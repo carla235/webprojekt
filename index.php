@@ -26,6 +26,12 @@ echo "
          <td><a href='#'><img src='Logo.png' width='50px' height='auto'></a></td>
     </table>
     <br> 
+  <UL>
+   <li><a href=\"#\">HOME</a></li>
+   <li><a href=\"#\">SHOP</a></li>
+   <li><a href=\"#\">CONTACT</a></li>
+   </UL>
+
 
 
 
