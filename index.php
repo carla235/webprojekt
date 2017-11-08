@@ -7,30 +7,31 @@
  */
 
 
-include_once "userdata.php";
-session_start();
+include_once "userdata.php"; // Integration des Datenbankzugriffs
+session_start(); // Session wird gestartet
 
 echo "
 
 <!DOCTYPE html>
-<html lang=\"en\">
+<html lang=\"en\">  // Sprache: Deutsch 
 <head>
     <meta charset=\"UTF-8\">
-    <title>ANNE KERN Concept Store</title>
+    <title>ANNE KERN Concept Store</title>   // Metadaten des Tabs 
     
 </head>
 <body>
 
 
     <table> 
-         <td><a href='#'><img src='Logo.png' width='50px' height='auto'></a></td>
-         <td><a href='#'><img src='usericon.png' width='50px' height='auto'></a></td>
-         <td><a href='#'><img src='shoppingicon.png' width='50px' height='auto'></a></td>
+         <td><a href='#'><img src='Logo.png' width='50px' height='auto'></a></td>   // Bildlogo wird aufgerufen = Titel der Website 
+         <td><a href='#'><img src='usericon.png' width='50px' height='auto'></a></td>  // AnmeldeIcon wird integriert 
+         <td><a href='#'><img src='shoppingicon.png' width='50px' height='auto'></a></td> //WarenkorbIcon wird integriert 
          
+        // Menueleiste = Auflistung der Bestandteile als Links  
     </table>
     <br> 
   <UL>
-   <li><a href=\"#\">HOME</a></li>
+   <li><a href=\"#\">HOME</a></li>  
    <li><a href=\"#\">SHOP</a></li>
    <li><a href=\"#\">CONTACT</a></li>
    </UL>
