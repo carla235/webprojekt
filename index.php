@@ -13,7 +13,7 @@ session_start(); // Session wird gestartet
 echo "
 
 <!DOCTYPE html>
-<html lang=\"en\">  // Sprache: Deutsch 
+<html lang=\"en\">  
 <head>
     <meta charset=\"UTF-8\">
     <title>ANNE KERN Concept Store</title>   // Metadaten des Tabs 
