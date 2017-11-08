@@ -24,6 +24,9 @@ echo "
 
     <table> 
          <td><a href='#'><img src='Logo.png' width='50px' height='auto'></a></td>
+         <td><a href='#'><img src='usericon.png' width='50px' height='auto'></a></td>
+         <td><a href='#'><img src='shoppingicon.png' width='50px' height='auto'></a></td>
+         
     </table>
     <br> 
   <UL>
@@ -31,7 +34,8 @@ echo "
    <li><a href=\"#\">SHOP</a></li>
    <li><a href=\"#\">CONTACT</a></li>
    </UL>
-
+   
+   
 
 
 
