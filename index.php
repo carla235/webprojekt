@@ -15,18 +15,18 @@ echo "
 <html lang=\"en\">  
 <head>
     <meta charset=\"UTF-8\">
-    <title>ANNE KERN Concept Store</title>   // Metadaten des Tabs 
+    <title>ANNE KERN Concept Store</title>   <!-- Metadaten des Tabs -->
     
 </head>
 <body>
 
+         <div align='center'><a href='#'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-    <table> 
-         <td><a href='#'><img src='Logo.png' width='50px' height='auto'></a></td>   // Bildlogo wird aufgerufen = Titel der Website 
-         <td><a href='#'><img src='usericon.png' width='50px' height='auto'></a></td>  // AnmeldeIcon wird integriert 
-         <td><a href='#'><img src='shoppingicon.png' width='50px' height='auto'></a></td> //WarenkorbIcon wird integriert 
+<div align='right'>    <table> 
+       <td><a href='#'><img src='usericon.png' width='30px' height='auto'></a></td>  <!-- AnmeldeIcon wird integriert -->
+       <td><a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a></td> </table></div> <!--WarenkorbIcon wird integriert -->
          
-        // Menueleiste = Auflistung der Bestandteile als Links  
+        <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     </table>
     <br> 
   <UL>
