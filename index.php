@@ -30,46 +30,22 @@ echo "
     </table>
     <br> 
   <UL>
-   <li><a href=\"#\">HOME</a></li>  
+   <li><a href=\"index.php?page=start.php\">HOME</a></li>  
    <li><a href=\"#\">SHOP</a></li>
-   <li><a href=\"#\">CONTACT</a></li>
+   <li><a href=\"index.php?page=contact.php\">CONTACT</a></li>
    </UL>";
    
-   
 
-
-
-
-
-  
-           if (isset($_SESSION['userid'])) {
-               echo"   <li><a href=\"index.php?page=logout\">Ausloggen</a></li>"; }
-           else{
-               echo"  <li><a href=\"index.php?page=login\">Einloggen</a></li>";}
-echo"
-            <li><a href=\"#\">About Me</a></li>
-            <li><a href=\"#\">Andere Aktion</a></li>
-            
-          </ul>
-        </li>
-      </ul>
-      
-     
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>";
 
 
 if (isset($_GET["page"]) ) {
     switch ($_GET["page"]) {
-        case "blogposts":
-            include "system/blogposts/posts.php";
+        case "start":
+            include "system/start.php";
             break;
 
-        case "login":
-            include "system/login/login.php";
+        case "contact":
+            include "system/contact.php";
             break;
 
         case "logout":
