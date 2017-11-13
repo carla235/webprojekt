@@ -7,7 +7,6 @@
  */
 
 
-include_once "userdata.php"; // Integration des Datenbankzugriffs
 session_start(); // Session wird gestartet
 
 echo "
