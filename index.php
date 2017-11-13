@@ -48,22 +48,6 @@ if (isset($_GET["page"]) ) {
             include "system/contact.php";
             break;
 
-        case "logout":
-            include "system/login/logout.php";
-            break;
-
-        case "register":
-            include "system/login/register.php";
-            break;
-
-        case "edit":
-            //?id=".$_GET["id"]
-            include "system/blogposts/bearbeiten.php";
-            break;
-
-        case "löschen":
-            include "system/blogposts/löschen.php";
-            break;
 
         default:
             include "system/start.php";
