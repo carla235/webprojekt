@@ -16,36 +16,49 @@ echo "
 <head>
     <meta charset=\"UTF-8\">
     <title>ANNE KERN Concept Store</title>   <!-- Metadaten des Tabs -->
+    <style>
+    .menue{
     
+    }
+    
+    .icons{
+    position: relative;
+    bottom: 150px;
+    
+    }
+    
+</style>
 </head>
 <body>
 
          <div align='center'><a href='#'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-<div align='right'>    <table> 
+<div class='icons' align='right'>    <table> 
        <td><a href='#'><img src='usericon.png' width='30px' height='auto'></a></td>  <!-- AnmeldeIcon wird integriert -->
        <td><a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a></td> </table></div> <!--WarenkorbIcon wird integriert -->
          
         <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     </table>
+    
     <br> 
-  <UL>
-  <li><a href=\"index.php?page=start.php\">HOME</a></li>  
+ 
+ <ul class='menue'>
+  <li><a href='index.php?page=start'>HOME</a></li>  
    <li><a href=\"#\">SHOP</a></li>
-   <li><a href=\"index.php?page=contact.php\">CONTACT</a></li>
-   </UL>";
+   <li><a href='index.php?page=contact'>CONTACT</a></li>
+   </ul>";
    
 
 
 
 if (isset($_GET["page"])) {
     switch ($_GET["page"]) {
-        case"start":
-            include "./system/start.php";
+        case "start":
+            include "system/start.php";
             break;
 
-        case"contact":
-            include "./system/contact.php";
+        case "contact":
+            include "system/contact.php";
             break;
 
         default:
