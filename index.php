@@ -38,13 +38,13 @@ echo "
 
 
 
-if (isset($_GET["page"]) ) {
+if (isset($_GET["page"])) {
     switch ($_GET["page"]) {
-        case "start":
+        case"start":
             include "system/start.php";
             break;
 
-        case "contact":
+        case"contact":
             include "system/contact.php";
             break;
 

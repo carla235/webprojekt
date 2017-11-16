@@ -8,9 +8,10 @@
 
 echo "<html>
 <head>
-<title></title>
+<title>ANNE KERN - Contact</title>
 </head>
 <body>
+<h1>CONTACT US!</h1>
 <p>
 Marktstraße 11
 Rottenburg, Baden-Wurttemberg, Germany
