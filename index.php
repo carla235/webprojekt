@@ -17,15 +17,27 @@ echo "
     <meta charset=\"UTF-8\">
     <title>ANNE KERN Concept Store</title>   <!-- Metadaten des Tabs -->
     <style>
-    .menue{
     
-    }
+ .menue   li{
+    display: inline-block;
+   
+}
+.menue a{
+padding: 150px;
+text-decoration: none;
+color: black;
+font-family: Arial;
+}
     
     .icons{
     position: relative;
     bottom: 150px;
-    
-    }
+    float:right;
+     }
+     
+     .icons a{
+     margin:20px;
+     }
     
 </style>
 </head>
@@ -33,9 +45,9 @@ echo "
 
          <div align='center'><a href='#'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-<div class='icons' align='right'>    <table> 
-       <td><a href='#'><img src='usericon.png' width='30px' height='auto'></a></td>  <!-- AnmeldeIcon wird integriert -->
-       <td><a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a></td> </table></div> <!--WarenkorbIcon wird integriert -->
+<div class='icons' >    
+       <a href='index.php?page=login'><img src='usericon.png' width='30px' height='auto'></a>  <!-- AnmeldeIcon wird integriert -->
+       <a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a></div> <!--WarenkorbIcon wird integriert -->
          
         <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     </table>
@@ -59,6 +71,10 @@ if (isset($_GET["page"])) {
 
         case "contact":
             include "system/contact.php";
+            break;
+
+        case"login":
+            include "system/login.php";
             break;
 
         default:
