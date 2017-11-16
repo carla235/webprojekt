@@ -41,11 +41,11 @@ echo "
 if (isset($_GET["page"])) {
     switch ($_GET["page"]) {
         case"start":
-            include "system/start.php";
+            include "./system/start.php";
             break;
 
         case"contact":
-            include "system/contact.php";
+            include "./system/contact.php";
             break;
 
         default:
