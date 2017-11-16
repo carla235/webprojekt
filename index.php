@@ -30,7 +30,7 @@ echo "
     </table>
     <br> 
   <UL>
-   <li><a href=\"index.php?page=start.php\">HOME</a></li>  
+  <li><a href=\"index.php?page=start.php\">HOME</a></li>  
    <li><a href=\"#\">SHOP</a></li>
    <li><a href=\"index.php?page=contact.php\">CONTACT</a></li>
    </UL>";
@@ -48,11 +48,9 @@ if (isset($_GET["page"]) ) {
             include "system/contact.php";
             break;
 
-
         default:
             include "system/start.php";
             break;
-
 
     }
 }
@@ -60,3 +58,6 @@ else
 {
     include "system/start.php";
 }
+
+echo "</body> </html>";
+
