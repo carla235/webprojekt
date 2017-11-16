@@ -60,5 +60,3 @@ else
 {
     include "system/start.php";
 }
-echo"<br></body>
-    </html>";
