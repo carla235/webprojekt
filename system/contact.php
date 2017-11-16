@@ -6,7 +6,10 @@
  * Time: 11:06
  */
 
-echo"
+echo "<html>
+<head>
+<title></title>
+</head>
 <body>
 <p>
 Marktstraße 11
@@ -14,4 +17,5 @@ Rottenburg, Baden-Wurttemberg, Germany
 </p>
 
 </body>
+</html>
 ";

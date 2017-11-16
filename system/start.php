@@ -15,6 +15,10 @@ echo "<html>
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 </p>
 
+<div align='left'><a href='#'><img src='./klamotten.jpg' width='100px' height='100px'></a></div>
+<div align='center'><a href='#'><img src='./deko.jpg' width='100px' height='100px'></a></div>
+<div align='right'><a href='#'><img src='./laden.jpg' width='100px' height='100px'></a></div>
+
 </body>
 
 </html>
