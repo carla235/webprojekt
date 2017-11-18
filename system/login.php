@@ -48,7 +48,8 @@ if (!empty($name) && !empty($vorname) && !empty($straße) && !empty($plz) && !em
 
 echo"
 <div class='register'>
-<h1>Registrieren!</h1>
+<h1>Registrieren!</h1><br>
+
 <form action='' method='post'>
 Name:<input type='text' name='name'><br>
 Vorname:<input type='text' name='vorname'><br>
