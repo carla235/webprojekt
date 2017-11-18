@@ -14,11 +14,34 @@ margin-top: 50px;
 margin: 10px;
 
 }
+
+.login{
+float: left; 
+margin-left: 200px;
+margin-top: 50px;
+}
+
+.login input{
+margin: 10px;
+
+}
 </style>
 </head>
-<body>";
+<body>
 
-// Beginn Registrierung
+
+<!-- Beginn Login -->
+
+<div class='login'>
+<h1>Login! </h1>
+<form action='#' method='post'>
+e-mail <input type='text' name='email'> <br>
+Passwort <input type='password' name='passwort'><br>
+<input type='submit' value='Einloggen!'>
+</form>
+</div>
+";
+//Beginn Registrierung
 include_once("./system/account/userdata.php");
 $name       = htmlspecialchars($_POST["name"], ENT_QUOTES, "UTF-8");
 $vorname      = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
