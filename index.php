@@ -16,6 +16,7 @@ echo "
 <head>
     <meta charset=\"UTF-8\">
     <title>ANNE KERN Concept Store</title>   <!-- Metadaten des Tabs -->
+  
     <style>
     
  .menue   li{
