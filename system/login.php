@@ -45,7 +45,7 @@ Passwort <input type='password' name='passwort'><br>
 include_once("./system/account/userdata.php");
 $name       = htmlspecialchars($_POST["name"], ENT_QUOTES, "UTF-8");
 $vorname      = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
-$straße     = htmlspecialchars($_POST["straße"], ENT_QUOTES, "UTF-8");
+$strasse     = htmlspecialchars($_POST["strasse"], ENT_QUOTES, "UTF-8");
 $plz      = htmlspecialchars($_POST["plz"], ENT_QUOTES, "UTF-8");
 $telefonnummer      = htmlspecialchars($_POST["telefonnummer"], ENT_QUOTES, "UTF-8");
 $email      = htmlspecialchars($_POST["email"], ENT_QUOTES, "UTF-8");
@@ -59,9 +59,9 @@ if (!empty($name) && !empty($vorname) && !empty($straße) && !empty($plz) && !em
     try {
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
-            "INSERT INTO benutzer(name, vorname, straße, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :straße, :plz, :telefonnummer, :email, :passwort)"
+            "INSERT INTO benutzer(name, vorname, strasse, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :strasse, :plz, :telefonnummer, :email, :passwort)"
         );
-        $query->execute(array("name" => $name, "vorname" => $vorname,"straße" => $straße,"plz" => $plz,"telefonnummer" => $telefonnummer,"vorname" => $vorname, "email" => $email, "passwort" => $passwort));
+        $query->execute(array("name" => $name, "vorname" => $vorname,"strasse" => $straße,"plz" => $plz,"telefonnummer" => $telefonnummer,"vorname" => $vorname, "email" => $email, "passwort" => $passwort));
         $db = null;// Daten werden eingetragen
     } catch (PDOException $x) {
     };
