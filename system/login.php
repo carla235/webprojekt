@@ -54,12 +54,12 @@ $clean_passwort   = htmlspecialchars($_POST["passwort"], ENT_QUOTES, "UTF-8");
 // Erzeuge Passwort-Hash
 $passwort = password_hash($clean_passwort, PASSWORD_DEFAULT);
 
-if (!empty($name) && !empty($vorname) && !empty($straße) && !empty($plz) && !empty($telefonnummer) && !empty($email) && !empty($passwort)) { // wenn diese Felder nicht leer
+if (!empty($name) && !empty($vorname) && !empty($strasse) && !empty($plz) && !empty($telefonnummer) && !empty($email) && !empty($passwort)) { // wenn diese Felder nicht leer
     // Registriere
     try {
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
-            "INSERT INTO benutzer(name, vorname, strasse, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :strasse, :plz, :telefonnummer, :email, :passwort)"
+            "INSERT INTO benutzer (name, vorname, strasse, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :strasse, :plz, :telefonnummer, :email, :passwort)"
         );
         $query->execute(array("name" => $name, "vorname" => $vorname,"strasse" => $straße,"plz" => $plz,"telefonnummer" => $telefonnummer,"vorname" => $vorname, "email" => $email, "passwort" => $passwort));
         $db = null;// Daten werden eingetragen
