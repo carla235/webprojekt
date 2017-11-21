@@ -6,7 +6,7 @@
  * Time: 09:00
  */
 
-include_once(dirname(__FILE__)."/../account/userdata.php");
+include_once(dirname(__FILE__) . "/../account/userdata.php");
 
 try {
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
@@ -22,7 +22,7 @@ try {
         echo "</div><br>";
         //if (!empty($zeile->bild)){
         //echo "<p><img src='./system/produkte/$zeile->images'></p><br>";}
-        echo "<div align='left'><a href='#'><img src='./../../glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
+        echo "<div align='left'><a href='#'><img src='../../glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
         echo "<div class='preis'>$zeile->preis €";
         echo "</div>";
     }
