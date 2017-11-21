@@ -21,12 +21,19 @@ try {
             Marke: $zeile->marke";
         echo "</div><br>";
         //if (!empty($zeile->bild)){
-            //echo "<p><img src='./system/produkte/$zeile->images'></p><br>";}
-        echo "<div align='left'><a href='#'><img src='./glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
+        //echo "<p><img src='./system/produkte/$zeile->images'></p><br>";}
+        echo "<div align='left'><a href='#'><img src='./../../glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
         echo "<div class='preis'>$zeile->preis €";
         echo "</div>";
     }
-    echo "</div>";
 
-    session_start();
-    if (isset($_SESSION['userid'])){
+    $db = null;
+} catch (PDOException $e) {
+    echo "Error!: Bitte wenden Sie sich an den Administrator!?...".$e;
+    die();
+}
+?>
+
+
+    //session_start();
+   // if (isset($_SESSION['userid'])){
