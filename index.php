@@ -57,7 +57,7 @@ font-family: Arial;
  
  <ul class='menue'>
   <li><a href='index.php?page=start'>HOME</a></li>  
-   <li><a href=\"#\">SHOP</a></li>
+   <li><a href='index.php?page=shop'>SHOP</a></li>
    <li><a href='index.php?page=contact'>CONTACT</a></li>
    </ul>";
    
@@ -76,6 +76,10 @@ if (isset($_GET["page"])) {
 
         case"login":
             include "system/login.php";
+            break;
+
+        case"shop":
+            include "system/shop.php";
             break;
 
         default:
