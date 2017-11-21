@@ -18,6 +18,10 @@ echo
  .preis {
  font-family: Arial;
  }
+ 
+ .artikel {
+    display:inline; 
+    }
 
 
 </style>
@@ -33,15 +37,15 @@ try {
     $query->execute();
 
     while ($zeile = $query->fetchObject()) {
-        echo "<div class='artikelname'>$zeile->marke - 
+        echo "<div class='artikel'>$zeile->marke - 
             $zeile->artikelname";
-        echo "</div><br>";
+        echo "<br>";
         //if (!empty($zeile->bild)) {
             //echo "<p><img src='./system/produkte/$zeile->bild'></p><br>";
         //}
         echo "<div align='left'><a href='#'><img src='./glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
         echo "<div class='preis'>$zeile->preis €";
-        echo "</div>";
+        echo "</div><br><br>";
     }
 echo "</div><br>";
 
