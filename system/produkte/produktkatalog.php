@@ -10,7 +10,7 @@ include_once(dirname(__FILE__)."/../account/userdata.php");
 
 try {
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM produktkatalog ORDER BY date DESC ";
+    $sql = "SELECT * FROM produktkatalog";
     $query = $db->prepare($sql);
     $query->execute();
 
@@ -20,10 +20,10 @@ try {
         echo "<div class='artikelname'>$zeile->artikelname - 
             Marke: $zeile->marke";
         echo "</div><br>";
-        if (!empty($zeile->bild)){
-            echo "<p><img src='./system/produkte/$zeile->images'></p><br>";}
-        echo "<div class='preis'>";
-        echo $zeile->preis."<br>";
+        //if (!empty($zeile->bild)){
+            //echo "<p><img src='./system/produkte/$zeile->images'></p><br>";}
+        echo "<div align='left'><a href='#'><img src='./glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
+        echo "<div class='preis'>$zeile->preis €";
         echo "</div>";
     }
     echo "</div>";
