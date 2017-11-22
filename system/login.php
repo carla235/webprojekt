@@ -34,7 +34,7 @@ margin: 10px;
 
 <div class='login'>
 <h1>Login! </h1>
-<form action='#' method='post'>
+<form action='./system/login_logic.php' method='post'>
 e-mail <input type='text' name='email'> <br>
 Passwort <input type='password' name='passwort'><br>
 <input type='submit' value='Einloggen!'>
@@ -42,6 +42,8 @@ Passwort <input type='password' name='passwort'><br>
 </div>
 ";
 //Beginn Registrierung
+
+
 include_once("./system/account/userdata.php");
 $name       = htmlspecialchars($_POST["name"], ENT_QUOTES, "UTF-8");
 $vorname      = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
@@ -59,12 +61,15 @@ if (!empty($name) && !empty($vorname) && !empty($strasse) && !empty($plz) && !em
     try {
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
-            "INSERT INTO benutzer (name, vorname, strasse, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :strasse, :plz, :telefonnummer, :email, :passwort)"
+            "INSERT INTO benutzer(name, vorname, strasse, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :strasse, :plz, :telefonnummer, :email, :passwort)"
         );
         $query->execute(array("name" => $name, "vorname" => $vorname,"strasse" => $strasse,"plz" => $plz,"telefonnummer" => $telefonnummer,"vorname" => $vorname, "email" => $email, "passwort" => $passwort));
         $db = null;// Daten werden eingetragen
+
+
     } catch (PDOException $x) {
     };
+    header("Location:index.php");
 } else {
     $errorMessage = "Bitte füllen Sie alle Felder aus.";
 }
@@ -76,10 +81,10 @@ echo"
 <form action='' method='post'>
 Name:<input type='text' name='name'><br>
 Vorname:<input type='text' name='vorname'><br>
-Straße: <input type='text' name='straße'><br>
+Straße: <input type='text' name='strasse'><br>
 PLZ/Ort <input type='text' name='plz'><br>
 Telefonnummer <input type='text' name='telefonnummer'><br>
-e-mail<input type='text' name='e-mail'><br>
+e-mail<input type='text' name='email'><br>
 Passwort:<input type='password' name='passwort'><br>
 <input type='submit' value='Registrieren!'>
 </form>
@@ -91,6 +96,7 @@ Passwort:<input type='password' name='passwort'><br>
 
 
 ";
+
 /**
  * Created by PhpStorm.
  * User: anna-mariaosterloh

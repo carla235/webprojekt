@@ -82,6 +82,10 @@ if (isset($_GET["page"])) {
             include "system/shop.php";
             break;
 
+        case"produkt":
+            include "system/produkte/Produktansicht.php";
+            break;
+
         default:
             include "system/start.php";
             break;
