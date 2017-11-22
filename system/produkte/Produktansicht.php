@@ -3,8 +3,9 @@
 include(dirname(__FILE__) . "/../account/userdata.php");
 echo"<html><body>";
 try {
+    $artikelnummer = (int)$_GET["artikelnummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM produktkatalog  ";
+    $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
     $query = $db->prepare($sql);
     $query->execute();
 

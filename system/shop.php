@@ -37,7 +37,7 @@ try {
     $query->execute();
 
     while ($zeile = $query->fetchObject()) {
-        echo "<div class='artikel'>$zeile->marke - 
+        echo "<a href='./system/produkte/Produktansicht.php?artikelnummer=$zeile->artikelnummer' <div class='artikel'>$zeile->marke - 
             $zeile->artikelname";
         echo "<br>";
         //if (!empty($zeile->bild)) {
@@ -45,7 +45,7 @@ try {
         //}
         echo "<div align='left'><a href='#'><img src='./glitzerkleid.jpeg' width='225px' height='300px'></a></div>";
         echo "<div class='preis'>$zeile->preis €";
-        echo "</div><br><br>";
+        echo "</div><br><br></a>";
     }
 echo "</div><br>";
 
