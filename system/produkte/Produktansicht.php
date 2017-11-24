@@ -32,7 +32,7 @@ try {
     $query->execute();
 
     while ($zeile = $query->fetchObject()) {
-        echo    "<div class='produkt'></div><div class='bild'><img src= './system/produkte/images/$zeile->bild' width='300px' height='auto' ></div>
+        echo    "<div class='produkt'></div><div class='bild'><img src= './$zeile->bild' width='300px' height='auto' ></div>
                  <div class='produktinfos'>
                  <h1> $zeile->artikelname | $zeile->marke </h1>
                  EAN:$zeile->ean <br><br><br>
