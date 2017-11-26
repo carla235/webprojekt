@@ -19,41 +19,52 @@ echo "
   
     <style>
     
- .menue   li{
-    display: inline-block;
-   
+.logo{
+
 }
+    
+.menue ul{
+width: 1000px;
+
+}
+.menue li{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+   }
+   
 .menue a{
-padding: 150px;
+padding: 125px;
 text-decoration: none;
 color: black;
 font-family: Arial;
 }
     
-    .icons{
+.icons{
     position: relative;
     bottom: 150px;
     float:right;
      }
      
-     .icons a{
-     margin:20px;
+.icons a{
+     margin-left:10px;
+     margin-right:10px;
      }
     
 </style>
 </head>
 <body>
 
-         <div align='center'><a href='#'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
+         <div class='logo' align='center'><a href='#'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
 <div class='icons' >    
        <a href='index.php?page=login'><img src='usericon.png' width='30px' height='auto'></a>  <!-- AnmeldeIcon wird integriert -->
-       <a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a></div> <!--WarenkorbIcon wird integriert -->
-         
+       <a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a> <!--WarenkorbIcon wird integriert -->
+        <a href='index.php?page=backend'><img src='add.png' width='30px' height ='auto'</a> </div> 
         <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     </table>
     
-    <br> 
+    <br> <br> 
  
  <ul class='menue'>
   <li><a href='index.php?page=start'>HOME</a></li>  
@@ -74,7 +85,7 @@ if (isset($_GET["page"])) {
             include "system/contact.php";
             break;
 
-        case"login":
+        case "login":
             include "system/login.php";
             break;
 
@@ -84,6 +95,10 @@ if (isset($_GET["page"])) {
 
         case"produkt":
             include "system/produkte/Produktansicht.php";
+            break;
+
+        case"backend":
+            include"system/backend/productform.php";
             break;
 
         default:

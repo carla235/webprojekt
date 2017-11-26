@@ -36,7 +36,58 @@ input.textfield {
 </style>
 </head>
 
-<body>
+<body>";
+
+if ($_FILES['datei']['size'] != 0 ) {
+//$upload_folder = '/../../system/blogposts/uploads/'; //Das Upload-Verzeichnis
+    $upload_folder = './system/produkte/images/'; //Das Upload-Verzeichnis
+    $filename = pathinfo($_FILES['datei']['name'], PATHINFO_FILENAME);
+    $extension = strtolower(pathinfo($_FILES['datei']['name'], PATHINFO_EXTENSION));
+
+//Überprüfung der Dateiendung
+    $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
+    if (!in_array($extension, $allowed_extensions)) {
+        die("Ungültige Dateiendung. Nur png, jpg, jpeg und gif-Dateien sind erlaubt");
+    }
+
+//Überprüfung der Dateigröße
+    /* $max_size = 500 * 1024; //500 KB
+     if ($_FILES['datei']['size'] > $max_size) {
+         die("Bitte keine Dateien größer 500kb hochladen");
+     }*/
+
+//Überprüfung dass das Bild keine Fehler enthält
+    if (function_exists('exif_imagetype')) { //Die exif_imagetype-Funktion erfordert die exif-Erweiterung auf dem Server
+        $allowed_types = array(IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF);
+        $detected_type = exif_imagetype($_FILES['datei']['tmp_name']);
+        if (!in_array($detected_type, $allowed_types)) {
+            die("Nur der Upload von Bilddateien ist gestattet");
+        }
+    }
+
+//Pfad zum Upload
+    $new_path = $upload_folder . $filename . '.' . $extension;
+    $dbfile = $filename . '.' . $extension;
+
+//Neuer Dateiname falls die Datei bereits existiert
+    if (file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Dateinamen
+        $id = 1;
+        do {
+            $new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
+            $dbfile = $filename . '_' . $id . '.' . $extension;
+            $id++;
+        } while (file_exists($new_path));
+    }
+
+//Alles okay, verschiebe Datei an neuen Pfad
+    move_uploaded_file($_FILES['datei']['tmp_name'], $new_path);
+    echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';
+}
+
+
+
+echo"
+
 
 <!-- Beginn des Produktformulars --> 
 <div id='productform'>
@@ -45,7 +96,7 @@ input.textfield {
 
 <!-- Variablen im Formualar bzw. das Formular zum ausfuellen --> 
 
-<form action='../backend/productform.php' method='post'>
+<form action='#' method='post'>
 
 <div class='productinput'><br>
 <label><b>Marke</b></label><br>   
@@ -67,19 +118,19 @@ input.textfield {
 <label><b>Details</b></label><br> 
 <input class= 'textfield' type='text' size='20' name='details' placeholder='Artikeldetails' required><br>
 <label><b>Bildupload</b></label><br> 
-<input type='text' size='20' name='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
+<input type='file' size='20' name='datei' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
 <br>
 <input id='erstellen' type=\"submit\" name=\"erstellen\" value=\"Erstellen\">
 </div>
 </div> ";
 
 // Datenbankzugriff
-include_once("../account/userdata.php");
+include_once("./system/account/userdata.php");
 
 // Erstellen eines neuen Datensatzes durch den Befehl POST
 
 //ueberprueft, ob der Button fuer Submit gedrueckt wurde
-if(isset($_POST['abschicken'])) {
+//if(isset($_POST['abschicken'])) {
 // Variablen vom Formular uebertragen
     $artikelnummer = htmlspecialchars($_POST["artikelnummer"], ENT_QUOTES, "UTF-8");
     $artikelname = htmlspecialchars($_POST["artikelname"], ENT_QUOTES, "UTF-8");
@@ -106,11 +157,11 @@ if(isset($_POST['abschicken'])) {
 
         } catch (PDOException $x) {
         };
-        header("Location:index.php");
+        header("Location:index.php?page=start");
     } else {
         $errorMessage = "Eingabe unvollständig.";
     }
-}
+//}
 
 echo"
 
