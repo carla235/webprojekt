@@ -11,7 +11,7 @@ if (!empty($email)) { // Wenn email nicht leer wird Passwort geprüft
     $passwort = htmlspecialchars($_POST["passwort"], ENT_QUOTES, "UTF-8");
 
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM benutzer WHERE email=:email ";
+    $sql = "SELECT * FROM benutzer WHERE email= :email";
     $query = $db->prepare($sql);
     $query->execute(array(':email' => $email));
 
@@ -19,15 +19,18 @@ if (!empty($email)) { // Wenn email nicht leer wird Passwort geprüft
 
 
     //Überprüfung des Passworts wenn e-mail stimmt
-    if ($zeile !== false && password_verify($passwort, $zeile["passwort"])) {
+
+
+    if($zeile !== false && password_verify($passwort, $zeile["passwort"])) {
         $_SESSION['userid'] = $zeile['id'];
-        header:("Location:index.php");
-        //die('Login erfolgreich.
+       header:("Location:index.php");
+       die();
     }
     else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
 } else $errorMessage = "";
+
 
 if (!empty($errorMessage)) {
 
