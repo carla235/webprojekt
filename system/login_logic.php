@@ -20,7 +20,7 @@ if (!empty($email)) { // Wenn email nicht leer wird Passwort geprüft
 
     //Überprüfung des Passworts wenn e-mail stimmt
     if ($zeile !== false && password_verify($passwort, $zeile["passwort"])) {
-        $_SESSION['userid'] = $zeile['kundennummer'];
+        $_SESSION['userid'] = $zeile['id'];
         header:("Location:index.php");
         //die('Login erfolgreich.
     }
