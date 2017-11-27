@@ -54,7 +54,7 @@ $email      = htmlspecialchars($_POST["email"], ENT_QUOTES, "UTF-8");
 $clean_passwort   = htmlspecialchars($_POST["passwort"], ENT_QUOTES, "UTF-8");
 
 // Erzeuge Passwort-Hash
-$passwort = password_hash($clean_passwort, PASSWORD_DEFAULT);
+$passwort = password_hash($clean_passwort,PASSWORD_DEFAULT);
 
 if (!empty($name) && !empty($vorname) && !empty($strasse) && !empty($plz) && !empty($telefonnummer) && !empty($email) && !empty($passwort)) { // wenn diese Felder nicht leer
     // Registriere

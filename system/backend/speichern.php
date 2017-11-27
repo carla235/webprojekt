@@ -68,11 +68,13 @@ if ($_FILES['bild']['size'] != 0 ) {
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
             "INSERT INTO produktkatalog(artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES(:artikelname, :marke :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
         );
-        $query->execute(array("artikelname" => $artikelname, "marke" => $marke, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "artikelbeschreibung" => $artikelbeschreibung, "details" => $details, "bild" => $dbfile));
+        $query->execute(array(":artikelname" => $artikelname, ":marke" => $marke, ":ean" => $ean, ":preis" => $preis, ":groesse" => $groesse, ":menge" => $menge, ":artikelbeschreibung" => $artikelbeschreibung, ":details" => $details, ":bild" => $dbfile));
         $db = null;// Daten werden eingetragen
 
 
     } catch (PDOException $x) {
+        echo "Fehler";
+        die();
     };
     header("Location: ../../index.php");
 } else {
