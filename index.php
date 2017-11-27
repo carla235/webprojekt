@@ -101,6 +101,10 @@ if (isset($_GET["page"])) {
             include"system/backend/productform.php";
             break;
 
+        case"bearbeiten":
+            include "system/backend/bearbeiten/form.php";
+            break;
+
         default:
             include "system/start.php";
             break;

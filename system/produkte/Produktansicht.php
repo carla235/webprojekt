@@ -32,7 +32,9 @@ try {
     $query->execute();
 
     while ($zeile = $query->fetchObject()) {
-        echo    "<div class='produkt'></div><div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' ></div>
+        echo    "<div class='produkt'></div><div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > 
+                 <div class='bearbeiten'><li><a href='index.php?page=bearbeiten'>Artikel bearbeiten</a></li></div>
+                 </div>
                  <div class='produktinfos'>
                  <h1> $zeile->artikelname | $zeile->marke </h1>
                  EAN:$zeile->ean <br><br><br>
@@ -58,7 +60,7 @@ try {
                  DETAILS:<br>
                  $zeile->details<br><br>
                  LIEFERZEIT 3-5 WERKTAGE | 4,90€ 
-                  </div></div>
+                  </div>
                  
       
       ";}
