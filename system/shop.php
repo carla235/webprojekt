@@ -43,9 +43,7 @@ try {
              <a href='index.php?page=produkt&artikelnummer=$zeile->artikelnummer' <div class='artikel'>$zeile->marke - 
                    $zeile->artikelname</div><br>";
 
-            //if (!empty($zeile->bild)) {
-            //echo "<p><img src='./system/produkte/$zeile->bild'></p><br>";
-            //}
+
             echo "<div align='left'> <a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a> </div>";
             echo "<div class='preis'>$zeile->preis € </div>";
             echo "<br><br>    </a>  </div>
