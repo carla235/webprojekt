@@ -14,7 +14,7 @@ $groesse = htmlspecialchars($_POST["groesse"], ENT_QUOTES, "UTF-8");
 $menge = htmlspecialchars($_POST["menge"], ENT_QUOTES, "UTF-8");
 $artikelbeschreibung = htmlspecialchars($_POST["artikelbeschreibung"], ENT_QUOTES, "UTF-8");
 $details = htmlspecialchars($_POST["details"], ENT_QUOTES, "UTF-8");
-//$dbfile = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
+//$bild = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
 
 if (!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && !empty($groesse) && !empty($menge) && !empty($details) && !empty($artikelbeschreibung)) {
     include_once("../../system/account/userdata.php");
@@ -29,7 +29,7 @@ if ($_FILES['bild']['size'] != 0 ) {
     $extension = strtolower(pathinfo($_FILES['bild']['name'], PATHINFO_EXTENSION));
 
 //Überprüfung der Dateiendung
-    $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
+   $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
     if (!in_array($extension, $allowed_extensions)) {
         die("Ungültige Dateiendung. Nur png, jpg, jpeg und gif-Dateien sind erlaubt");
     }
@@ -61,23 +61,31 @@ if ($_FILES['bild']['size'] != 0 ) {
     move_uploaded_file($_FILES['bild']['tmp_name'], $new_path);
     echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';}
 
-
-
-
     try {
+
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
-            "INSERT INTO produktkatalog (artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES(:artikelname, :marke :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
+            "INSERT INTO produktkatalog(artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES (:artikelname, :marke, :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
         );
-        $query->execute(array(":artikelname" => $artikelname, ":marke" => $marke, ":ean" => $ean, ":preis" => $preis, ":groesse" => $groesse, ":menge" => $menge, ":artikelbeschreibung" => $artikelbeschreibung, ":details" => $details, ":bild" => $new_path));
+        //$query->execute(array("artikelname" => $artikelname, "marke" => $marke, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "artikelbeschreibung" => $artikelbeschreibung, "details" => $details, "bild" => $dbfile));
+        $query->bindParam(':artikelname', $artikelname);
+        $query->bindParam(':marke', $marke);
+        $query->bindParam(':ean', $ean);
+        $query->bindParam(':preis', $preis);
+        $query->bindParam(':groesse', $groesse);
+        $query->bindParam(':menge', $menge);
+        $query->bindParam(':artikelbeschreibung', $artikelbeschreibung);
+        $query->bindParam(':details', $details);
+        $query->bindParam(':bild', $dbfile);
+
         $db = null;// Daten werden eingetragen
 
 
     } catch (PDOException $x) {
-        echo "Fehler";
+        echo "$x";
         die();
     };
-    header("Location: ../../index.php");
+   // header("Location: ../../index.php");
 } else {
     $errorMessage = "Eingabe unvollständig.";
 }

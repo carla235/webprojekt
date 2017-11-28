@@ -19,25 +19,23 @@ echo "
   
     <style>
     
-.logo{
 
-}
     
-.menue ul{
-width: 1000px;
 
-}
 .menue li{
     display: inline;
+    list-style: none;
     margin-left: 10px;
     margin-right: 10px;
+   
    }
    
 .menue a{
-padding: 125px;
+padding: 150px;
 text-decoration: none;
 color: black;
 font-family: Arial;
+
 }
     
 .icons{
@@ -57,12 +55,12 @@ font-family: Arial;
 
          <div class='logo' align='center'><a href='#'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-<div class='icons' >    
-       <a href='index.php?page=login'><img src='usericon.png' width='30px' height='auto'></a>  <!-- AnmeldeIcon wird integriert -->
-       <a href='#'><img src='shoppingicon.png' width='30px' height='auto'></a> <!--WarenkorbIcon wird integriert -->
-        <a href='index.php?page=backend'><img src='add.png' width='30px' height ='auto'</a> </div> 
+<div class='icons' >  <table>
+     <td>  <a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td>  <!-- AnmeldeIcon wird integriert -->
+      <td> <a href='#'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->
+      <td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> </table> </div> 
         <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
-    </table>
+   
     
     <br> <br> 
  
