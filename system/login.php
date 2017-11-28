@@ -63,7 +63,7 @@ if (!empty($name) && !empty($vorname) && !empty($strasse) && !empty($plz) && !em
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
             "INSERT INTO benutzer(name, vorname, strasse, plz, telefonnummer, email, passwort) VALUES(:name, :vorname, :strasse, :plz, :telefonnummer, :email, :passwort)"
         );
-        $query->execute(array("name" => $name, "vorname" => $vorname,"strasse" => $strasse,"plz" => $plz,"telefonnummer" => $telefonnummer,"vorname" => $vorname, "email" => $email, "passwort" => $passwort));
+        $query->execute(array("name" => $name, "vorname" => $vorname,"strasse" => $strasse,"plz" => $plz,"telefonnummer" => $telefonnummer, "email" => $email, "passwort" => $passwort));
         $db = null;// Daten werden eingetragen
 
 
