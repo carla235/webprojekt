@@ -5,6 +5,7 @@
  * Date: 27.11.17
  * Time: 17:15
  */
+
 echo " 
 <html> 
 
@@ -43,13 +44,14 @@ input.textfield {
 
 <body>";
 
+
 try {
     include(dirname(_FILE) . "../../system/account/userdata.php");
+    //$artikelnummer = (int)$_GET["artikelnummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
     $sql = "SELECT * FROM produktkatalog";
     $query = $db->prepare($sql);
     $query->execute();
-    // if ($zeile = $query->fetchObject()) {     //Wenn es den Datensatz gibt dann echo..//holt sich hier den entsprechenden Datensatz
     while ($zeile=$query->fetchObject()){
 
         echo"
@@ -59,9 +61,10 @@ try {
 
 <!-- Variablen im Formualar bzw. das Formular zum ausfuellen --> 
 
-<form action='./system/backend/bearbeiten/do.php' method='post'>
+
 
 <div class='productinput'><br>
+<form action='./system/backend/bearbeiten/do.php' method='post'>
 <label><b>Marke</b></label><br>   
 <input type=\"text\" size=\"20\" maxlength='50' name='marke' value='$zeile->marke'<br>
 <label><b>Artikelname</b></label><br> 
@@ -75,18 +78,18 @@ try {
 <label><b>Größe</b></label><br> 
 <input type='text' size='20' maxlength='2' name='groesse' value='$zeile->groesse'<br>
 <label><b>Menge</b></label><br> 
-<input type='number' size='20' maxlength='2' name='menge' value='$zeile->menge'<br>
+<input type='number' size='20' maxlength='2' name='menge' value='$zeile->menge'<br><br>
 <label><b>Artikelbeschreibung</b></label><br> 
-<input class= 'textfield' type='text' size='100' name='artikelbeschreibung' value='$zeile->artikelbeschreibung'<br>
+<textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='50' rows='10'>$zeile->artikelbeschreibung</textarea><br><br>
 <label><b>Details</b></label><br> 
-<input class= 'textfield' type='text' size='100' name='details' value='$zeile->details'<br>
+<textarea class= 'textfield' id='text' name='details' cols='50' rows='10' >$zeile->details</textarea><br><br>
 <label><b>Bildupload</b></label><br> 
 <input type='text' size='20' name='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
 <br>
 <input type='submit' value='update!' class='button'/>
 </div>
 </div> ";
-//sichern des neuen Datensatzes
+
         echo "</form>";
         echo "</div>";
 
