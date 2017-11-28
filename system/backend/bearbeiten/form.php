@@ -47,9 +47,9 @@ input.textfield {
 
 try {
     include(dirname(_FILE) . "../../system/account/userdata.php");
-    //$artikelnummer = (int)$_GET["artikelnummer"];
+    $artikelnummer = (int)$_GET["artikelnummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM produktkatalog";
+    $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
     $query = $db->prepare($sql);
     $query->execute();
     while ($zeile=$query->fetchObject()){
