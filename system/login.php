@@ -1,4 +1,5 @@
 <?php
+include_once("./system/account/userdata.php");
 
 echo"
 <html>
@@ -44,7 +45,7 @@ Passwort <input type='password' name='passwort'><br>
 //Beginn Registrierung
 
 
-include_once("./system/account/userdata.php");
+
 $name       = htmlspecialchars($_POST["name"], ENT_QUOTES, "UTF-8");
 $vorname      = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
 $strasse     = htmlspecialchars($_POST["strasse"], ENT_QUOTES, "UTF-8");

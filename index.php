@@ -71,6 +71,7 @@ font-family: Arial;
    <li><a href='index.php?page=shop'>SHOP</a></li>
    <li><a href='index.php?page=contact'>CONTACT</a></li>
    </ul>";
+
    
 
 

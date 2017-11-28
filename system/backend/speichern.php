@@ -1,5 +1,5 @@
 <?php
-include_once("../../system/account/userdata.php");
+
 // Erstellen eines neuen Datensatzes durch den Befehl POST
 
 //ueberprueft, ob der Button fuer Submit gedrueckt wurde
@@ -17,13 +17,14 @@ $details = htmlspecialchars($_POST["details"], ENT_QUOTES, "UTF-8");
 //$dbfile = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
 
 if (!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && !empty($groesse) && !empty($menge) && !empty($details) && !empty($artikelbeschreibung)) {
+    include_once("../../system/account/userdata.php");
     //&& !empty($bild), da Bildupload noch nicht umgesetzt ist, ist das noch keine Bedingung
     // sollten diese Felder ausgefuellt sein, dann
 // Datenbankzugriff
 
 
 if ($_FILES['bild']['size'] != 0 ) {
-    $upload_folder = '../../../images/'; //Das Upload-Verzeichnis
+    $upload_folder = './../../../images/'; //Das Upload-Verzeichnis
     $filename = pathinfo($_FILES['bild']['name'], PATHINFO_FILENAME);
     $extension = strtolower(pathinfo($_FILES['bild']['name'], PATHINFO_EXTENSION));
 
@@ -58,17 +59,17 @@ if ($_FILES['bild']['size'] != 0 ) {
 
 //Alles okay, verschiebe Datei an neuen Pfad
     move_uploaded_file($_FILES['bild']['tmp_name'], $new_path);
-    echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';
-}
+    echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';}
+
 
 
 
     try {
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
-            "INSERT INTO produktkatalog(artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES(:artikelname, :marke :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
+            "INSERT INTO produktkatalog (artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES(:artikelname, :marke :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
         );
-        $query->execute(array(":artikelname" => $artikelname, ":marke" => $marke, ":ean" => $ean, ":preis" => $preis, ":groesse" => $groesse, ":menge" => $menge, ":artikelbeschreibung" => $artikelbeschreibung, ":details" => $details, ":bild" => $dbfile));
+        $query->execute(array(":artikelname" => $artikelname, ":marke" => $marke, ":ean" => $ean, ":preis" => $preis, ":groesse" => $groesse, ":menge" => $menge, ":artikelbeschreibung" => $artikelbeschreibung, ":details" => $details, ":bild" => $new_path));
         $db = null;// Daten werden eingetragen
 
 
@@ -80,6 +81,10 @@ if ($_FILES['bild']['size'] != 0 ) {
 } else {
     $errorMessage = "Eingabe unvollständig.";
 }
+
+
+
+
 //}
 
 /**
