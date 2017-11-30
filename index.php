@@ -57,7 +57,7 @@ font-family: Arial;
 
 <div class='icons' >  <table>
      <td>  <a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td>  <!-- AnmeldeIcon wird integriert -->
-      <td> <a href='#'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->
+      <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->
       <td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> </table> </div> 
         <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
    
@@ -102,6 +102,9 @@ if (isset($_GET["page"])) {
 
         case"bearbeiten":
             include "system/backend/bearbeiten/form.php";
+            break;
+        case"warenkorb":
+            include"system/warenkorb.php";
             break;
 
         default:

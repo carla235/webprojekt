@@ -55,14 +55,17 @@ try {
                  </select><br><br>
 
 
+
                  ARTIKELBESCHREIBUNG:<br>
                  $zeile->artikelbeschreibung<br><br>
                  DETAILS:<br>
                  $zeile->details<br><br>
                  LIEFERZEIT 3-5 WERKTAGE | 4,90€ 
-                  </div>
+                 <br><br>
+                
+                <a href='index.php?page=warenkorb&artikelnummer=$zeile->artikelnummer'>In den Warenkorb</a>
                  
-      
+    
       ";}
       $db=null;}
 

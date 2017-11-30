@@ -85,7 +85,7 @@ if ($_FILES['bild']['size'] != 0 ) {
         echo "$x";
         die();
     };
-   // header("Location: ../../index.php");
+    header("Location: ../../index.php");
 } else {
     $errorMessage = "Eingabe unvollständig.";
 }
