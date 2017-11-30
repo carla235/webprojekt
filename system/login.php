@@ -28,11 +28,16 @@ margin: 10px;
 }
 </style>
 </head>
-<body>
+<body>";
 
 
-<!-- Beginn Login -->
 
+if(isset($_SESSION['kundennummer'])){
+    include './system/logout.php';
+}
+else{
+
+echo"
 <div class='login'>
 <h1>Login! </h1>
 <form action='./system/login_logic.php' method='post'>
@@ -96,7 +101,7 @@ Passwort:<input type='password' name='passwort'><br>
 
 
 
-";
+";}
 
 /**
  * Created by PhpStorm.
