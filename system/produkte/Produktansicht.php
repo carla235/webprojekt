@@ -1,6 +1,7 @@
 <?php
 
 include(dirname(__FILE__) . "/../account/userdata.php");
+session_start();
 echo"<html>
 <head>
 <style>
@@ -63,11 +64,30 @@ try {
                  LIEFERZEIT 3-5 WERKTAGE | 4,90€ 
                  <br><br>
                 
-                <a href='index.php?page=warenkorb&artikelnummer=$zeile->artikelnummer'>In den Warenkorb</a>
-                 
+            
+             <form action='index.php?page=warenkorb' method='post'>
+             <input type='hidden' name='artikelnummer' value='$zeile->artikelnummer'>
+             <input type='submit' value='In den Warenkorb'></form>
     
       ";}
-      $db=null;}
+
+      if (isset($_POST['artikelnummer'])){
+          $artikelnummer=$_POST['artikelnummer'];
+
+         /* $abfrage = "SELECT * FROM produktkatalog WHERE  artikelnummer = $artikelnummer ";
+          $query = mysqli_query($abfrage);
+          if(mysql_num_rows($query) > 0) {
+              $zeile = mysqli_fetch_array($query);
+                $bild = $zeile->bild;
+                $artikelname =$zeile->artikelname;
+                $marke=$zeile->marke;
+                $preis=$zeile->preis;*/
+
+        $neu = array('bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis);
+        $_SESSION["warenkorb"][$artikelnummer]= $neu;}
+
+
+    $db=null;}
 
 catch (PDOException $e) {
     echo "Error!: Bitte wenden Sie sich an den Administrator!?..." . $e;
