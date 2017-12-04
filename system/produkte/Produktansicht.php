@@ -38,7 +38,7 @@ try {
                  </div>
                  <div class='produktinfos'>
                  <h1> $zeile->artikelname | $zeile->marke </h1>
-                 EAN:$zeile->ean <br><br><br>
+                 EAN: $zeile->ean <br><br><br>
                  PREIS: $zeile->preis € <br><br><br>
                 GRÖßE:  <select name=\"groesse\">
                      <option value=\"XS\">XS</option>
