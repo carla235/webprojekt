@@ -72,7 +72,7 @@ echo"
 <label><b>Details</b></label><br> 
 <input class= 'textfield' type='text' size='20' name='details' placeholder='Artikeldetails' required><br>
 <label><b>Bildupload</b></label><br> 
-<input type='file' size='20' name='bild' id='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
+<input type='file' name='bild' id='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
 <br>
 <input id='erstellen' type=\"submit\" name=\"erstellen\" value=\"Erstellen\">
 </div></form>
