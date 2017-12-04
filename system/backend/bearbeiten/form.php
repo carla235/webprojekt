@@ -96,8 +96,9 @@ try {
 <label><b>Details</b></label><br> 
 <textarea class= 'textfield' id='text' name='details' cols='125' rows='10' >$zeile->details</textarea><br><br>
 <label><b>Bildupload</b></label><br> 
-<input type='text' size='20' name='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
+<input<a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a><br> <!-- not yet required --> 
 <br>
+<input type='file' name='bild' id='bild' placeholder='Klappt noch nicht'><br>
 <input type='submit' value='UPDATE!' class='button'/>
 </div>
 </div> ";
