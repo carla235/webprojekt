@@ -18,7 +18,7 @@ $details = htmlspecialchars($_POST["details"], ENT_QUOTES, "UTF-8");
 echo " 2";
 if (!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && !empty($groesse) && !empty($menge) && !empty($details) && !empty($artikelbeschreibung)) {
 echo "include ";
-    include_once("../../system/account/userdata.php");
+    include_once("./../account/userdata.php");
     //&& !empty($bild), da Bildupload noch nicht umgesetzt ist, ist das noch keine Bedingung
     // sollten diese Felder ausgefuellt sein, dann
 // Datenbankzugriff
@@ -27,7 +27,7 @@ echo "include ";
     echo  $_FILES['bild']['name'];
 if ($_FILES['bild']['size'] != 0 ) {
     echo "BIld nicht 0 ";
-    $upload_folder = '../images/'; //Das Upload-Verzeichnis
+    $upload_folder = './../../../images/'; //Das Upload-Verzeichnis
     $filename = pathinfo($_FILES['bild']['name'], PATHINFO_FILENAME);
     $extension = strtolower(pathinfo($_FILES['bild']['name'], PATHINFO_EXTENSION));
     echo "bild1  ";
@@ -72,8 +72,8 @@ echo "Bild Ende";
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
             "INSERT INTO produktkatalog(artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES (:artikelname, :marke, :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
         );
-        //$query->execute(array("artikelname" => $artikelname, "marke" => $marke, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "artikelbeschreibung" => $artikelbeschreibung, "details" => $details, "bild" => $dbfile));
-        $query->bindParam(':artikelname', $artikelname);
+        $query->execute(array("artikelname" => $artikelname, "marke" => $marke, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "artikelbeschreibung" => $artikelbeschreibung, "details" => $details, "bild" => $dbfile));
+       /* $query->bindParam(':artikelname', $artikelname);
         $query->bindParam(':marke', $marke);
         $query->bindParam(':ean', $ean);
         $query->bindParam(':preis', $preis);
@@ -81,7 +81,7 @@ echo "Bild Ende";
         $query->bindParam(':menge', $menge);
         $query->bindParam(':artikelbeschreibung', $artikelbeschreibung);
         $query->bindParam(':details', $details);
-        $query->bindParam(':bild', $dbfile);
+        $query->bindParam(':bild', $dbfile);*/
 
         $db = null;// Daten werden eingetragen
 
@@ -91,7 +91,7 @@ echo "Bild Ende";
         die();
     };
 
-    die();
+
     header("Location: ../../index.php");
 } else {
     $errorMessage = "Eingabe unvollständig.";
