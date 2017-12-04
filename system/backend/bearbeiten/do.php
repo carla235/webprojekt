@@ -15,10 +15,10 @@
     $menge = htmlspecialchars($_POST["menge"], ENT_QUOTES, "UTF-8");
     $artikelbeschreibung = htmlspecialchars($_POST["artikelbeschreibung"], ENT_QUOTES, "UTF-8");
     $details = htmlspecialchars($_POST["details"], ENT_QUOTES, "UTF-8");
-    $bild = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
-//$dbfile = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
+    //$bild = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
+$dbfile = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
 
-    if (!empty($artikelnummer) && !empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && !empty($groesse) && !empty($menge) && !empty($details) && !empty($artikelbeschreibung) && !empty($bild)) {
+    if (!empty($artikelnummer) &&!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && !empty($groesse) && !empty($menge) && !empty($details) && !empty($artikelbeschreibung)) {
 
 
         try {
@@ -28,7 +28,7 @@
             $db = new PDO($dsn, $dbuser, $dbpass, $option);
             $query = $db->prepare(
                 "UPDATE produktkatalog SET marke= :marke, artikelname= :artikelname, artikelbeschreibung= :artikelbeschreibung, ean= :ean, preis= :preis, groesse= :groesse, menge= :menge, details= :details, bild= :bild WHERE artikelnummer = :artikelnummer" );         //neuer Inhalt wird reingeschrieben
-            $query->execute(array("marke" => $marke, "artikelname" => $artikelname, "artikelnummer" => $artikelnummer, "artikelbeschreibung" => $artikelbeschreibung, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "details" => $details, "bild" => $bild));
+            $query->execute(array("marke" => $marke, "artikelname" => $artikelname, "artikelnummer" => $artikelnummer, "artikelbeschreibung" => $artikelbeschreibung, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "details" => $details, "bild" => $dbfile));
             $db = null;
             header('Location: ../../../index.php');          //auf index zurückgeleitet
         } catch (PDOException $e) {

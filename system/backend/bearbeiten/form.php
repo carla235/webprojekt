@@ -81,10 +81,10 @@ try {
 <input type=\"text\" size=\"20\" maxlength='50' name='marke' value='$zeile->marke'><br><br>
 <label><b>Artikelname</b></label><br> 
 <input type='text' size='20' maxlength='50' name='artikelname' value='$zeile->artikelname'><br><br>
-<label><b>EAN-Code</b></label><br> 
-<input type='text' size='20' maxlength='13' name='ean' value='$zeile->ean'><br><br>
 <label><b>Artikelnummer</b></label><br> 
 <input type='text' size='20' maxlength='5' name='artikelnummer' value='$zeile->artikelnummer'><br><br>
+<label><b>EAN-Code</b></label><br> 
+<input type='text' size='20' maxlength='13' name='ean' value='$zeile->ean'><br><br>
 <label><b>Preis</b></label><br> 
 <input type='text' size='20' maxlength='10' name='preis' value='$zeile->preis'><br><br>
 <label><b>Größe</b></label><br>
