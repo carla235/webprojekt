@@ -103,8 +103,6 @@ try {
 <input type='submit' value='UPDATE!' class='button'/>
 </div>
 </div> ";
-
-
         echo "</form>";
         echo "</div>";
 
