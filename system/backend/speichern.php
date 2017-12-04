@@ -27,7 +27,7 @@ echo "include ";
     echo  $_FILES['bild']['name'];
 if ($_FILES['bild']['size'] != 0 ) {
     echo "BIld nicht 0 ";
-    $upload_folder = './../../../images/'; //Das Upload-Verzeichnis
+    $upload_folder = './../../images/'; //Das Upload-Verzeichnis
     $filename = pathinfo($_FILES['bild']['name'], PATHINFO_FILENAME);
     $extension = strtolower(pathinfo($_FILES['bild']['name'], PATHINFO_EXTENSION));
     echo "bild1  ";
