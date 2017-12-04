@@ -11,8 +11,9 @@ echo
 <head>
     <title>SHOP</title>
     <style>
- .artikelname {
+ .produkt.artikel {
  font-family: Arial;
+ display: inline;
  }
  
  .preis {
@@ -21,7 +22,7 @@ echo
  
     
 .produkt {
-
+display: inline;
 }
 
 </style>
@@ -46,8 +47,8 @@ try {
 
             echo "<div align='left'> <a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a> </div>";
             echo "<div class='preis'>$zeile->preis € </div>";
-            echo "<br><br>    </a>  </div>
-</tr>";
+            echo "<br><br>    </a>  </div>";
+
          }
 echo "<br>";
 
