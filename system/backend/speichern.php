@@ -63,7 +63,9 @@ echo "3";
     }
 
 //Alles okay,  verschiebe Datei an neuen Pfad
-    move_uploaded_file($_FILES['bild']['tmp_name'], $new_path);
+    move_uploaded_file($_FILES['bild']['tmp_name'], $new_path,
+    'hochgeladenes/'. $_FILES['bild']['name']);
+
     echo 'Bild erfolgreich hochgeladen: <a href="' . $new_path . '">' . $new_path . '</a>';}
 echo "Bild Ende";
     try {

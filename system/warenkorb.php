@@ -30,11 +30,11 @@ margin-left: 10px;
 
 
         if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
-            foreach($_SESSION['warenkorb']as $artikelnummer=> $artikelname){
-               echo $bild['bild'];
-               echo $artikelname['artikelname'];
-               echo $marke['marke'];
-               echo $preis['preis'];
+            foreach($_SESSION['warenkorb']as $neu=> $artikelnummer){
+               echo $neu['bild'];
+               echo $neu['artikelname'];
+               echo $neu['marke'];
+               echo $neu['preis'];
             }
         }
 
