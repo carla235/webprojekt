@@ -38,7 +38,7 @@ try {
                  </div>
                  <div class='produktinfos'>
                  <h1> $zeile->artikelname | $zeile->marke </h1>
-                 EAN:$zeile->ean <br><br><br>
+                 EAN: $zeile->ean <br><br><br>
                  PREIS: $zeile->preis € <br><br><br>
                 GRÖßE:  <select name=\"groesse\">
                      <option value=\"XS\">XS</option>
@@ -65,7 +65,7 @@ try {
                  <br><br>
                 
             
-             <form action='index.php?page=warenkorb' method='post'>
+             <form action='' method='post'>
              <input type='hidden' name='artikelnummer' value='$zeile->artikelnummer'>
              <input type='submit' value='In den Warenkorb'></form>
     
@@ -73,18 +73,20 @@ try {
 
       if (isset($_POST['artikelnummer'])){
           $artikelnummer=$_POST['artikelnummer'];
+          echo $_POST["artikelnummer"];
 
-         /* $abfrage = "SELECT * FROM produktkatalog WHERE  artikelnummer = $artikelnummer ";
-          $query = mysqli_query($abfrage);
-          if(mysql_num_rows($query) > 0) {
-              $zeile = mysqli_fetch_array($query);
+
                 $bild = $zeile->bild;
                 $artikelname =$zeile->artikelname;
                 $marke=$zeile->marke;
-                $preis=$zeile->preis;*/
+                $preis=$zeile->preis;
 
         $neu = array('bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis);
-        $_SESSION["warenkorb"][$artikelnummer]= $neu;}
+        $_SESSION["warenkorb"][$artikelnummer]= $neu;
+
+          echo $_SESSION["warenkorb"] ;}
+
+
 
 
     $db=null;}

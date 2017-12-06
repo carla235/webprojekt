@@ -81,10 +81,10 @@ try {
 <input type=\"text\" size=\"20\" maxlength='50' name='marke' value='$zeile->marke'><br><br>
 <label><b>Artikelname</b></label><br> 
 <input type='text' size='20' maxlength='50' name='artikelname' value='$zeile->artikelname'><br><br>
-<label><b>EAN-Code</b></label><br> 
-<input type='text' size='20' maxlength='13' name='ean' value='$zeile->ean'><br><br>
 <label><b>Artikelnummer</b></label><br> 
 <input type='text' size='20' maxlength='5' name='artikelnummer' value='$zeile->artikelnummer'><br><br>
+<label><b>EAN-Code</b></label><br> 
+<input type='text' size='20' maxlength='13' name='ean' value='$zeile->ean'><br><br>
 <label><b>Preis</b></label><br> 
 <input type='text' size='20' maxlength='10' name='preis' value='$zeile->preis'><br><br>
 <label><b>Größe</b></label><br>
@@ -95,13 +95,14 @@ try {
 <textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='125' rows='10'>$zeile->artikelbeschreibung</textarea><br><br>
 <label><b>Details</b></label><br> 
 <textarea class= 'textfield' id='text' name='details' cols='125' rows='10' >$zeile->details</textarea><br><br>
-<label><b>Bildupload</b></label><br> 
-<input type='text' size='20' name='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
+<label><b>Bild ändern</b></label><br> 
+<br><b>Aktuelles Bild</b><br> 
+<a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a><br> <!-- not yet required --> 
 <br>
+<input type='file' name='bild' id='bild'><br>
 <input type='submit' value='UPDATE!' class='button'/>
 </div>
 </div> ";
-
         echo "</form>";
         echo "</div>";
 
