@@ -41,3 +41,4 @@ $dbfile = htmlspecialchars($_POST["bild"], ENT_QUOTES, "UTF-8");
 
 
 
+
