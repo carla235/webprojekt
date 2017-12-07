@@ -15,10 +15,15 @@ echo "
 .Kosten{
 float:right;
 width:300px;
-margin-top:50px;
+margin-top:10px;
+margin-right: 50px;
 }
 
 .produkt{
+float: left; 
+width: 300px;
+margin-left: 30px;
+
 
 }
 
@@ -30,28 +35,28 @@ margin-top:50px;
 
 
         if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
-            foreach($_SESSION['warenkorb']as $neu){
-               echo "<img src='./../../images/".$neu['bild']."/'><br>";
-               echo $neu['artikelname']."<br>";
+            foreach($_SESSION['warenkorb']as $neu){ // Gibt Artikelinformationen aus Session array aus
+               echo "<img src='/../../images/".$neu['bild']." '> <br> ";
+               echo $neu['artikelname']." |  ";
                echo $neu['marke']."<br>";
                echo $neu['preis']."€<br><br><br>";
             }
         }
 echo "</div>
 <div class='Kosten'>
-<h1>Kosten</h1>";
+<h1>Zur Kasse!</h1>";
 
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
-    foreach($_SESSION['warenkorb']as $neu){
-      echo $neu['preis']."€<br><br><br>";
+
+    foreach($_SESSION['warenkorb']as $neu){ // Gibt artikelname und Preis aus Session array aus
+    echo $neu['artikelname']." | ";
+    echo $neu['preis']."€<br><br><br>";
 
     }
     }
+    echo"Versand: 4,90€ <br>";
+    echo"Summe:<br>";
     echo"</div>";
-
-
-
-
 
 
 
