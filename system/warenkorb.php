@@ -10,33 +10,48 @@ echo "
 <head>
 <title>Warenkorb</title>
 <style>
-.produktinfos{
-position: absolute;
-width:200px;
-left: 200px;
-bottom: 120px;
 
+
+.Kosten{
+float:right;
+width:300px;
+margin-top:50px;
 }
-.bild{
-position: absolute; 
-margin-left: 10px;
+
+.produkt{
+
 }
 
 </style>
 </head>
 <body>
-<h1>Mein Warenkorb</h1>
+<h1>Mein Warenkorb</h1><div class='produkt'>
 <br><br>";
 
 
         if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
-            foreach($_SESSION['warenkorb']as $neu=> $artikelnummer){
-               echo $neu['bild'];
-               echo $neu['artikelname'];
-               echo $neu['marke'];
-               echo $neu['preis'];
+            foreach($_SESSION['warenkorb']as $neu){
+               echo "<img src='./../../images/".$neu['bild']."/'><br>";
+               echo $neu['artikelname']."<br>";
+               echo $neu['marke']."<br>";
+               echo $neu['preis']."€<br><br><br>";
             }
         }
+echo "</div>
+<div class='Kosten'>
+<h1>Kosten</h1>";
+
+if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
+    foreach($_SESSION['warenkorb']as $neu){
+      echo $neu['preis']."€<br><br><br>";
+
+    }
+    }
+    echo"</div>";
+
+
+
+
 
 
 
