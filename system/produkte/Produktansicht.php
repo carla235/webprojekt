@@ -71,10 +71,18 @@ try {
     
       ";}
 
-      if (isset($_POST['artikelnummer'])){
+      if (isset($_POST['artikelnummer'])){// Artikel werden in Session array abgespeichert, mit dem sie im Warenkorb ausgelesen werden
           $artikelnummer=$_POST['artikelnummer'];
           echo $_POST["artikelnummer"];
 
+
+              $artikelnummer = (int)$_GET["artikelnummer"];
+              $db = new PDO($dsn, $dbuser, $dbpass, $option);
+              $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
+              $query = $db->prepare($sql);
+              $query->execute();
+
+              while ($zeile = $query->fetchObject()) {
 
                 $bild = $zeile->bild;
                 $artikelname =$zeile->artikelname;
@@ -84,12 +92,12 @@ try {
         $neu = array('bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
 
-          echo $_SESSION["warenkorb"] ;}
+                  ;}
 
 
 
 
-    $db=null;}
+    $db=null;}}
 
 catch (PDOException $e) {
     echo "Error!: Bitte wenden Sie sich an den Administrator!?..." . $e;
