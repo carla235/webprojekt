@@ -25,7 +25,7 @@ echo "
  
  </style>
  </head>
- <body> <div> <a href='../index.php?page=start'>Zurück zur Startseite </a></li> </div>
+ <body> <div> <a href='index.php?page=start'>Zurück zur Startseite </a></li> </div>
  </body>
  </html> 
  ";

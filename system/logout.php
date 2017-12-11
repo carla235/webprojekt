@@ -7,7 +7,7 @@
  */
 session_destroy();
 
-include "../system/logout_confirmation.php";
+include "logout_confirmation.php";
 
 ?>
 
