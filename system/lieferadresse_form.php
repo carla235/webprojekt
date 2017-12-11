@@ -96,7 +96,7 @@ try {
 <input type='submit' value='UPDATE!' class='button'/>
 </div> ";
         echo "</form>";
-        echo "</div>"
+        echo "</div>";
 
     }
     //else {
