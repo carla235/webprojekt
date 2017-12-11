@@ -26,8 +26,8 @@ display: inline;
 }
 
 .gallery {
-height: 390px; 
-width: 450px; 
+height: 40%; 
+width: 30%; 
 margin: 5px;  
 float: right; 
 }
