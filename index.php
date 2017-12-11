@@ -31,7 +31,8 @@ echo "
    }
    
 .menue a{
-padding: 150px;
+padding-left: 150px;
+padding-right: 150px;
 text-decoration: none;
 color: black;
 font-family: Arial;

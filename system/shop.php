@@ -29,6 +29,7 @@ display: inline;
 height: 390px; 
 width: 450px; 
 margin: 5px;  
+float: right; 
 }
 
 </style>
