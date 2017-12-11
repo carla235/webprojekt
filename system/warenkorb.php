@@ -71,6 +71,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
 
     echo"</div>";
+echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></div>";
 
 
 

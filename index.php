@@ -107,6 +107,9 @@ if (isset($_GET["page"])) {
         case"warenkorb":
             include"system/warenkorb.php";
             break;
+        case"kaufen":
+            include"system/lieferadresse_form.php";
+            break;
 
         default:
             include "system/start.php";
