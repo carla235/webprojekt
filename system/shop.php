@@ -28,8 +28,7 @@ display: inline;
 .gallery {
 height: 390px; 
 width: 450px; 
-margin: 5px; 
-float: right; 
+margin: 5px;  
 }
 
 </style>
