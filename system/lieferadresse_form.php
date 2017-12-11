@@ -96,6 +96,7 @@ try {
 <input type='submit' value='UPDATE!' class='button'/>
 </div> ";
         echo "</form>";
+        echo"<div class='uebersicht'><li><a href='index.php?page=uebersicht'>Weiter</a></li></div>";
         echo "</div>";
 
     }
