@@ -6,7 +6,7 @@
  * Time: 10:20 PM
  */
 
-echo "Sie wurden erfolgreich Abgemeldet.";
+echo "Sie wurden erfolgreich Abgemeldet";
 
 echo " 
  <html> 

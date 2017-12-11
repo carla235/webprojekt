@@ -10,7 +10,7 @@ echo
     "<html>
 <head>
     <title>SHOP</title>
-    <style>
+   <style>
  .produkt.artikel {
  font-family: Arial;
  display: inline;
@@ -23,6 +23,13 @@ echo
     
 .produkt {
 display: inline;
+}
+
+.gallery {
+height: 390px; 
+width: 450px; 
+margin: 5px; 
+float: right; 
 }
 
 </style>
@@ -40,14 +47,14 @@ try {
     while ($zeile = $query->fetchObject()) {
 
 
-            echo "<div class='produkt'>
+            echo "<div class='gallery'>
+             <div class='produkt'>
              <a href='index.php?page=produkt&artikelnummer=$zeile->artikelnummer' <div class='artikel'>$zeile->marke - 
-                   $zeile->artikelname</div><br>";
-
-
-            echo "<div align='left'> <a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a> </div>";
-            echo "<div class='preis'>$zeile->preis € </div>";
-            echo "<br><br>    </a>  </div>";
+                   $zeile->artikelname</div><br>
+              <div class='bild' align='left'> <a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a> </div>
+              <div class='preis'>$zeile->preis € </div>
+              <br><br>    </a>  </div>
+              </div>";
 
          }
 echo "<br>";
