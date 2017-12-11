@@ -66,12 +66,11 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
     }
     }
     echo"Versand: 4,90€ <br><br><br>";
-    echo"Summe:<br>";
-
+    echo"Summe:<br><br><br>";
+echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></div>";
 
 
     echo"</div>";
-echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></div>";
 
 
 
@@ -81,6 +80,7 @@ echo "</body>
 
 </html>
 ";
+
 
 /**
  * Created by PhpStorm.
