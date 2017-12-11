@@ -12,7 +12,7 @@ echo "
  <html> 
  <head> 
  <style> 
- div {
+ #logoutconfirmation {
     background-color: white;
     color: black ;
     padding: 2px 5px;
@@ -25,7 +25,7 @@ echo "
  
  </style>
  </head>
- <body> <div> <a href='index.php?page=start'>Zurück zur Startseite </a></li> </div>
+ <body> <div id='logoutconfirmation'> <a href='index.php?page=start'>Zurück zur Startseite </a></li> </div>
  </body>
  </html> 
  ";
