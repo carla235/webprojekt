@@ -21,11 +21,11 @@ width: 100%;
    }
     
 
-
 .Kosten{
 float:right;
-width: 400px;
-margin-right: 30px;
+width:300px;
+margin-top:-10px;
+margin-right: 100px;
 }
 
 .produkt{
@@ -46,7 +46,7 @@ top: -150px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     height: 40px;
-    width: 100px;
+    width: 130px;
     background-color: white;
     color: black;
     border: 1px solid black;
