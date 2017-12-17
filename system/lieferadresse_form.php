@@ -63,9 +63,11 @@ input.textfield {
 
 try {
     include(dirname(_FILE) . "/system/account/userdata.php");
-    $kundennummer = (int)$_GET["kundennummer"];
+   $kundennummer = (int)$_GET["kundennummer"];
+
+
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM benutzer ";
+    $sql = "SELECT * FROM benutzer";
     $query = $db->prepare($sql);
     $query->execute();
     while ($zeile=$query->fetchObject()){

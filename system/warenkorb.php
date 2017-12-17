@@ -41,12 +41,22 @@ top: -150px;
 
         if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
             foreach($_SESSION['warenkorb']as $neu){ // Gibt Artikelinformationen aus Session array aus
-               $a = $neu['bild'];
+                $id=$neu['artikelnummer'];
+                $a = $neu['bild'];
                 echo "<a href='#'><img src= './images/$a' width='100px' height='auto'></a>";
                 echo "<div class='produktinfos'>";
                 echo $neu['artikelname']." |  ";
                 echo $neu['marke']."<br>";
-                echo $neu['preis']."€<br><br><br></div>";
+
+                echo $neu['preis']."€<br><br><br>";
+                echo "<a href= './system/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
+
+
+               /* echo    "<form action='' method='post'>
+                        <input type='hidden' name='delete' value='$id'>
+                        <input type='button' name='delete' value='löschen'></form> ";*/
+
+
             }
         }
 
@@ -68,6 +78,11 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
     echo"Versand: 4,90€ <br><br><br>";
     echo"Summe:<br><br><br>";
 echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></div>";
+
+
+
+
+
 
 
     echo"</div>";

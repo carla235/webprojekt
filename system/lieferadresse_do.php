@@ -23,7 +23,7 @@ if (!empty($name) &&!empty($vorname) && !empty($strasse) && !empty($plz) && !emp
 
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(
-            "UPDATE benutzer SET name= :name, vorname= :vorname, strasse= :strasse, plz= :plz, telefonnummer= :telefonnummer, email= :email WHERE kundennummer = :kundennummer" );         //neuer Inhalt wird reingeschrieben
+            "UPDATE benutzer SET name= :name, vorname= :vorname, strasse= :strasse, plz= :plz, telefonnummer= :telefonnummer, email= :email WHERE  kundennummer = :kundennummer" );         //neuer Inhalt wird reingeschrieben
         $query->execute(array("name" => $name, "vorname" => $vorname, "strasse" => $strasse, "telefonnummer" => $telefonnummer, "email" => $email));
         $db = null;
         header('Location: ../index.php');          //auf index zurückgeleitet

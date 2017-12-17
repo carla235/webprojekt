@@ -84,13 +84,13 @@ try {
               $query->execute();
 
               while ($zeile = $query->fetchObject()) {
-
+                $artikelnummer= $zeile->artikelnummer;
                 $bild = $zeile->bild;
                 $artikelname =$zeile->artikelname;
                 $marke=$zeile->marke;
                 $preis=$zeile->preis;
 
-        $neu = array('bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis);
+        $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
 
                   ;}
