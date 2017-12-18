@@ -114,7 +114,7 @@ try {
     include(dirname(_FILE) . "/system/account/userdata.php");
     $kundennummer = (int)$_GET["kundennummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM benutzer ";
+    $sql = "SELECT * FROM benutzer WHERE $_SESSION ['kundennummer']";
     $query = $db->prepare($sql);
     $query->execute();
     while ($zeile=$query->fetchObject()){
