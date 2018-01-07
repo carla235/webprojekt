@@ -109,7 +109,7 @@ echo"
 } catch (PDOException $e) {
     echo "Error!: Bitten wenden Sie sich an den Administrator...";
     die();
-}
+
 
 
 ?>
