@@ -41,8 +41,7 @@ font-family: Arial;
     
 .icons{
     position: relative;
-    bottom: 150px;
-    float:right;
+   float:right;
      }
      
 .icons a{
@@ -58,9 +57,14 @@ font-family: Arial;
 
 <div class='icons' >  <table>
      <td>  <a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td>  <!-- AnmeldeIcon wird integriert -->
-      <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->
-      <td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> </table> </div> 
-        <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
+      <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->";
+
+if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
+echo"<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> ";}
+else{}
+echo"</table>";
+
+echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
    
     
     <br> <br> 

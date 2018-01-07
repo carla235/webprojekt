@@ -47,14 +47,11 @@ top: -150px;
                 echo "<div class='produktinfos'>";
                 echo $neu['artikelname']." |  ";
                 echo $neu['marke']."<br>";
+                echo $neu['groesse'];
+                echo $neu['menge'];
 
                 echo $neu['preis']."€<br><br><br>";
                 echo "<a href= './system/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
-
-
-               /* echo    "<form action='' method='post'>
-                        <input type='hidden' name='delete' value='$id'>
-                        <input type='button' name='delete' value='löschen'></form> ";*/
 
 
             }
