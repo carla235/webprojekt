@@ -92,7 +92,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 }
 echo"Versand: 4,90€ <br><br><br>";
 echo"Summe:<br><br><br>";
-echo"<input type='submit' value='Bestellung abschließen!' class='button'/>";
+echo"<a href='index.php?page=bestätigung' ><input type='submit' value='Bestellung abschließen!' class='button' /></a>";
 
 
 

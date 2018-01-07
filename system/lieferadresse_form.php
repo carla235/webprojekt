@@ -63,11 +63,11 @@ input.textfield {
 
 try {
     include(dirname(_FILE) . "/system/account/userdata.php");
-   $kundennummer = (int)$_GET["kundennummer"];
+   $kundennummer = $_SESSION['kundennummer'];
 
 
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM benutzer";
+    $sql = "SELECT * FROM benutzer WHERE kundennummer=$kundennummer";
     $query = $db->prepare($sql);
     $query->execute();
     while ($zeile=$query->fetchObject()){
@@ -97,7 +97,7 @@ echo"
 <input type='submit' value='UPDATE!' class='button'/>
 </div> ";
         echo "</form>";
-        echo"<div class='uebersicht'><li><a href='index.php?page=uebersicht'>Weiter</a></li></div>";
+        echo"<div class='uebersicht'><li><a href='index.php?page=zahlung'>Weiter</a></li></div>";
         echo "</div>";
 
     }

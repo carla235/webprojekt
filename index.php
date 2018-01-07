@@ -66,7 +66,7 @@ echo"</table>";
 
 echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
    
-    j
+    
     <br> <br> 
  
  <ul class='menue'>
@@ -115,8 +115,16 @@ if (isset($_GET["page"])) {
             include"system/lieferadresse_form.php";
             break;
 
-        case"uebersicht":
+        case"übersicht":
             include"system/uebersicht_form.php";
+            break;
+
+        case"bestätigung":
+            include "system/bestätigung.php";
+            break;
+
+        case"zahlung":
+            include"system/zahlung.php";
             break;
 
         default:
