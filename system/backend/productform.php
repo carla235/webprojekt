@@ -68,7 +68,7 @@ echo"
 <label><b>Menge</b></label><br> 
 <input type='number' size='20' maxlength='2' name='menge' placeholder='maximal 2 Zahlen' required><br>
 <label><b>Artikelbeschreibung</b></label><br> 
-<input class= 'textfield' type='text' size='20' name='artikelbeschreibung' placeholder='Artikelbeschreibung' required><br>
+<textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='125' rows='10'<br></textarea><br><br>
 <label><b>Details</b></label><br> 
 <input class= 'textfield' type='text' size='20' name='details' placeholder='Artikeldetails' required><br>
 <label><b>Bildupload</b></label><br> 
