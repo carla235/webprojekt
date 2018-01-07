@@ -21,6 +21,13 @@ margin-top: 100px;
 }
 
 </style>
+<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\">
+function auswahl() {
+
+
+  
+}
+</script>
 </head>
 
 
@@ -33,28 +40,35 @@ try {
     $query->execute();
 
     while ($zeile = $query->fetchObject()) {
-        echo    "<div class='produkt'></div><div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > 
-                 <div class='bearbeiten'><li><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten</a></li></div>
-                 <div class='loeschen'><li><a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></li></div>
+        echo    "<div class='produkt'></div><div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > ";
+
+        if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
+        echo"    <div class='bearbeiten'><li><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten</a></li></div>
+                 <div class='loeschen'><li><a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></li></div>";}
+            else{}
+            echo"
                  </div>
                  <div class='produktinfos'>
                  <h1> $zeile->artikelname | $zeile->marke </h1>
                  EAN: $zeile->ean <br><br><br>
                  PREIS: $zeile->preis € <br><br><br>
-                GRÖßE:  <select name=\"groesse\">
-                     <option value=\"XS\">XS</option>
-                     <option value=\"S\">S</option>
-                     <option value=\"M\">M</option>
-                     <option value=\"L\">L</option>
-                     <option value=\"XL\">XL</option>
-                 </select><br><br>
+                        <form action='' method='post' >
+                GRÖßE: <select id='groesse 'name=\"groesse\" onchange=''>
+                         <option value=\"XS\">XS</option>
+                         <option value=\"S\">S</option>
+                         <option value=\"M\">M</option>
+                         <option value=\"L\">L</option>
+                         <option value=\"XL\">XL</option>
+                       </select></form><br><br>";
+
+                echo" <form action='' method='post'>
                  MENGE:  <select name=\"menge\">
-                     <option value=\"1\">1</option>
-                     <option value=\"2\">2</option>
-                     <option value=\"3\">3</option>
-                     <option value=\"4\">4</option>
-                     <option value=\"5\">5</option>
-                 </select><br><br>
+                            <option value=\"1\">1</option>
+                            <option value=\"2\">2</option>
+                            <option value=\"3\">3</option>
+                            <option value=\"4\">4</option>
+                            <option value=\"5\">5</option>
+                        </select></form>   <br><br>
 
 
 
@@ -89,8 +103,10 @@ try {
                 $artikelname =$zeile->artikelname;
                 $marke=$zeile->marke;
                 $preis=$zeile->preis;
+                  $groesse = $_POST['groesse'];
+                  $menge=  $_POST['menge'];
 
-        $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis);
+        $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis, 'groesse'=>$groesse, 'menge'=>$menge);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
 
                   ;}
