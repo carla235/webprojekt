@@ -70,7 +70,7 @@ echo"
 <label><b>Artikelbeschreibung</b></label><br> 
 <textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='125' rows='10'<br></textarea><br><br>
 <label><b>Details</b></label><br> 
-<input class= 'textfield' type='text' size='20' name='details' placeholder='Artikeldetails' required><br>
+<textarea class= 'textfield' id='text' name='details' cols='125' rows='10' <br></textarea><br><br>
 <label><b>Bildupload</b></label><br> 
 <input type='file' name='bild' id='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
 <br>
