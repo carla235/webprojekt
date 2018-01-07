@@ -66,7 +66,7 @@ echo"</table>";
 
 echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
    
-    
+    j
     <br> <br> 
  
  <ul class='menue'>
