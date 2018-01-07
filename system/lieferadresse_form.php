@@ -7,7 +7,7 @@
  */
 
 
-
+session_start();
 echo " 
 <html> 
 
@@ -72,15 +72,14 @@ try {
     $query->execute();
     while ($zeile=$query->fetchObject()){
 
-        echo"
-
-<h1> Lieferadresse </h1> 
 
 
-<!-- Variablen im Formualar bzw. das Formular zum ausfuellen --> 
+echo "<h1> Lieferadresse </h1>";
 
 
+//Variablen im Formualar bzw. das Formular zum ausfuellen -->
 
+echo"
 <div class='input'><br>
 <form action='./system/lieferadresse_do.php' method='post'>
 <label><b>Name</b></label><br>   
