@@ -23,19 +23,22 @@ echo
     width:200px;
     }
     .text{
-    margin: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    }
+  
+  width: 900px;
+  
+    
+   
+   
+  }
 
 </style>
 </head>
 
 <body>
 
-<div align='center'><a href='#'><img src='./titelbild.jpg' width='500px' height='250px'></a></div>
+<div align='center'><a href='#'><img src='./images/startak.jpg' width='900px' height='200px'></a></div>
 
-<div class='text'>
+<div class='text'    >
 Wir möchten Menschen in toller Atmosphäre überraschen, sie inspirieren und immer wieder auf’s Neue begeistern. Im Concept Store gibt es individuelle Damenmode, auch stylische, nachhaltige Mode „made fair“. Zum besonderen Produkt- und Markenangebot spielt das Gespräch untereinander und das Erlebnis beim Einkauf eine große Rolle. Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben dieses besondere Markenangebot. Das moderne Erlebniskonzept verbindet Mode, Kunst und Design. Vor allem aber soll der Concept Store ein Ort sein, an dem sich die Kunden entspannen können und sich gerne aufhalten.
 </div>
 
