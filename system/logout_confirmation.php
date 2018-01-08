@@ -27,7 +27,7 @@ echo "
  
  </style>
  </head>
- <body> <div id='logoutconfirmation'> <a href='../index.php?page=start'>Zurück zur Startseite </a></li> </div>
+ <body> <div id='logoutconfirmation'> <a href='./index.php?page=start'>Zurück zur Startseite </a></li> </div>
  </body>
  </html> 
  ";

@@ -10,6 +10,7 @@
         echo "<a href= '/system/logout_confirmation.php'><img src='../logout.png' height='20px' width='auto'></a></div>";
 
 }
-
+*/
+include"logout_confirmation.php";
 ?>
 
