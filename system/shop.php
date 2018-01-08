@@ -51,7 +51,7 @@ try {
              <div class='produkt'>
              <a href='index.php?page=produkt&artikelnummer=$zeile->artikelnummer' <div class='artikel'>$zeile->marke - 
                    $zeile->artikelname</div><br>
-              <div class='bild' align='left'> <a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a> </div>
+              <div class='bild' align='left'> <a href='index.php?page=produkt&artikelnummer=$zeile->artikelnummer'><img src='./images/$zeile->bild' width='225px' height='300px'> </a> </div>
               <div class='preis'>$zeile->preis € </div>
               <br><br>    </a>  </div>
               </div>";
