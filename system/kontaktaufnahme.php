@@ -1,5 +1,5 @@
 <?php
-
+//include_once "./index.php"
 echo " 
 
 <html>
@@ -97,7 +97,22 @@ input[type=submit]:hover, input[type=reset]:hover {
    color: white;
     
 }
-        
+
+#abbrechen {
+    width: 480px;
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    margin-top: 10px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11pt;
+    font-family:;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
+}        
         </style>
     </head>
     <body>
@@ -158,6 +173,7 @@ input[type=submit]:hover, input[type=reset]:hover {
         <div class=\"button\">
             <input type=\"reset\" value=\"Zurücksetzen\" />
             <input type=\"submit\" value=\"Versenden\" onclick=\"alert('Ihre Anfrage wurde abgeschickt')\" />
+            <a id=\"abbrechen\" href='../index.php?page=start'> Abbrechen </a>
         </div>
             </form> 
             </div>

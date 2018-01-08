@@ -47,7 +47,7 @@ Baden-Wurttemberg, Germany<br> <br>
 <div class='Social'>
 <a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='./instagram.png'width='50px' height='50px'></a>
 <a href='https://www.facebook.com/annekern.conceptstore/'><img src='./facebook.png' width='50px' width='50px'></a>
-<div id='kontaktaufnahme'><li><a href='../system/kontaktaufnahme.php'> ANNE KERN Concept Store kontaktieren </a></li></div>
+<div id='kontaktaufnahme'><li><a href='./system/kontaktaufnahme.php'> ANNE KERN Concept Store kontaktieren </a></li></div>
 </div>
 </div> 
 
