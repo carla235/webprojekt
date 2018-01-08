@@ -9,11 +9,6 @@ $option = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 //include(dirname(__FILE__) . "../../account/userdata.php"); // Inkludiere userdata
 
 
-/*$db = new PDO($dsn, $dbuser, $dbpass, $option);
-$sql = ("SELECT artikelnummer FROM produktkatalog WHERE produktkatalog.artikelnummer=" . $_GET['ARTIKELNUMMER']);
-$query = $db->prepare($sql);
-$query->execute(array(':artikelnummer' => $artikelnummer, ));
-$zeile = $query->fetch(); */
 
 if (!empty ($artikelnummer)) {
 
