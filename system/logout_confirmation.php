@@ -6,6 +6,8 @@
  * Time: 10:20 PM
  */
 
+session_destroy();
+
 echo "Sie wurden erfolgreich Abgemeldet";
 
 echo " 
