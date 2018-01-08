@@ -10,15 +10,15 @@ $option = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 
 
 
-if (!empty ($artikelnummer)) {
+if (isset($_GET['artikelnummer'])) {
 
     try {
         //include_once("userdata.php");
-        include(dirname(_FILE) . "/../../account/userdata.php");
-        $artikelnummer= $_GET ['artikelnummer'];
+        include(dirname(_FILE) . "./system/account/userdata.php");
+        $artikelnummer= $_GET['artikelnummer'];
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(
-            "DELETE FROM produktkatalog WHERE artikelnummer= $artikelnummer");         //Produkt wird geloescht
+            "DELETE FROM produktkatalog WHERE artikelnummer = '$artikelnummer' ");         //Produkt wird geloescht
         $query->execute(array("artikelname" => $artikelname, "marke" => $marke, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "artikelbeschreibung" => $artikelbeschreibung, "details" => $details, "bild" => $dbfile));
         //$db = null;
        // header('Location: ../../../index.php');          //auf index zurückgeleitet
@@ -27,9 +27,9 @@ if (!empty ($artikelnummer)) {
         die();
     }
 } else {
-    echo "Error: Bitte alle Felder ausfüllen!";
+    echo "Error!";
 }
-
+die();
 
 
 

@@ -127,6 +127,10 @@ if (isset($_GET["page"])) {
             include"system/zahlung.php";
             break;
 
+        case"loeschen":
+            include"system/backend/loeschen/deleteproduct.php";
+            break;
+
         case"kontaktaufnahme";
             include"system/kontaktaufnahme.php";
             break;
