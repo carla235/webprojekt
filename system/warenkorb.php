@@ -58,7 +58,6 @@ top: -150px;
         }
 
 
-
 echo "</div>
 <div class='Kosten'>
 <h1>ZUSAMMENFASSUNG DEINER BESTELLUNG!</h1>";
@@ -73,7 +72,12 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
     }
     }
     echo"Versand: 4,90€ <br><br><br>";
-    echo"Summe:<br><br><br>";
+
+
+
+
+    $p=   + 4.90 ;
+    echo"Summe: $p €<br><br><br>";
 echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></div>";
 
 
