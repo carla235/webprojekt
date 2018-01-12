@@ -64,6 +64,7 @@ font-family: Arial;
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
 echo"<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> <!-- Produkte hinzufuegen -->";
 echo"<td> <a href='index.php?page=logout'><img src='logout.png' width='30px' height='30px'></a></td> <!-- LogoutIcon -->";
+echo" ";
 
    }
 else{}
