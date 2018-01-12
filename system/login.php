@@ -35,6 +35,7 @@ margin: 10px;
 if(isset($_SESSION['kundennummer'])){
     include './system/logout.php';
 }
+
 else{
 
 echo"
@@ -101,7 +102,9 @@ Passwort:<input type='password' name='passwort'><br>
 
 
 
-";}
+";
+
+}
 
 /**
  * Created by PhpStorm.
