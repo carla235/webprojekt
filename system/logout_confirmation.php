@@ -15,7 +15,7 @@ echo "
  <head> 
  <style> 
  #logoutconfirmation {
-    background-color: white;
+    background-color: white;  
     color: black ;
     padding: 2px 5px;
     margin: 8px 0;

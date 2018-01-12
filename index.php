@@ -59,8 +59,11 @@ font-family: Arial;
      <td>  <a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td>  <!-- AnmeldeIcon wird integriert -->
       <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->";
 
+
+
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
-echo"<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> ";}
+echo"<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> <!-- Produkte hinzufuegen -->";
+echo"<td> <a href='index.php?page=logout'><img src='logout.png' width='30px' height='30px'></a></td> <!-- LogoutIcon -->";}
 else{}
 echo"</table>";
 
@@ -91,6 +94,10 @@ if (isset($_GET["page"])) {
 
         case "login":
             include "system/login.php";
+            break;
+
+        case"logout":
+            include"system/logout.php";
             break;
 
         case"shop":
