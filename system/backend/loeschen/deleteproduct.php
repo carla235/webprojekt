@@ -31,7 +31,7 @@ if (isset($_GET['artikelnummer'])) {
 }
 die();
 
-include '/productdeleted.php';
+include './productdeleted.php';
 
 
 
