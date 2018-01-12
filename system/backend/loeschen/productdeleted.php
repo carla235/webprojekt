@@ -19,7 +19,7 @@ echo "
  
  </style>
  </head>
- <body> <div id='shoplink'> <a href='../../shop.php'>Zurück zum Shop</a> </div>
+ <body> <div id='shoplink'> <a href='../../../index.php?page=shop'>Zurück zum Shop</a> </div>
  </body>
  </html> 
  ";
