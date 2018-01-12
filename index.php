@@ -119,9 +119,9 @@ if (isset($_GET["page"])) {
             include"system/uebersicht_form.php";
             break;
 
-       // case"bestätigung":
-         //   include "system/bestätigung.php";
-         //   break;
+        case"bestätigung":
+            include "system/bestätigung.php";
+            break;
 
         case"zahlung":
             include"system/zahlung.php";

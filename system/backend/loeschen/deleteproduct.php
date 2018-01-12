@@ -14,7 +14,7 @@ if (isset($_GET['artikelnummer'])) {
 
     try {
 
-        include(dirname(_FILE) . "./system/account/userdata.php");
+        include(dirname(_FILE) . "/system/account/userdata.php");
         $artikelnummer= $_GET['artikelnummer'];
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(
