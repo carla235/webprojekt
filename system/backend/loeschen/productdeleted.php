@@ -6,7 +6,7 @@ echo "
  <html> 
  <head> 
  <style> 
- div {
+ #shoplink {
     background-color: white;
     color: black ;
     padding: 2px 5px;
@@ -19,7 +19,7 @@ echo "
  
  </style>
  </head>
- <body> <div> <a href='../../../index.php?page=shop'>Zurück zum Shop</a> </div>
+ <body> <div id='shoplink'> <a href='../../shop.php'>Zurück zum Shop</a> </div>
  </body>
  </html> 
  ";

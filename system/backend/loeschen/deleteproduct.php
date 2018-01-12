@@ -29,9 +29,10 @@ if (isset($_GET['artikelnummer'])) {
 } else {
     echo "Error!";
 }
-die();
+;
 
-include './productdeleted.php';
+include"productdeleted.php";
 
+//header("Location: ../../index.php");
 
 
