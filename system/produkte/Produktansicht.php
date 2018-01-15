@@ -86,7 +86,7 @@ try {
     
       ";}
 
-      if (isset($_POST['artikelnummer'])){// Artikel werden in Session array abgespeichert, mit dem sie im Warenkorb ausgelesen werden
+      if (isset($_POST['artikelnummer'])){ // Artikel werden in Session array abgespeichert, mit dem sie im Warenkorb ausgelesen werden
           $artikelnummer=$_POST['artikelnummer'];
           echo $_POST["artikelnummer"];
 

@@ -19,9 +19,6 @@ echo "
   
     <style>
     
-
-    
-
 .menue li{
     display: inline;
     list-style: none;

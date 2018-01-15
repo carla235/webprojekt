@@ -5,6 +5,7 @@
  * Date: 11.12.17
  * Time: 16:48
  */
+session_start();
 
 $name = htmlspecialchars($_POST["name"], ENT_QUOTES, "UTF-8");
 $vorname = htmlspecialchars($_POST["vorname"], ENT_QUOTES, "UTF-8");
@@ -16,6 +17,7 @@ $email = htmlspecialchars($_POST["email"], ENT_QUOTES, "UTF-8");
 
 if (!empty($name) &&!empty($vorname) && !empty($strasse) && !empty($plz) && !empty($telefonnummer) && !empty($email)) {
 
+    $kundennummer = $_SESSION['kundennummer'];
 
     try {
         //include_once("userdata.php");
@@ -23,7 +25,7 @@ if (!empty($name) &&!empty($vorname) && !empty($strasse) && !empty($plz) && !emp
 
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(
-            "UPDATE benutzer SET name= :name, vorname= :vorname, strasse= :strasse, plz= :plz, telefonnummer= :telefonnummer, email= :email WHERE  kundennummer = :kundennummer" );         //neuer Inhalt wird reingeschrieben
+            "UPDATE benutzer SET name= :name, vorname= :vorname, strasse= :strasse, plz= :plz, telefonnummer= :telefonnummer, email= :email WHERE  kundennummer = $kundennummer" );       //neuer Inhalt wird reingeschrieben
         $query->execute(array("name" => $name, "vorname" => $vorname, "strasse" => $strasse, "telefonnummer" => $telefonnummer, "email" => $email));
         $db = null;
         header('Location: ../index.php');          //auf index zurückgeleitet
