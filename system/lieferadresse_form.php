@@ -94,11 +94,10 @@ echo"
 <input type='text' size='20' maxlength='13' name='telefonnummer' value='$zeile->telefonnummer'><br><br>
 <label><b>E-mail</b></label><br> 
 <input type='text' size='20' maxlength='50' name='email' value='$zeile->email'><br><br>
-<input type='submit' value='UPDATE!' class='button'/>
+<input type='submit' value='WEITER!' class='button'/>
 </div> ";
         echo "</form>";
-        echo"<div class='uebersicht'><li><a href='index.php?page=zahlung'>Weiter</a></li></div>";
-        echo "</div>";
+
 
     }
     //else {

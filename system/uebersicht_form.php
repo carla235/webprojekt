@@ -5,7 +5,7 @@
  * Date: 11.12.17
  * Time: 18:32
  */
-
+session_start();
 echo " 
 <html> 
 
@@ -64,6 +64,8 @@ input.textfield {
 echo "<h1>ZUSAMMENFASSUNG DEINER BESTELLUNG!</h1>";
 
 
+
+
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
     foreach($_SESSION['warenkorb']as $neu){ // Gibt Artikelinformationen aus Session array aus
         $a = $neu['bild'];
@@ -75,7 +77,10 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
     }
 }
 
+$zahlung = $_POST['Zahlmethode'];
+echo $zahlung;
 
+$_SESSION["zahlung"] = $zahlung;
 
 echo "</div>
 <div class='Kosten'>
@@ -91,33 +96,28 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
     }
 }
 
-echo $zahlung;
+
 
 echo"Versand: 4,90€ <br><br><br>";
 echo"Summe:<br><br><br>";
-echo"<a href='index.php?page=bestätigung' ><input type='submit' value='Bestellung abschließen!' class='button' /></a>";
 
+echo"
+<form method='post' action='./system/bestellung_do.php'>
+<input type='submit' value='Bestellung abschließen!' class='button' />
+</form>";
 
 
 echo"</div>";
 
 
 
-
-echo "</body>
-
-
-</html>
-";
-
-
-
+$kundennummer = $_SESSION['kundennummer'];
 
 try {
     include(dirname(_FILE) . "/system/account/userdata.php");
-    $kundennummer = (int)$_GET["kundennummer"];
+
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
-    $sql = "SELECT * FROM benutzer WHERE $_SESSION ['kundennummer']";
+    $sql = "SELECT * FROM benutzer WHERE kundennummer=$kundennummer";
     $query = $db->prepare($sql);
     $query->execute();
     while ($zeile=$query->fetchObject()){
@@ -126,10 +126,7 @@ try {
 
 <h1> Lieferadresse </h1> 
 
-
 <!-- Variablen im Formualar bzw. das Formular zum ausfuellen --> 
-
-
 
 <div class='lieferadresse'><br>
 
@@ -145,9 +142,6 @@ E-mail: $zeile->email<br><br><br>
         echo "</div>";
 
     }
-    //else {
-    //  echo "Datensatz nicht gefunden!";
-    //  }
 
     $db = null;
 } catch (PDOException $e) {
@@ -156,4 +150,10 @@ E-mail: $zeile->email<br><br><br>
 }
 
 
+echo "</body>
+
+
+</html>
+";
 ?>
+

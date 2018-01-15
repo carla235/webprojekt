@@ -6,7 +6,7 @@ echo "
 </head>
 <body>
 <h1>Bitte wähle deine Zahlungsmethode!</h1>
-<form >
+<form method='post' action='index.php?page=übersicht'>
 
     <input type=\"radio\" id=\"mc\" name='Zahlmethode' value=\"Kreditkarte\">
     <label for=\"mc\"> Kreditkarte</label> <br><br>
@@ -15,13 +15,13 @@ echo "
     <input type=\"radio\" id=\"ae\" name=\"Zahlmethode\" value=\"Lastschrift\">
     <label for=\"ae\"> Lastschrift</label> <br><br>
    
-
+<input type='submit' value='Weiter!' class='button'/>
 
 </form>
 ";
 
 echo"
- <a href='index.php?page=übersicht'><input type='submit' value='Weiter!' class='button'/></a>
+ 
 
 </body>
 

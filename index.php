@@ -52,18 +52,22 @@ font-family: Arial;
 
          <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-<div class='icons' >  <table>
-     <td>  <a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td>  <!-- AnmeldeIcon wird integriert -->
+<div class='icons' >  <table>";
+if (!isset ($_SESSION['kundennummer'])){
+echo"
+     <td><a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td><!-- AnmeldeIcon wird integriert -->";}
+   else{
+         echo"
+    <td> <a href='index.php?page=logout'><img src='logout.png' width='30px' height='30px'></a></td> <!-- LogoutIcon -->";}
+    echo"
       <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->";
 
 
 
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
-echo"<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> <!-- Produkte hinzufuegen -->";
-echo"<td> <a href='index.php?page=logout'><img src='logout.png' width='30px' height='30px'></a></td> <!-- LogoutIcon -->";
-echo" ";
+echo "<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> <!-- Produkte hinzufuegen -->";
 
-   }
+}
 else{}
 echo"</table>";
 
