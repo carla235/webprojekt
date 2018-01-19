@@ -65,7 +65,9 @@ echo"
 
 
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
-echo "<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> <!-- Produkte hinzufuegen -->";
+echo "<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> 
+      <td> <a href='index.php?page=bestelluebersicht'><img src='list.png' width='30px' height ='30px'</a></td>
+<!-- Produkte hinzufuegen -->";
 
 }
 else{}
@@ -148,6 +150,14 @@ if (isset($_GET["page"])) {
 
         case"kontaktaufnahme";
             include"system/kontaktaufnahme.php";
+            break;
+
+        case"bestelluebersicht";
+            include"system/backend/backend_uebersicht.php";
+            break;
+
+        case"bestellposition";
+            include "system/backend/uebersicht_position.php";
             break;
 
         default:
