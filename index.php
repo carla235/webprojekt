@@ -63,7 +63,6 @@ echo"
       <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->";
 
 
-
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
 echo "<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> 
       <td> <a href='index.php?page=bestelluebersicht'><img src='list.png' width='30px' height ='30px'</a></td>
