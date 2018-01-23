@@ -170,5 +170,5 @@ else
     include "system/start.php";
 }
 
-echo "</body> </html>";
+echo "</body> </html>"
 
