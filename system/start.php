@@ -28,10 +28,10 @@ echo
       <img class=\"d-block w-100\" src=\"./images/startak.jpg\" alt=\"First slide\">
     </div>
     <div class=\"carousel-item\">
-      <img class=\"d-block w-100\" src=\"...\" alt=\"Second slide\">
+      <img class=\"d-block w-100\" src=\"./images/slider.jpg\" alt=\"Second slide\">
     </div>
     <div class=\"carousel-item\">
-      <img class=\"d-block w-100\" src=\"...\" alt=\"Third slide\">
+      <img class=\"d-block w-100\" src=\"./images/prozente_slider.png\" alt=\"Third slide\">
     </div>
   </div>
   <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
