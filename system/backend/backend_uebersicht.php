@@ -7,13 +7,17 @@ echo"
 </head>
 
 <body>";
- echo   "<table>
-<tr>
-<th>Bestellnummer</th>
-<th>Kundennummer</th>
-<th>Eingangsdatum</th>
-<th>Zahlungsart</th>
-</tr>";
+ echo   "<table class=\"table table-striped\">
+  <thead>
+    <tr>
+      <th scope=\"col\">Bestellnummer</th>
+      <th scope=\"col\">Kundennummer</th>
+      <th scope=\"col\">Eingangsdatum</th>
+      <th scope=\"col\">Zahlungsart</th>
+    </tr>
+  </thead>
+   <tbody>
+";
 
 include "./system/account/userdata.php";
 
@@ -24,7 +28,6 @@ try {
     $query->execute();
 while($zeile =$query->fetchObject()){
     echo"
-
 <tr>
 <td>$zeile->bestellnummer</td>
 <td>$zeile->kundennummer</td>
@@ -42,7 +45,7 @@ catch (PDOException $e) {
     echo "Error!: Bitte wenden Sie sich an den Administrator!?..." . $e;
     die();
 }
-echo "</table>";
+echo "</tbody></table>";
 
         echo "
 </body>

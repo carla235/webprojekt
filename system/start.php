@@ -8,27 +8,13 @@
 echo
 "<html>
 <head>
+
     <title>START</title>
     <style>
-    .bilder{
-    display:inline; 
-    }
-   
-    .bilder a{
-    margin: 100px; 
-    }
-    
-    .bilder img{
-    height:200px;
-    width:200px;
-    }
+
     .text{
-  
+
   width: 900px;
-  
-    
-   
-   
   }
 
 </style>
@@ -36,17 +22,32 @@ echo
 
 <body>
 
-<div align='center'><a href='#'><img src='./images/startak.jpg' width='900px' height='200px'></a></div>
+<div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
+  <div class=\"carousel-inner\">
+    <div class=\"carousel-item active\">
+      <img class=\"d-block w-100\" src=\"./images/startak.jpg\" alt=\"First slide\">
+    </div>
+    <div class=\"carousel-item\">
+      <img class=\"d-block w-100\" src=\"...\" alt=\"Second slide\">
+    </div>
+    <div class=\"carousel-item\">
+      <img class=\"d-block w-100\" src=\"...\" alt=\"Third slide\">
+    </div>
+  </div>
+  <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
+    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+    <span class=\"sr-only\">Previous</span>
+  </a>
+  <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">
+    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+    <span class=\"sr-only\">Next</span>
+  </a>
+</div>
 
-<div class='text'    >
+<div class='text'     >
 Wir möchten Menschen in toller Atmosphäre überraschen, sie inspirieren und immer wieder auf’s Neue begeistern. Im Concept Store gibt es individuelle Damenmode, auch stylische, nachhaltige Mode „made fair“. Zum besonderen Produkt- und Markenangebot spielt das Gespräch untereinander und das Erlebnis beim Einkauf eine große Rolle. Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben dieses besondere Markenangebot. Das moderne Erlebniskonzept verbindet Mode, Kunst und Design. Vor allem aber soll der Concept Store ein Ort sein, an dem sich die Kunden entspannen können und sich gerne aufhalten.
 </div>
 
-<div class='bilder'>
-<a href='#'> <img src='./klamotten.jpg'></a>
-<a href='#'><img src='./deko.jpg'></a>
-<a href='#'><img src='./laden.jpg'></a>
-</div>
 
 </body>
 

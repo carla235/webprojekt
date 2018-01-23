@@ -16,25 +16,10 @@ echo "
 <head>
     <meta charset=\"UTF-8\">
     <title>ANNE KERN Concept Store</title>   <!-- Metadaten des Tabs -->
-  
-    <style>
-    
-.menue li{
-    display: inline;
-    list-style: none;
-    margin-left: 10px;
-    margin-right: 10px;
-   
-   }
-   
-.menue a{
-padding-left: 150px;
-padding-right: 150px;
-text-decoration: none;
-color: black;
-font-family: Arial;
+        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">
+      
 
-}
+    <style>
     
 .icons{
     position: relative;
@@ -76,12 +61,20 @@ echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
    
     
     <br> <br> 
+    
+    <ul class=\"nav justify-content-center\">
+  <li class=\"nav-item\">
+    <a class=\"nav-link active\" href=\"index.php?page=start\">HOME</a>
+  </li>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"index.php?page=shop\">SHOP</a>
+  </li>
+  <li class=\"nav-item\">
+    <a class=\"nav-link\" href=\"index.php?page=contact\">CONTACT</a>
+  </li>
+</ul>
  
- <ul class='menue'>
-  <li><a href='index.php?page=start'>HOME</a></li>  
-   <li><a href='index.php?page=shop'>SHOP</a></li>
-   <li><a href='index.php?page=contact'>CONTACT</a></li>
-   </ul>";
+";
 
    
 

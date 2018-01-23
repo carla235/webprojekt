@@ -12,7 +12,14 @@ echo"
 
 $bestellnummer=$_GET['bestellnummer'];
 echo"
-<h1>Auftrag mit der Bestellnummer $bestellnummer</h1>
+
+<table class=\"table table-striped\">
+  <thead>
+    <tr>
+      <th scope=\"col\"><h1>Auftrag mit der Bestellnummer $bestellnummer</h1></th>
+    </tr>
+  </thead>
+  <tbody>
 ";
 
 
@@ -25,23 +32,9 @@ try {
     $query->execute();
 
     while($zeile =$query->fetchObject()){
-        echo"
-        $zeile->artikelnummer <br>";
+        echo"<tr>
+  <td>$zeile->artikelnummer <br></td></tr>";
 
-     /*   $artikelnummer= $zeile->artikelnummer;
-
-
-        $db = new PDO($dsn, $dbuser, $dbpass, $option);
-        $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
-        $query = $db->prepare($sql);
-        $query->execute();
-        while($zeile =$query->fetchObject()){
-            $zeile->artikelname;
-            $zeile->marke;
-
-
-        }
-*/
     }
 
     $db=null;}
@@ -50,7 +43,7 @@ catch (PDOException $e) {
     echo "Error!: Bitte wenden Sie sich an den Administrator!?..." . $e;
     die();
 }
-echo "</table>";
+echo " </tbody></table>";
 
 echo "
 </body>
