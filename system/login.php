@@ -18,13 +18,18 @@ margin: 10px;
 
 .login{
 float: left; 
-margin-left: 200px;
+margin-left: 100px;
 margin-top: 50px;
 }
 
 .login input{
 margin: 10px;
 
+}
+label {
+    width: 10em;
+    display: block;
+    float: left;
 }
 </style>
 </head>
@@ -38,12 +43,17 @@ if(isset($_SESSION['kundennummer'])){
 
 else{
 
+
+
 echo"
+
 <div class='login'>
 <h1>Login! </h1>
 <form action='./system/login_logic.php' method='post'>
-e-mail <input type='text' name='email'> <br>
-Passwort <input type='password' name='passwort'><br>
+   <label for=\"email\">E-Mail:</label>
+<input type='text' name='email'><br>
+   <label for=\"passwort\">Passwort:</label>
+<input type='password' name='passwort'><br>
 <input type='submit' value='Einloggen!'>
 </form>
 </div>
@@ -86,13 +96,20 @@ echo"
 <h1>Registrieren!</h1><br>
 
 <form action='' method='post'>
-Name:<input type='text' name='name'><br>
-Vorname:<input type='text' name='vorname'><br>
-Straße: <input type='text' name='strasse'><br>
-PLZ/Ort <input type='text' name='plz'><br>
-Telefonnummer <input type='text' name='telefonnummer'><br>
-e-mail<input type='text' name='email'><br>
-Passwort:<input type='password' name='passwort'><br>
+   <label for=\"name\">Name:</label>
+<input type='text' name='name'><br>
+   <label for=\"vorname\">Vorname:</label>
+<input type='text' name='vorname'><br>
+   <label for=\"strasse\">Straße:</label>
+<input type='text' name='strasse'><br>
+   <label for=\"plz\">PLZ/Ort:</label>
+<input type='text' name='plz'><br>
+   <label for=\"telefonnummer\">Telefonnummer:</label>
+<input type='text' name='telefonnummer'><br>
+   <label for=\"email\">E-Mail:</label>
+<input type='text' name='email'><br>
+   <label for=\"password\">Passwort:</label>
+<input type='password' name='passwort'><br>
 <input type='submit' value='Registrieren!'>
 </form>
 </div>

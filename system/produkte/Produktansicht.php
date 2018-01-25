@@ -48,6 +48,7 @@ try {
             else{}
             echo"
                  </div>
+                  <form action='' method='post'>
                  <div class='produktinfos'>
                  <h1> $zeile->artikelname | $zeile->marke </h1>
                  EAN: $zeile->ean <br><br><br>
@@ -80,7 +81,7 @@ try {
                  <br><br>
                 
             
-             <form action='' method='post'>
+            
              <input type='hidden' name='artikelnummer' value='$zeile->artikelnummer'>
              <input type='submit' value='In den Warenkorb'></form>
     
