@@ -10,7 +10,7 @@ echo
 "<html>
 <head>
 
-    <title>agb</title>
+    <title>AGB</title>
     <style>
 
     .text{

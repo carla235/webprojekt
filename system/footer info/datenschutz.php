@@ -9,7 +9,7 @@ echo
 "<html>
 <head>
 
-    <title>datenschutz</title>
+    <title>Datenschutz</title>
     <style>
 
     .text{

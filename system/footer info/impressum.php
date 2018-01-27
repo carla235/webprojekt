@@ -9,7 +9,7 @@ echo
 "<html>
 <head>
 
-    <title>impressum</title>
+    <title>Impressum</title>
     <style>
 
     .text{
