@@ -22,7 +22,10 @@ echo "
 <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>
 
     <style>
-
+body {
+margin-left: 15px;
+margin-right: 15px;
+}
     
 .icons{
     position: relative;
