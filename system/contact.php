@@ -17,9 +17,9 @@ echo "<html>
       .contact{
       font-family: Arial;
       position: relative;
-      left: 650px;
+      left: 780px;
       right: 30px;
-      top: -225px;
+      top: -250px;
       }
       
       .Social{
