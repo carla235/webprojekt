@@ -2,7 +2,7 @@
 session_start();
 
     try {
-        include  "./account/userdata.php";
+        include "./../account/userdata.php";
         $kundennummer = $_SESSION['kundennummer'];
         $zahlung = $_SESSION['zahlung'];
         $eingangsdatum = date("Y-m-d");
@@ -35,7 +35,7 @@ session_start();
         }
         $db = null;
 
-        header("Location:../index.php?page=bestätigung");
+        header("Location:../../index.php?page=bestätigung");
 
     } catch (PDOException $x) {
         echo $x->getMessage();

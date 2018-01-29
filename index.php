@@ -209,7 +209,7 @@ if (isset($_GET["page"])) {
 
         case"shop":
 
-            include "system/shop.php";
+            include "system/produkte/shop.php";
 
             break;
 
@@ -239,13 +239,13 @@ if (isset($_GET["page"])) {
 
         case"warenkorb":
 
-            include"system/warenkorb.php";
+            include "system/bestellvorgang/warenkorb.php";
 
             break;
 
         case"kaufen":
 
-            include"system/lieferadresse_form.php";
+            include "system/bestellvorgang/lieferadresse_form.php";
 
             break;
 
@@ -253,7 +253,7 @@ if (isset($_GET["page"])) {
 
         case"übersicht":
 
-            include"system/uebersicht_form.php";
+            include"system/bestellvorgang/uebersicht_form.php";
 
             break;
 
@@ -261,7 +261,7 @@ if (isset($_GET["page"])) {
 
         case"bestätigung":
 
-            include "system/bestätigung.php";
+            include "system/bestellvorgang/bestätigung.php";
 
             break;
 
@@ -269,7 +269,7 @@ if (isset($_GET["page"])) {
 
         case"zahlung":
 
-            include"system/zahlung.php";
+            include "system/bestellvorgang/zahlung.php";
 
             break;
 

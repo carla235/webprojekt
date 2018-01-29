@@ -81,7 +81,7 @@ echo "<h1> Lieferadresse </h1>";
 
 echo"
 <div class='input'><br>
-<form action='./system/lieferadresse_do.php' method='post'>
+<form action='./system/bestellvorgang/lieferadresse_do.php' method='post'>
 <label><b>Name</b></label><br>   
 <input type=\"text\" size=\"20\" maxlength='50' name='name' value='$zeile->name'><br><br>
 <label><b>Vorname</b></label><br> 

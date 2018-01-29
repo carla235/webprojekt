@@ -50,7 +50,7 @@ float: right;
 </head><body>";
 
 
-include_once(dirname(__FILE__)."/./account/userdata.php");
+include_once(dirname(__FILE__) . "./../account/userdata.php");
 
 try {
     $db = new PDO($dsn, $dbuser, $dbpass, $option);

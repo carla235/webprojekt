@@ -6,7 +6,7 @@ if(isset($_GET['delete'])) {
    unset($_SESSION['warenkorb'][$del_id]);
 
 }
-header("Location:../index.php?page=warenkorb");
+header("Location:../../index.php?page=warenkorb");
 
 /**
  * Created by PhpStorm.

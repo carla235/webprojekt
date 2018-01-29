@@ -51,7 +51,7 @@ top: -150px;
                 echo $neu['menge']."<br>";
 
                 echo $neu['preis']."€<br><br><br>";
-                echo "<a href= './system/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
+                echo "<a href= './system/bestellvorgang/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
 
 
             }

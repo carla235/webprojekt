@@ -104,7 +104,7 @@ echo"Versand: 4,90€ <br><br><br>";
 echo"Summe:<br><br><br>";
 
 echo"
-<form method='post' action='./system/bestellung_do.php'>
+<form method='post' action='./system/bestellvorgang/bestellung_do.php'>
 <input type='submit' value='Bestellung abschließen!' class='button' />
 </form>";
 
@@ -116,7 +116,7 @@ echo"</div>";
 $kundennummer = $_SESSION['kundennummer'];
 
 try {
-    include(dirname(_FILE) . "/system/account/userdata.php");
+    include(dirname(_FILE) . "../../system/account/userdata.php");
 
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
     $sql = "SELECT * FROM benutzer WHERE kundennummer=$kundennummer";

@@ -1,6 +1,6 @@
 <?php
 
-include(dirname(__FILE__) . "/../account/userdata.php");
+include(dirname(__FILE__) . "./../account/userdata.php");
 session_start();
 echo"<html>
 <head>
