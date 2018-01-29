@@ -42,6 +42,10 @@ margin-right: 10%;
 
 }
 
+a{
+color:black;
+}
+
 .icons{
     position: relative;
    float:right;
@@ -108,8 +112,7 @@ div.container{
 
 
 
-         <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
-
+         <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='20%' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
 
 <div class='icons' >  <table>";
@@ -118,17 +121,17 @@ if (!isset ($_SESSION['kundennummer'])){
 
     echo"
 
-     <td><a href='index.php?page=login'><img src='usericon.png' width='30px' height='30px'></a></td><!-- AnmeldeIcon wird integriert -->";}
+     <td><a href='index.php?page=login'><img src='usericon.png' width='25em' height='auto'></a></td><!-- AnmeldeIcon wird integriert -->";}
 
 else{
 
     echo"
 
-    <td> <a href='index.php?page=logout'><img src='logout.png' width='30px' height='30px'></a></td> <!-- LogoutIcon -->";}
+    <td> <a href='index.php?page=logout'><img src='logout.png' width='25em' height='auto'></a></td> <!-- LogoutIcon -->";}
 
     echo"
 
-      <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='30px' height='30px'></a></td> <!--WarenkorbIcon wird integriert -->";
+      <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='25em' height='auto'></a></td> <!--WarenkorbIcon wird integriert -->";
 
 
 
@@ -136,9 +139,9 @@ else{
 
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
 
-    echo "<td> <a href='index.php?page=backend'><img src='add.png' width='30px' height ='30px'</a></td> 
+    echo "<td> <a href='index.php?page=backend'><img src='add.png' width='25em' height ='auto'</a></td> 
 
-      <td> <a href='index.php?page=bestelluebersicht'><img src='list.png' width='30px' height ='30px'</a></td>
+      <td> <a href='index.php?page=bestelluebersicht'><img src='list.png' width='25em' height ='auto'</a></td>
 
 <!-- Produkte hinzufuegen -->";
 
@@ -172,6 +175,11 @@ echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
 
     <a class=\"nav-link\" href=\"index.php?page=contact\">CONTACT</a>
 
+  </li>
+  
+  <li class=\"nav-item\">
+
+   
   </li>
 
 </ul>
@@ -373,8 +381,8 @@ echo "
 <tr>
 <td><a href='index.php?page=agb'> AGB </a></td>
 <td>ANNE KERN CONCEPT STORE</td>
-<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='instagram_footer.png' width='15%' height='auto' ></a>
-<a href='https://www.facebook.com/annekern.conceptstore/'><img src='facebook-logo-button.png' width='15%' height='auto'></a></td>
+<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='instagram_footer.png' width='10%' height='auto' ></a>
+<a href='https://www.facebook.com/annekern.conceptstore/'><img src='facebook-logo-button.png' width='10%' height='auto'></a></td>
 </tr>
 
 
