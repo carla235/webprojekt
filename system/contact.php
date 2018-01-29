@@ -38,35 +38,39 @@ echo "<html>
       }
       
       .umrandung_1{
- border-style: dotted;
-  border-width: 1.5px;
-  margin-left: 1.1%;
-  margin-right:5px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding: 1%;
-  padding-left:5%;
-  padding-right:5%;
-  padding-bottom:5%;
-  padding-top:7%;
+    width: 20%;   
+    border-style: dotted;
+    border-width: 1.5px;
+    margin-left: 12%;
+    margin-right: 0%; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 1%;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:5%;
+    padding-top: 5%;
   }
   
   .inhaberin{
-margin-left: 0.1%;
+  margin-left: 2%;
   margin-right:1px;
   margin-top: 5%;
   margin-bottom: 5%;
-
+  padding: 0%; 
   }
-      
+
  .map{
-margin-left: 0.1%;
+  margin-left: 2%;
   margin-right:1px;
   margin-top: 11%;
   margin-bottom: 5%;
-
+  padding: 0%; 
   }
-      
+ div.container{
+ padding: 0%; 
+ }     
+ 
     </style>
 
 
