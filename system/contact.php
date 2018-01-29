@@ -11,7 +11,9 @@ echo "<html>
 <title>ANNE KERN - Contact</title>
   <style>
     
-    
+    body{
+    height: 100%; 
+    }
       .contact{
       position: relative;
       float: left;

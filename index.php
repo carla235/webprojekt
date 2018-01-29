@@ -55,6 +55,7 @@ margin-right: 10%;
     margin: 2%; 
 }
 
+
 table{width: 80%;
 color: white;
 }
@@ -68,8 +69,6 @@ padding: 1%;
 }
 
 
-
-
 </style>
 
 </head>
@@ -77,9 +76,6 @@ padding: 1%;
 <body>
 
 <div class='index'>
-
-
-
          <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
 
@@ -124,7 +120,7 @@ echo"</table>";
 
 
 
-echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
+echo "  </div>   <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     <br> <br> 
     <ul class=\"nav justify-content-center\">
 

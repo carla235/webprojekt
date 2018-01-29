@@ -24,6 +24,7 @@ echo
         height: 100%; 
     }
    
+   
  .produkt.artikel {
  display: inline;
  }
