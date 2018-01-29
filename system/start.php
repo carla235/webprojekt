@@ -16,6 +16,10 @@ echo
 
   width: 900px;
   }
+  
+  .umrandung_1{
+  border-style: dotted;
+  }
 
 </style>
 </head>
@@ -45,7 +49,7 @@ echo
   </a>
 </div>
 </div>
-<div class='col-sm-5'>
+<div class='col-sm-6 umrandung_1'>
 
 
 <p class=\"text-left\">
