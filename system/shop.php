@@ -11,13 +11,26 @@ echo
 <head>
     <title>SHOP</title>
    <style>
+   
+   html{
+       height: 100%; 
+       width: 100%; 
+    }
+    
+    body {
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 100%; 
+    }
+   
+   
  .produkt.artikel {
- font-family: Arial;
  display: inline;
  }
  
  .preis {
- font-family: Arial;
+ 
  }
  
     
@@ -33,7 +46,7 @@ float: right;
 }
 
 </style>
-</head>";
+</head><body>";
 
 
 include_once(dirname(__FILE__)."/./account/userdata.php");
@@ -68,4 +81,6 @@ echo "<br>";
     echo "Error!: Bitte wenden Sie sich an den Administrator!?...".$e;
     die();
 }
+echo" </body> </html>";
+
 ?>

@@ -54,6 +54,21 @@ margin-right: 10%;
 .nav-item {
     margin: 2%; 
 }
+
+
+table{width: 80%;
+color: white;
+}
+
+.footer{
+background-color: darkgray;
+width: 100%;
+margin-top: 5%;
+margin-bottom: 5%;
+padding: 1%;
+}
+
+
 </style>
 
 </head>
@@ -61,9 +76,6 @@ margin-right: 10%;
 <body>
 
 <div class='index'>
-
-
-
          <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
 
@@ -108,7 +120,7 @@ echo"</table>";
 
 
 
-echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
+echo "  </div>   <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     <br> <br> 
     <ul class=\"nav justify-content-center\">
 
@@ -277,6 +289,12 @@ if (isset($_GET["page"])) {
 
             break;
 
+        case"agb";
+            include "./system/footer_info/agb.php";
+            break;
+
+        case"";
+
 
 
         default:
@@ -304,4 +322,13 @@ else
 
 
 echo "
+<div class='footer'>
+<table>
+
+<tr><td><a href='index.php?page=agb'> AGB </a> </td></tr>
+<tr><td><a href='index.php?page=datenschutz'> Datenschutz</a> </td></tr>
+<tr><td><a href='index.php?page=impressum'> Impressum </a> </td></tr>
+<tr><td><a href='index.php?page=versand'> Versand und Zahlung</a> </td></tr>
+
+</table></div>
 </body> </html>";

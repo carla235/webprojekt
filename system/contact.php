@@ -11,18 +11,9 @@ echo "<html>
 <title>ANNE KERN - Contact</title>
   <style>
     
-    html{
-       height: 100%; 
-       width: 100%; 
+    body{
+    height: 100%; 
     }
-    
-    body {
-        font-family: 'Open Sans Condensed', sans-serif;
-        margin-left: 10%;
-        margin-right: 10%;
-        height: 100%; 
-    }
-    
       .contact{
       left: 30%;
       margin-right: 10%;
