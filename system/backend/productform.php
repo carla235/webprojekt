@@ -6,12 +6,15 @@ echo "
 <head> 
 <style> 
 body {
-height: 100%; 
-width: 100%; 
+font-family: 'Open Sans Condensed', sans-serif;
+margin-left: 10%;
+margin-right: 10%;
 }
-form { 
+#productform { 
     height: 100%;
-    width: 100%;
+    width: 50%;
+    margin-left: 25%;  
+    margin-right: 25%; 
     background-color: ;
 }
 
