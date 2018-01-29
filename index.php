@@ -39,6 +39,7 @@ body {
 font-family: 'Open Sans Condensed', sans-serif;
 margin-left: 10%;
 margin-right: 10%;
+
 }
 
 .icons{
@@ -55,10 +56,8 @@ margin-right: 10%;
     margin: 2%; 
 }
 
+table{width: 80%;
 
-table{
-width: 80%;
-color: white;
 }
 
 .footer{
@@ -68,6 +67,21 @@ margin-top: 5%;
 margin-bottom: 5%;
 padding: 1%;
 }
+.footer a{
+color: white;
+margin: 2%
+}
+
+.footer td{
+width: 30%;
+}
+
+.footer table{
+color:white;
+
+}
+
+
 
 
 </style>
@@ -77,9 +91,12 @@ padding: 1%;
 <body>
 
 <div class='index'>
+
+
+
          <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-</div>
+
 
 <div class='icons' >  <table>";
 
@@ -121,7 +138,7 @@ echo"</table>";
 
 
 
-echo "  </div>   <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
+echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     <br> <br> 
     <ul class=\"nav justify-content-center\">
 
@@ -294,7 +311,17 @@ if (isset($_GET["page"])) {
             include "./system/footer_info/agb.php";
             break;
 
-        case"";
+        case"datenschutz";
+            include "./system/footer_info/datenschutz.php";
+            break;
+
+        case"impressum";
+            include"./system/footer_info/impressum.php";
+            break;
+
+        case"versand";
+            include"./system/footer_info/versand und zahlung.php";
+            break;
 
 
 
@@ -325,11 +352,28 @@ else
 echo "
 <div class='footer'>
 <table>
+<th>Informationen</th>
+<th>Kontakt</th>
+<th>Follow us!</th>
 
-<tr><td><a href='index.php?page=agb'> AGB </a> </td></tr>
-<tr><td><a href='index.php?page=datenschutz'> Datenschutz</a> </td></tr>
-<tr><td><a href='index.php?page=impressum'> Impressum </a> </td></tr>
-<tr><td><a href='index.php?page=versand'> Versand und Zahlung</a> </td></tr>
+<tr>
+<td><a href='index.php?page=agb'> AGB </a></td>
+<td>ANNE KERN CONCEPT STORE</td>
+<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='instagram_footer.png' width='15%' height='auto' ></a>
+<a href='https://www.facebook.com/annekern.conceptstore/'><img src='facebook-logo-button.png' width='15%' height='auto'></a></td>
+</tr>
+
+
+<tr><td><a href='index.php?page=datenschutz'> Datenschutz</a> </td>
+<td>Marktstraße 11</td>
+</tr>
+
+<tr><td><a href='index.php?page=impressum'> Impressum </a> </td>
+<td>Rottenburg</td>
+</tr>
+
+<tr><td><a href='index.php?page=versand'> Versand und Zahlung</a> </td>
+</tr>
 
 </table></div>
 </body> </html>";
