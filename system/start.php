@@ -19,7 +19,9 @@ echo
   
   .umrandung_1{
   border-style: dotted;
+  margin: 15px;
   }
+  
 
 </style>
 </head>
