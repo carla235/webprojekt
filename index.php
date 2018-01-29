@@ -56,7 +56,8 @@ margin-right: 10%;
     margin: 2%; 
 }
 
-table{width: 80%;
+table {
+  width: 80%;
 
 }
 
@@ -79,23 +80,6 @@ width: 30%;
 .footer table{
 color:white;
 
-}
-div.col-sm-12 {
-    margin-left: 0; 
-    margin-right: 0; 
-}
-div.row{
- margin: 0; 
- padding-left: 0;
- padding-right: 0; 
- width: 100%; 
-}
-
-div.container{
-    padding: 0; 
-    margin-right: 0; 
-    margin-left: 0; 
-    width: 100%; 
 }
 
 </style>

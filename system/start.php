@@ -61,7 +61,7 @@ Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben diese
 
 
 
-<div class='col-sm-12'>
+<div class='col-sm-12' id='banner'>
 <img src='./images/socialmediabanner.png' width='100%'>
 </div> 
 
