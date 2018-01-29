@@ -49,7 +49,7 @@ Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben diese
 </p>
 </div>
 <div class=\"col-sm\">
-<img src='./images/Blumenkranz_Prozente_besser.jpg'  width='80%' height='auto'>
+<img src='./images/Blumenkranz_Prozente_besser.jpg'  width='80%' height='auto' align='center'>
 </div><br>
 
 
