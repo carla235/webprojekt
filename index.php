@@ -62,6 +62,9 @@ color: white;
 .footer{
 background-color: darkgray;
 width: 100%;
+margin-top: 5%;
+margin-bottom: 5%;
+padding: 1%;
 }
 
 
@@ -289,6 +292,12 @@ if (isset($_GET["page"])) {
 
             break;
 
+        case"agb";
+            include "./system/footer_info/agb.php";
+            break;
+
+        case"";
+
 
 
         default:
@@ -319,10 +328,10 @@ echo "
 <div class='footer'>
 <table>
 
-<tr><td> AGB </td></tr>
-<tr><td> Datenschutz </td></tr>
-<tr><td> Impressum </td></tr>
-<tr><td> Versand und Zahlung </td></tr>
+<tr><td><a href='index.php?page=agb'> AGB </a> </td></tr>
+<tr><td><a href='index.php?page=datenschutz'> Datenschutz</a> </td></tr>
+<tr><td><a href='index.php?page=impressum'> Impressum </a> </td></tr>
+<tr><td><a href='index.php?page=versand'> Versand und Zahlung</a> </td></tr>
 
 </table></div>
 </body> </html>";
