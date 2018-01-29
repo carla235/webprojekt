@@ -47,8 +47,8 @@ top: -150px;
                 echo "<div class='produktinfos'>";
                 echo $neu['artikelname']." |  ";
                 echo $neu['marke']."<br>";
-                echo $neu['groesse'];
-                echo $neu['menge'];
+                echo $neu['groesse']." | ";
+                echo $neu['menge']."<br>";
 
                 echo $neu['preis']."€<br><br><br>";
                 echo "<a href= './system/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
@@ -68,6 +68,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
     echo $neu['artikelname']." | ";
     echo $neu['preis']."€<br><br><br>";
+
 
     }
     }

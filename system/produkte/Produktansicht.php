@@ -53,17 +53,18 @@ try {
                  <h1> $zeile->artikelname | $zeile->marke </h1>
                  EAN: $zeile->ean <br><br><br>
                  PREIS: $zeile->preis € <br><br><br>
+                       
                         <form action='' method='post' >
-                GRÖßE: <select id='groesse 'name=\"groesse\" onchange=''>
+                GRÖßE: <select id='groesse'name=\"groesse\">
                          <option value=\"XS\">XS</option>
                          <option value=\"S\">S</option>
                          <option value=\"M\">M</option>
                          <option value=\"L\">L</option>
                          <option value=\"XL\">XL</option>
-                       </select></form><br><br>";
+                       </select></form><br><br>
 
-                echo" <form action='' method='post'>
-                 MENGE:  <select name=\"menge\">
+            <form action='' method='post'>
+                 MENGE: <select id='menge' name='menge'>
                             <option value=\"1\">1</option>
                             <option value=\"2\">2</option>
                             <option value=\"3\">3</option>
@@ -105,7 +106,7 @@ try {
                 $marke=$zeile->marke;
                 $preis=$zeile->preis;
                   $groesse = $_POST['groesse'];
-                  $menge=  $_POST['menge'];
+                  $menge =  $_POST['menge'];
 
         $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis, 'groesse'=>$groesse, 'menge'=>$menge);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
