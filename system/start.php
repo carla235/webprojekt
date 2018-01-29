@@ -68,9 +68,10 @@ Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben diese
 <img src='./images/Blumenkranz_Prozente_besser.jpg'  width='100%' height='auto'>
 </div><br>
 
+
 <div class='col-sm-12'>
 <img src='./images/socialmediabanner.png' width='100%'>
-</div>
+</div> 
 
 
 </body>
