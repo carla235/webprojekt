@@ -22,7 +22,7 @@ session_start();
         $query->execute();
         $zeile = $query->fetchObject();
         $bestellnummer = $zeile->bestellnummer;
-        $db = null;// Daten werden eingetragen
+        $db = null;// Daten werden eingetragen,
 
 
         // Mit Bestellnummer einzelne Artikel in DB eintragen
