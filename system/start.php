@@ -34,7 +34,7 @@ echo
 <body>
 <div class='col-sm-12'>
 
-      <img class=\"d-block w-100\" src=\"./images/startak.jpg\" >
+      <img class=\"d-block w-100\" src=\"./images/titelbild.jpg\" >
       </div>
   
    
