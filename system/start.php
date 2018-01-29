@@ -27,6 +27,11 @@ echo
   padding: 1%;
   }
   
+  .blumenkranz{
+  margin-top: 8%;
+ margin-left: 11%;
+
+  }
 
 
 </style>
@@ -48,7 +53,7 @@ Wir möchten Menschen in toller Atmosphäre überraschen, sie inspirieren und im
 Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben dieses besondere Markenangebot. Das moderne Erlebniskonzept verbindet Mode, Kunst und Design. Vor allem aber soll der Concept Store ein Ort sein, an dem sich die Kunden entspannen können und sich gerne aufhalten.<br>
 </p>
 </div>
-<div class=\"col-sm\">
+<div class=\"col-sm blumenkranz\">
 <img src='./images/Blumenkranz_Prozente_besser.jpg'  width='80%' height='auto'>
 </div><br>
 
