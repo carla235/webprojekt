@@ -14,26 +14,32 @@ echo "<html>
     h1{
     font-family: Arial;
     }
+    
+    body{ 
+    
+    }
       .contact{
       font-family: Arial;
       position: relative;
-      left: 780px;
-      right: 30px;
-      top: -270px;
+      float: left;
+      left: 60%;
+      margin-right: 10%;
+      margin-top: -20%;  
       }
       
       #kontaktaufnahme {
       position: relative; 
-      top: 15px; 
+      margin-top: 7%; 
       }
       
       .Social{
       display: inline;
       }
-      .Social a{
-      margin-right:20px;
       
+      .Social a{
+      margin-right: 7%;
       }
+      
     </style>
 
 
@@ -49,11 +55,11 @@ Rottenburg<br>
 Baden-Wurttemberg, Germany<br> <br>
 <h1>FOLLOW US!</h1> <br> 
 
-<div class='Social'>
-<a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='./instagram.png'width='50px' height='50px'></a>
-<a href='https://www.facebook.com/annekern.conceptstore/'><img src='./facebook.png' width='50px' width='50px'></a>
-<div id='kontaktaufnahme'><a href='./system/kontaktaufnahme.php'> ANNE KERN Concept Store kontaktieren </a></div>
-</div>
+    <div class='Social'>
+        <a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='./instagram.png'width='50px' height='50px'></a>
+        <a href='https://www.facebook.com/annekern.conceptstore/'><img src='./facebook.png' width='50px' width='50px'></a>
+        <div id='kontaktaufnahme'><a href='./system/kontaktaufnahme.php'> ANNE KERN Concept Store kontaktieren </a></div>
+    </div>
 </div> 
 
 
