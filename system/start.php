@@ -23,12 +23,12 @@ echo
   margin-left: 1.1%;
   margin-right:1px;
   margin-top: 5%;
-  margin-bottom: 2.5%;
+  margin-bottom: 5%;
   padding: 1%;
   }
   
   .blumenkranz{
-  margin-top: 8%;
+  margin-top: 3%;
  margin-left: 11%;
 
   }
