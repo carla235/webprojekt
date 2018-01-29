@@ -56,7 +56,8 @@ margin-right: 10%;
 }
 
 
-table{width: 80%;
+table{
+width: 80%;
 color: white;
 }
 
@@ -78,7 +79,7 @@ padding: 1%;
 <div class='index'>
          <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='200px' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
-
+</div>
 
 <div class='icons' >  <table>";
 
