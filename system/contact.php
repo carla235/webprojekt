@@ -12,14 +12,10 @@ echo "<html>
   <style>
     
     h1{
-    font-family: Arial;
+   
     }
     
-    body{ 
-    
-    }
       .contact{
-      font-family: Arial;
       position: relative;
       float: left;
       left: 60%;
@@ -40,12 +36,16 @@ echo "<html>
       margin-right: 7%;
       }
       
+      #contactus{
+      padding: auto; 
+      }
+      
     </style>
 
 
 </head>
 <body>
-<h1>CONTACT US!</h1> <br>
+<h1 id='contactus'>CONTACT US!</h1> <br>
 <a href='https://www.google.de/maps/place/Anne+Kern+Concept+Store/@48.4767309,8.9346626,15z/data=!4m5!3m4!1s0x0:0xdc434e420bca24da!8m2!3d48.4767309!4d8.9346626'><img src='./Map.png' width='50%' height='auto%'></a>
 <br>
 
