@@ -376,6 +376,7 @@ echo "
 <table>
 <th>Informationen</th>
 <th>Kontakt</th>
+
 <th>Follow us!</th>
 
 <tr>
@@ -391,11 +392,17 @@ echo "
 </tr>
 
 <tr><td><a href='index.php?page=impressum'> Impressum </a> </td>
-<td>Rottenburg</td>
+<td>72108 Rottenburg</td>
 </tr>
 
 <tr><td><a href='index.php?page=versand'> Versand und Zahlung</a> </td>
+<td>Tel: 07472/4405268</td>
 </tr>
+
 
 </table></div>
 </body> </html>";
+
+
+
+
