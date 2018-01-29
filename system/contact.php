@@ -20,9 +20,10 @@ echo "<html>
       margin-top: -20%;  
       }
       
-      #kontaktaufnahme {
+      .kontaktaufnahme {
       position: relative; 
       margin-top: 7%; 
+      color: gray;
       }
       
       .Social{
@@ -93,7 +94,7 @@ echo "<html>
     <div class='Social'>
         <a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='./instagram.png'width='50px' height='50px'></a>
         <a href='https://www.facebook.com/annekern.conceptstore/'><img src='./facebook.png' width='50px' width='50px'></a>
-        <div id='kontaktaufnahme'><a href='./system/kontaktaufnahme.php'> ANNE KERN Concept Store kontaktieren </a></div>
+        <div class='kontaktaufnahme'><a href='./system/kontaktaufnahme.php'> Hier klicken, um ANNE KERN Concept Store zu kontaktieren </a></div>
     </div>
 </p>
 </div>
