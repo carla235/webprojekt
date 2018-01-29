@@ -69,7 +69,7 @@ padding: 1%;
 }
 .footer a{
 color: white;
-margin: 2%
+margin: 2%;
 }
 
 .footer td{
@@ -80,9 +80,23 @@ width: 30%;
 color:white;
 
 }
+div.col-sm-12 {
+    margin-left: 0; 
+    margin-right: 0; 
+}
+div.row{
+ margin: 0; 
+ padding-left: 0;
+ padding-right: 0; 
+ width: 100%; 
+}
 
-
-
+div.container{
+    padding: 0; 
+    margin-right: 0; 
+    margin-left: 0; 
+    width: 100%; 
+}
 
 </style>
 
