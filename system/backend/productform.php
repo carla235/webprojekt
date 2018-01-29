@@ -16,14 +16,15 @@ form {
 }
 
 input {
-    background-color: beige;
+    background-color: white;
     color: black ;
     padding: 14px 20px;
     margin: 8px 0;
     cursor: pointer;
     width: 100%;
-    border: 3px solid gray;
+    border: 1px solid black;
   
+}  
 }
 input.textfield { 
   
@@ -31,7 +32,7 @@ input.textfield {
 #erstellen {
     width: 25%;
     height: ;
-    background-color: aliceblue;
+    background-color: lightgray;
 }
 </style>
 </head>
@@ -54,27 +55,26 @@ echo"
 
 <div class='productinput'><br>
 <label><b>Marke</b></label><br>   
-<input type=\"text\" size=\"20\" maxlength='50' name='marke' placeholder='maximal 50 Zeichen' required><br>
+<input type=\"text\" size=\"20\" maxlength='50' name='marke' placeholder='maximal 50 Zeichen' required><br><br>
 <label><b>Artikelname</b></label><br> 
-<input type='text' size='20' maxlength='50' name='artikelname' placeholder='maximal 50 Zeichen' required><br>
+<input type='text' size='20' maxlength='50' name='artikelname' placeholder='maximal 50 Zeichen' required><br><br>
 <label><b>EAN-Code</b></label><br> 
-<input type='text' size='20' maxlength='13' name='ean' placeholder='maximal 13 Zahlen' required><br>
+<input type='text' size='20' maxlength='13' name='ean' placeholder='maximal 13 Zahlen' required><br><br>
 <!--<label><b>Artikelnummer</b></label><br> 
 <input type='text' size='20' maxlength='5' name='artikelnummer' placeholder='maximal 5 Zahlen' required><br>-->
 <label><b>Preis</b></label><br> 
-<input type='text' size='20' maxlength='10' name='preis' placeholder='maximal 10 Zeichen' required><br>
+<input type='text' size='20' maxlength='10' name='preis' placeholder='maximal 10 Zeichen' required><br><br>
 <label><b>Größe</b></label><br> 
-<input type='text' size='20' maxlength='2' name='groesse' placeholder='maximal 2 Zeichen' required><br>
+<input type='text' size='20' maxlength='2' name='groesse' placeholder='maximal 2 Zeichen' required><br><br>
 <label><b>Menge</b></label><br> 
-<input type='number' size='20' maxlength='2' name='menge' placeholder='maximal 2 Zahlen' required><br>
+<input type='number' size='20' maxlength='2' name='menge' placeholder='maximal 2 Zahlen' required><br><br>
 <label><b>Artikelbeschreibung</b></label><br> 
-<textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='125' rows='10'<br></textarea><br><br>
+<textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='87' rows='10'<br></textarea><br><br>
 <label><b>Details</b></label><br> 
-<textarea class= 'textfield' id='text' name='details' cols='125' rows='10' <br></textarea><br><br>
+<textarea class= 'textfield' id='text' name='details' cols='87' rows='10' <br></textarea><br><br>
 <label><b>Bildupload</b></label><br> 
-<input type='file' name='bild' id='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> 
-<br>
-<input id='erstellen' type=\"submit\" name=\"erstellen\" value=\"Erstellen\">
+<input type='file' name='bild' id='bild' placeholder='Klappt noch nicht'><br> <!-- not yet required --> <br>
+<input id='erstellen' type=\"submit\" name=\"erstellen\" value=\"Produkt Upload\">
 </div></form>
 </div> ";
 

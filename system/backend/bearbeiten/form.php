@@ -38,13 +38,9 @@ input {
 }
 
 .button {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    height: 40px;
-    width: 100px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+   width: 25%;
+    height: ;
+    background-color: lightgray;
 }
 
 input.textfield { 
@@ -92,10 +88,10 @@ try {
 <label><b>Menge</b></label><br> 
 <input type='number' size='20' maxlength='2' name='menge' value='$zeile->menge'><br><br>
 <label><b>Artikelbeschreibung</b></label><br> 
-<textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='125' rows='10'>$zeile->artikelbeschreibung</textarea><br><br>
+<textarea class= 'textfield' id='text' name='artikelbeschreibung' cols='87' rows='10'>$zeile->artikelbeschreibung</textarea><br><br>
 <label><b>Details</b></label><br> 
-<textarea class= 'textfield' id='text' name='details' cols='125' rows='10' >$zeile->details</textarea><br><br>
-<label><b>Bild ändern</b></label><br> 
+<textarea class= 'textfield' id='text' name='details' cols='87' rows='10' >$zeile->details</textarea><br><br>
+<label><b>Bild ändern:</b></label>
 <br><b>Aktuelles Bild</b><br> 
 <a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a><br> <!-- not yet required --> 
 <br>
