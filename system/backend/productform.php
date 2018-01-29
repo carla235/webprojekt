@@ -13,7 +13,7 @@ margin-right: 10%;
 #productform { 
     height: 100%;
     width: 50%;
-    margin-left: 25%;  
+      
     margin-right: 25%; 
     background-color: ;
 }

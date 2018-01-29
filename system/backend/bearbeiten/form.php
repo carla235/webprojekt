@@ -12,8 +12,7 @@ echo "
 <head> 
 <style> 
 body {
-height: 100%; 
-width: 100%; 
+ 
 }
 
 *{
@@ -23,6 +22,8 @@ width: 100%;
 form { 
     height: 100%;
     width: 50%;
+      
+    margin-right: 25%; 
     background-color: ;
 }
 
