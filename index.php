@@ -178,4 +178,6 @@ else
 }
 
 
-echo "</body> </html>";
+echo "
+
+</body> </html>";
