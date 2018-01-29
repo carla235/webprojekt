@@ -43,11 +43,13 @@ echo
     <span class=\"sr-only\">Next</span>
   </a>
 </div>
+<div class='col-sm-5 umrandung_zwei'>
+
 
 <p class=\"text-center\">
 Wir möchten Menschen in toller Atmosphäre überraschen, sie inspirieren und immer wieder auf’s Neue begeistern. Im Concept Store gibt es individuelle Damenmode, auch stylische, nachhaltige Mode „made fair“. Zum besonderen Produkt- und Markenangebot spielt das Gespräch untereinander und das Erlebnis beim Einkauf eine große Rolle. Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben dieses besondere Markenangebot. Das moderne Erlebniskonzept verbindet Mode, Kunst und Design. Vor allem aber soll der Concept Store ein Ort sein, an dem sich die Kunden entspannen können und sich gerne aufhalten.
 </p>
-
+</div>
 <img src='./images/socialmediabanner.png' width='100%'>
 
 
