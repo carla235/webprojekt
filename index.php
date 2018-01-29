@@ -37,6 +37,10 @@ margin-right: 10%;
      margin-right:10px;
      }
      
+.nav-item {
+    margin: 2%; 
+}
+     
 
     
 </style>
