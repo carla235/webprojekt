@@ -21,6 +21,7 @@ echo
 </head>
 
 <body>
+<div class='col-sm-12'>
 
 <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
   <div class=\"carousel-inner\">
@@ -43,12 +44,17 @@ echo
     <span class=\"sr-only\">Next</span>
   </a>
 </div>
+</div>
+<div class='col-sm-5'>
 
-<p class=\"text-center\">
+
+<p class=\"text-left\">
 Wir möchten Menschen in toller Atmosphäre überraschen, sie inspirieren und immer wieder auf’s Neue begeistern. Im Concept Store gibt es individuelle Damenmode, auch stylische, nachhaltige Mode „made fair“. Zum besonderen Produkt- und Markenangebot spielt das Gespräch untereinander und das Erlebnis beim Einkauf eine große Rolle. Hier geht es um Wohlfühlatmosphäre, erstklassigen Kundenservice und eben dieses besondere Markenangebot. Das moderne Erlebniskonzept verbindet Mode, Kunst und Design. Vor allem aber soll der Concept Store ein Ort sein, an dem sich die Kunden entspannen können und sich gerne aufhalten.
 </p>
-
+</div>
+<div class='col-sm-12'>
 <img src='./images/socialmediabanner.png' width='100%'>
+</div>
 
 
 </body>

@@ -68,6 +68,7 @@ echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
    
     
     <br> <br> 
+  
     
     <ul class=\"nav justify-content-center\">
   <li class=\"nav-item\">
@@ -80,6 +81,7 @@ echo "  </div>     <!-- Menueleiste = Auflistung der Bestandteile als Links  -->
     <a class=\"nav-link\" href=\"index.php?page=contact\">CONTACT</a>
   </li>
 </ul>
+
 ";
 
    
