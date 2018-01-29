@@ -33,7 +33,7 @@ float: right;
 }
 
 </style>
-</head>";
+</head><body>";
 
 
 include_once(dirname(__FILE__)."/./account/userdata.php");
@@ -68,4 +68,6 @@ echo "<br>";
     echo "Error!: Bitte wenden Sie sich an den Administrator!?...".$e;
     die();
 }
+echo" </body> </html>";
+
 ?>
