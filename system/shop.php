@@ -27,7 +27,7 @@ display: inline;
 
 .gallery {
 height: 40%; 
-width: 30%; 
+width: 27%; 
 margin: 5px;  
 float: right; 
 }
