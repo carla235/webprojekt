@@ -28,7 +28,7 @@ echo
   }
   
   .blumenkranz{
-  margin-top: 8%;
+  margin-top: 3%;
  margin-left: 11%;
 
   }
