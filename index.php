@@ -54,6 +54,18 @@ margin-right: 10%;
 .nav-item {
     margin: 2%; 
 }
+
+table{width: 80%;
+color: white;
+}
+
+.footer{
+background-color: darkgray;
+width: 100%;
+}
+
+
+
 </style>
 
 </head>
@@ -304,4 +316,13 @@ else
 
 
 echo "
+<div class='footer'>
+<table>
+
+<tr><td> AGB </td></tr>
+<tr><td> Datenschutz </td></tr>
+<tr><td> Impressum </td></tr>
+<tr><td> Versand und Zahlung </td></tr>
+
+</table></div>
 </body> </html>";
