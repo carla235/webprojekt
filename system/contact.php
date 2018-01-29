@@ -74,7 +74,6 @@ margin-left: 0.1%;
 <body>
 
 <div class=\"container\">
-<div class='col-sm-12>
 <h1 id='contactus'>CONTACT US!</h1> <br>
 </div>
   <div class=\"row\">
