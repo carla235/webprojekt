@@ -23,8 +23,8 @@ echo "
 
     <style>
 body {
-margin-left: 15px;
-margin-right: 15px;
+margin-left: 10%;
+margin-right: 10%;
 }
     
 .icons{
