@@ -11,13 +11,25 @@ echo
 <head>
     <title>SHOP</title>
    <style>
+   
+   html{
+       height: 100%; 
+       width: 100%; 
+    }
+    
+    body {
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 100%; 
+    }
+   
  .produkt.artikel {
- font-family: Arial;
  display: inline;
  }
  
  .preis {
- font-family: Arial;
+ 
  }
  
     
