@@ -3,8 +3,6 @@ include "./system/account/userdata.php";
 
 session_start(); //Session wird wieder aufgenommen
 
-
-
 echo "
 <html>
 <head>
@@ -35,7 +33,11 @@ top: -150px;
 </style>
 </head>
 <body>
-<h1>Mein Warenkorb</h1><div class='produkt'>
+
+<h1>Mein Warenkorb</h1>
+<body><div class='container'> <div class='row'>
+
+<div class=\"col-sm\">
 <br><br>";
 
 
@@ -44,6 +46,7 @@ top: -150px;
                 $id=$neu['artikelnummer'];
                 $a = $neu['bild'];
                 echo "<a href='#'><img src= './images/$a' width='100px' height='auto'></a>";
+
                 echo "<div class='produktinfos'>";
                 echo $neu['artikelname']." |  ";
                 echo $neu['marke']."<br>";
@@ -58,8 +61,9 @@ top: -150px;
         }
 
 
-echo "</div>
-<div class='Kosten'>
+echo "
+</div>
+ <div class=\"col-sm\">
 <h1>ZUSAMMENFASSUNG DEINER BESTELLUNG!</h1>";
 
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
@@ -87,7 +91,7 @@ echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></di
 
 
 
-    echo"</div>";
+    echo"</div></div>";
 
 
 

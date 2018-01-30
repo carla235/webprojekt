@@ -5,10 +5,9 @@ session_start();
 echo"<html>
 <head>
 <style>
+
 .produktinfos{
 
-margin-left: 400px;
-margin-bottom:600px;
 }
 
 .bild{
@@ -31,7 +30,9 @@ function auswahl() {
 </head>
 
 
-<body>";
+<body>
+
+<div class='container'> <div class='row'>";
 try {
     $artikelnummer = (int)$_GET["artikelnummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
@@ -40,37 +41,46 @@ try {
     $query->execute();
 
     while ($zeile = $query->fetchObject()) {
-        echo    "<div class='produkt'></div><div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > ";
 
-        if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
-        echo"    <div class='bearbeiten'><li><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten</a></li></div>
-                 <div class='loeschen'><li><a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></li></div>";}
-            else{}
+
+        echo"
+            <div class=\"col-sm\">
+            
+                <div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > ";
+
+                        if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
+                            echo"   <div class='bearbeiten'><li><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten</a></li></div>
+                                    <div class='loeschen'><li><a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></li></div>";}
+                         else{}
             echo"
                  </div>
-                  <form action='' method='post'>
-                 <div class='produktinfos'>
-                 <h1> $zeile->artikelname | $zeile->marke </h1>
-                 EAN: $zeile->ean <br><br><br>
-                 PREIS: $zeile->preis € <br><br><br>
+            </div>
+            
+                  <div class=\"col-sm\">
+                     <form action='' method='post'>
+                         <div class='produktinfos'>
+                                <h1> $zeile->artikelname | $zeile->marke </h1>
+                                EAN: $zeile->ean <br><br><br>
+                                PREIS: $zeile->preis € <br><br><br>
                        
-                        <form action='' method='post' >
-                GRÖßE: <select id='groesse'name=\"groesse\">
-                         <option value=\"XS\">XS</option>
-                         <option value=\"S\">S</option>
-                         <option value=\"M\">M</option>
-                         <option value=\"L\">L</option>
-                         <option value=\"XL\">XL</option>
-                       </select></form><br><br>
+                                    <form action='' method='post' >
+                                    GRÖßE: <select id='groesse'name=\"groesse\">
+                                            <option value=\"XS\">XS</option>
+                                            <option value=\"S\">S</option>
+                                            <option value=\"M\">M</option>
+                                            <option value=\"L\">L</option>
+                                            <option value=\"XL\">XL</option>
+                                            </select></form><br><br>
 
-            <form action='' method='post'>
-                 MENGE: <select id='menge' name='menge'>
-                            <option value=\"1\">1</option>
-                            <option value=\"2\">2</option>
-                            <option value=\"3\">3</option>
-                            <option value=\"4\">4</option>
-                            <option value=\"5\">5</option>
-                        </select></form>   <br><br>
+                                    <form action='' method='post'>
+                                     MENGE: <select id='menge' name='menge'>
+                                            <option value=\"1\">1</option>
+                                            <option value=\"2\">2</option>
+                                            <option value=\"3\">3</option>
+                                            <option value=\"4\">4</option>
+                                            <option value=\"5\">5</option>
+                                            </select></form>   
+                                            <br><br>
 
 
 
@@ -82,9 +92,13 @@ try {
                  <br><br>
                 
             
-            
+           
              <input type='hidden' name='artikelnummer' value='$zeile->artikelnummer'>
              <input type='submit' value='In den Warenkorb'></form>
+             </div>
+             </div>
+             </div>
+             </div>
     
       ";}
 

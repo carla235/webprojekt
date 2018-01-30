@@ -6,26 +6,21 @@ echo"
 <head>
 <style>
 .register {
-
 float: right; 
-margin-right: 300px;
-margin-top: 50px;
 }
+
 .register input{
 margin: 10px;
-
 }
 
 .login{
 float: left; 
-margin-left: 100px;
-margin-top: 50px;
 }
 
 .login input{
 margin: 10px;
-
 }
+
 label {
     width: 10em;
     display: block;
@@ -46,8 +41,9 @@ else{
 
 
 echo"
-
-<div class='login'>
+<div class=\"container\"> <div class=\"row\">
+ <div class=\"col-sm\">
+ <div class='login'>
 <h1>Login! </h1>
 <form action='./system/login_logic.php' method='post'>
    <label for=\"email\">E-Mail:</label>
@@ -56,7 +52,7 @@ echo"
 <input type='password' name='passwort'><br>
 <input type='submit' value='Einloggen!'>
 </form>
-</div>
+</div></div>
 ";
 //Beginn Registrierung
 
@@ -92,7 +88,8 @@ if (!empty($name) && !empty($vorname) && !empty($strasse) && !empty($plz) && !em
 }
 
 echo"
-<div class='register'>
+ <div class=\"col-sm\">
+ <div class='register'>
 <h1>Registrieren!</h1><br>
 
 <form action='' method='post'>
@@ -112,6 +109,8 @@ echo"
 <input type='password' name='passwort'><br>
 <input type='submit' value='Registrieren!'>
 </form>
+</div>
+</div>
 </div>
 
 </body>
