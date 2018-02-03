@@ -32,8 +32,10 @@ font-weight: bold;
 
 <div class='container'> <div class='row'>";
 try {
+    // Artikelnummer wird bei Auswahl Shop in URL übergeben und hier an Parameter übergeben
     $artikelnummer = (int)$_GET["artikelnummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+    // Daten werden für entsprechende Artikelnummer aus der DB ausgewählt
     $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
     $query = $db->prepare($sql);
     $query->execute();
@@ -46,6 +48,7 @@ try {
             
                 <div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > ";
 
+                        // Falls der Administrator (Kundennummer 14) angemeldet ist werden Backend Funktionen angezeigt)
                         if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
 
                             echo"  
@@ -57,6 +60,8 @@ try {
             </div>
             
                   <div class=\"col-sm\">
+                    
+                    // Artikel können in Warenkorb gelegt werden 
                      <form action='' method='post'>
                          <div class='produktinfos'>
                                 <h1> $zeile->artikelname | $zeile->marke </h1>
@@ -105,8 +110,6 @@ try {
       if (isset($_POST['artikelnummer'])){ // Artikel werden in Session array abgespeichert, mit dem sie im Warenkorb ausgelesen werden
           $artikelnummer=$_POST['artikelnummer'];
 
-
-
               $artikelnummer = (int)$_GET["artikelnummer"];
               $db = new PDO($dsn, $dbuser, $dbpass, $option);
               $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
@@ -122,6 +125,7 @@ try {
                   $groesse = $_POST['groesse'];
                   $menge = $_POST['menge'];
 
+                  // Artikel werden in Array abgespeichert (=SESSION)
         $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis, 'groesse'=>$groesse, 'menge'=>$menge);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
 

@@ -26,12 +26,6 @@ top: -150px;
 
 }
 
-
-
-
-
-
-
 </style>
 </head>
 
@@ -68,6 +62,8 @@ echo "</div>
 <p>Zahlung mit
 
 ";
+
+//ausgewählte Zahlungsmethode wird ausgelesen
 $zahlung = $_POST['Zahlmethode'];
 echo $zahlung;
 echo"</p><br>";
@@ -95,13 +91,16 @@ echo"
 <input type='submit' value='KAUFEN!' class='button'/>
 <br>    
 </form>";
-
+// Kundennummer wird aus Session ausgelesen (angemeldeter Nutzer) und an Parameter übergeben
 $kundennummer = $_SESSION['kundennummer'];
 
+//DB verbindung wird aufgebaut
 try {
     include(dirname(_FILE) . "../../system/account/userdata.php");
 
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+
+    //Datensätze aus der Zeile der Kundennummer wird ausgewählt
     $sql = "SELECT * FROM benutzer WHERE kundennummer=$kundennummer";
     $query = $db->prepare($sql);
     $query->execute();
@@ -120,9 +119,6 @@ Telefonnummer: $zeile->telefonnummer<br>
 E-mail: $zeile->email<br>
 
 ";
-
-
-
     }
 
     $db = null;

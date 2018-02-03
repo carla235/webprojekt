@@ -10,9 +10,8 @@ echo"
 
 ";
 
-$bestellnummer=$_GET['bestellnummer'];
+$bestellnummer=$_GET['bestellnummer']; // bestellnummer wurde über URL übergeben
 echo"
-
 <table class=\"table table-striped\">
   <thead>
     <tr>
@@ -24,16 +23,18 @@ echo"
 
 
 include "./system/account/userdata.php";
-
+//DB Verbindung wird hergestellt
 try {
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+    // Datensatz der Bestellnummer wird aus DB geholt
     $sql = "SELECT * FROM bestellposition WHERE bestellnummer=$bestellnummer";
     $query = $db->prepare($sql);
     $query->execute();
 
+    //Solange Datensätze vorhanden sind, werden diese aus der DB geholt
     while($zeile =$query->fetchObject()){
         echo"<tr>
-  <td>$zeile->artikelnummer <br></td></tr>";
+            <td>$zeile->artikelnummer <br></td></tr>";
 
     }
 

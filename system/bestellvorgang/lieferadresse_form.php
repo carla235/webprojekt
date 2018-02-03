@@ -33,26 +33,18 @@ input {
   
 }
 
-
-
-input.textfield { 
-  
-}
-
 </style>
 </head>
 
 <body>";
-
-
-
-
+// DB Verbindung wird aufgenommen
 try {
     include(dirname(_FILE) . "/system/account/userdata.php");
-   $kundennummer = $_SESSION['kundennummer'];
-
+   $kundennummer = $_SESSION['kundennummer'];// Kundennummer wird aus bestehender Session ausgelesen
 
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+
+    // Datensätze die in Zeile der entsprechenden Kundennummer stehen werden ausgelesen
     $sql = "SELECT * FROM benutzer WHERE kundennummer=$kundennummer";
     $query = $db->prepare($sql);
     $query->execute();
@@ -67,6 +59,8 @@ echo "<h1> Lieferadresse </h1>";
 
 echo"
 <div class='input'><br>
+
+<!-- Falls wir etwas ändern wird durch action=do das Update durchgeführt--> 
 <form action='./system/bestellvorgang/lieferadresse_do.php' method='post'>
 <label><b>Name</b></label><br>   
 <input type=\"text\" size=\"20\" maxlength='50' name='name' value='$zeile->name'><br><br>
@@ -86,9 +80,6 @@ echo"
 
 
     }
-    //else {
-    //  echo "Datensatz nicht gefunden!";
-    //  }
 
     $db = null;
 } catch (PDOException $e) {

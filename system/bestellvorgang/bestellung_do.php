@@ -1,16 +1,21 @@
 <?php
 session_start();
 
+//DB-Verbindung wird aufgenommen
     try {
         include "./../account/userdata.php";
+        // Daten aus SESSIONs werden ausgelesen und gleich an Parameter gebunden
         $kundennummer = $_SESSION['kundennummer'];
         $zahlung = $_SESSION['zahlung'];
         $eingangsdatum = date("Y-m-d");
         $db = new PDO($dsn, $dbuser, $dbpass, $option);
         $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
 
+            //Die entsprechenden Daten werden in die tabelle Bestellübersicht gebunden
             "INSERT INTO bestelluebersicht (kundennummer, eingangsdatum, zahlungsdaten) VALUES(:kundennummer, :eingangsdatum, :zahlungsdaten);"
         );
+
+        //Daten werden an Parameter gebunden
         $query->execute(array("kundennummer"=>$kundennummer, "eingangsdatum"=>$eingangsdatum, "zahlungsdaten"=>$zahlung));
         $db = null;// Daten werden eingetragen
 

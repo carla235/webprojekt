@@ -7,7 +7,8 @@ echo"
 </head>
 
 <body>";
- echo   "<table class=\"table table-striped\">
+ echo
+ "<table class=\"table table-striped\">
   <thead>
     <tr>
       <th scope=\"col\">Bestellnummer</th>
@@ -20,22 +21,25 @@ echo"
 ";
 
 include "./system/account/userdata.php";
-
+//DB-Verbindung wird aufgebaut
 try {
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+    // Daten werden aus DB geholt und in absteigender Reihenfolge geordnet
     $sql = "SELECT * FROM bestelluebersicht ORDER BY bestellnummer DESC ";
     $query = $db->prepare($sql);
     $query->execute();
-while($zeile =$query->fetchObject()){
+
+    // Solange Datensätze vorhanden sind werden diese aus DB geholt
+    while($zeile =$query->fetchObject()){
     echo"
-<tr>
-<td>$zeile->bestellnummer</td>
-<td>$zeile->kundennummer</td>
-<td>$zeile->eingangsdatum</td>
-<td>$zeile->zahlungsdaten</td>
-<td><a href='index.php?page=bestellposition&bestellnummer=$zeile->bestellnummer'>Zu den Artikeln der Bestellung!</a></td>
-</tr>    
-    ";
+        <tr>
+        <td>$zeile->bestellnummer</td>
+        <td>$zeile->kundennummer</td>
+        <td>$zeile->eingangsdatum</td>
+        <td>$zeile->zahlungsdaten</td>
+        <td><a href='index.php?page=bestellposition&bestellnummer=$zeile->bestellnummer'>Zu den Artikeln der Bestellung!</a></td>
+        </tr>    
+            ";
 
 }
 

@@ -44,12 +44,16 @@ margin-bottom: 0.5%;
 
 include_once(dirname(__FILE__) . "./../account/userdata.php");
 
+// DB Verbindung wird aufgebaut
 try {
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+
+    //Alle Produkte werden aus DB ausgewählt
     $sql = "SELECT * FROM produktkatalog";
     $query = $db->prepare($sql);
     $query->execute();
 
+    // Solange Produkte in DB stehen, werden diese ausgegeben
     while ($zeile = $query->fetchObject()) {
 
 

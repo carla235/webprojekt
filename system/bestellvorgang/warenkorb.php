@@ -90,17 +90,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
 ";
 
-
-
-
-
-
-
-
-    echo"</div></div>";
-
-
-
+echo"</div></div>";
 
 echo "</body>
 

@@ -44,20 +44,18 @@ input {
     background-color: lightgray;
 }
 
-input.textfield { 
-  
-}
-
 </style>
 </head>
 
 <body>";
 
-
+// DB Verbindung wird aufgebaut
 try {
     include(dirname(_FILE) . "../../system/account/userdata.php");
+    // Artikelnummer, die mit get übergeben wurde, wird an Parameter gebunden
     $artikelnummer = (int)$_GET["artikelnummer"];
     $db = new PDO($dsn, $dbuser, $dbpass, $option);
+    // Daten des entsprechenden Produkts werden aus der DB geholt
     $sql = "SELECT * FROM produktkatalog WHERE artikelnummer=$artikelnummer";
     $query = $db->prepare($sql);
     $query->execute();
@@ -69,8 +67,6 @@ try {
 
 
 <!-- Variablen im Formualar bzw. das Formular zum ausfuellen --> 
-
-
 
 <div class='productinput'><br>
 <form action='./system/backend/bearbeiten/do.php' method='post'>
@@ -94,7 +90,7 @@ try {
 <textarea class= 'textfield' id='text' name='details' cols='87' rows='10' >$zeile->details</textarea><br><br>
 <label><b>Bild ändern:</b></label>
 <br><b>Aktuelles Bild</b><br> 
-<a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a><br> <!-- not yet required --> 
+<a href='#'><img src='./images/$zeile->bild' width='225px' height='300px'> </a><br> 
 <br>
 <input type='file' name='bild' id='bild'><br>
 <input type='submit' value='UPDATE!' class='button'/>
@@ -104,9 +100,6 @@ try {
         echo "</div>";
 
     }
-    //else {
-    //  echo "Datensatz nicht gefunden!";
-    //  }
 
     $db = null;
 } catch (PDOException $e) {
