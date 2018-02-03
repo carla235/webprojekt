@@ -33,7 +33,7 @@ label {
 
 
 if(isset($_SESSION['kundennummer'])){
-    include './system/logout.php';
+    include './system/anmeldedaten/logout.php';
 }
 
 else{
@@ -45,7 +45,7 @@ echo"
  <div class=\"col-sm\">
  <div class='login'>
 <h1>Login! </h1>
-<form action='./system/login_logic.php' method='post'>
+<form action='./system/anmeldedaten/login_logic.php' method='post'>
    <label for=\"email\">E-Mail:</label>
 <input type='text' name='email'><br>
    <label for=\"passwort\">Passwort:</label>

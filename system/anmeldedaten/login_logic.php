@@ -1,6 +1,6 @@
 <?php
 
-include(dirname(__FILE__) . "/account/userdata.php"); // Inkludiere userdata
+include  "../account/userdata.php"; // Inkludiere userdata
 session_start();
 
 //$db = new PDO($dsn, $dbuser, $dbpass, $option);
@@ -24,7 +24,7 @@ if(!empty($email)) { // Wenn email nicht leer wird Passwort geholt aus Formular
    if($zeile !== false && password_verify($passwort, $zeile["passwort"])) {
 
         $_SESSION['kundennummer'] = $zeile['kundennummer'];
-         header("Location:./../index.php");
+         header("Location:../../index.php");
       //die('Login erfolgreich. Weiter zu <a href="index.php">internen Bereich</a>');
    } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";

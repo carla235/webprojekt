@@ -8,6 +8,6 @@
 */
 
 
-include"logout_confirmation.php";
+include "logout_confirmation.php";
 ?>
 

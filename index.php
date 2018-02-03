@@ -105,9 +105,9 @@ color:white;
 
 if (!isset ($_SESSION['kundennummer'])){
 
-    echo"
+    echo "
 
-     <td><a href='index.php?page=login'><img src='usericon.png' width='25em' height='auto'></a></td><!-- AnmeldeIcon wird integriert -->";}
+     <td><a href='index.php?page=login'><img src='images/usericon.png' width='25em' height='auto'></a></td><!-- AnmeldeIcon wird integriert -->";}
 
 else{
 
@@ -195,7 +195,7 @@ if (isset($_GET["page"])) {
 
         case "login":
 
-            include "system/login.php";
+            include "system/anmeldedaten/login.php";
 
             break;
 
@@ -203,7 +203,7 @@ if (isset($_GET["page"])) {
 
         case"logout":
 
-            include"system/logout.php";
+            include "system/anmeldedaten/logout.php";
 
             break;
 
