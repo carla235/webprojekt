@@ -38,6 +38,7 @@ top: -150px;
 <body><div class='container'> <div class='row'>
 
 <div class=\"col-sm\">
+
 <br><br>";
 
 
@@ -64,7 +65,7 @@ top: -150px;
 echo "
 </div>
  <div class=\"col-sm\">
-<h1>ZUSAMMENFASSUNG DEINER BESTELLUNG!</h1>";
+<h3>SUMME DEINER BESTELLUNG!</h3>";
 
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
     foreach($_SESSION['warenkorb']as $neu){ // Gibt artikelname und Preis aus Session array aus
@@ -82,8 +83,13 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
 
     $p=   + 4.90 ;
-    echo"Summe: $p €<br><br><br>";
-echo"<div class='kaufen'><li><a href='index.php?page=kaufen'>Kaufen</a></li></div>";
+    echo"Summe: $p €<br><br><br>
+<a href='index.php?page=kaufen'>
+<input type='submit' value='KAUFEN!' class='button'/></a>
+
+
+";
+
 
 
 

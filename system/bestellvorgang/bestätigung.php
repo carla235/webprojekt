@@ -13,7 +13,7 @@ font-weight: lighter;
 </head>
 <body>
 <div align='center'>
-<img src='herz.png' height='200px' width='auto'>
+<img src='./images/herz.png' height='200px' width='auto'>
 <h1>Vielen Dank für deine Bestellung! </h1>
 <a href='index.php?page=start'>Zurück zur Startseite!</a>
 </div>

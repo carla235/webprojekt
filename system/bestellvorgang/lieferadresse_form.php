@@ -33,15 +33,7 @@ input {
   
 }
 
-.button {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    height: 40px;
-    width: 100px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-}
+
 
 input.textfield { 
   

@@ -1,11 +1,5 @@
 <?php
-echo"0k";
-// Erstellen eines neuen Datensatzes durch den Befehl POST
 
-//ueberprueft, ob der Button fuer Submit gedrueckt wurde
-//if(isset($_POST['abschicken'])) {
-// Variablen vom Formular uebertragen
-//$artikelnummer = htmlspecialchars($_POST["artikelnummer"], ENT_QUOTES, "UTF-8");
 $artikelname = htmlspecialchars($_POST["artikelname"], ENT_QUOTES, "UTF-8");
 $marke = htmlspecialchars($_POST["marke"], ENT_QUOTES, "UTF-8");
 $ean = htmlspecialchars($_POST["ean"], ENT_QUOTES, "UTF-8");
@@ -19,10 +13,9 @@ echo " 2";
 if (!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && !empty($groesse) && !empty($menge) && !empty($details) && !empty($artikelbeschreibung)) {
 echo "include ";
     include_once("./../account/userdata.php");
-    //&& !empty($bild), da Bildupload noch nicht umgesetzt ist, ist das noch keine Bedingung
     // sollten diese Felder ausgefuellt sein, dann
 // Datenbankzugriff
-    echo "nach include ";
+
    echo  $_FILES['bild']['size'];
     echo  $_FILES['bild']['name'];
 if ($_FILES['bild']['size'] != 0 ) {
@@ -51,16 +44,6 @@ if ($_FILES['bild']['size'] != 0 ) {
 //Pfad zum Upload
     $new_path = $upload_folder . $filename . '.' . $extension;
     $dbfile = $filename . '.' . $extension;
-echo "3";
-//Neuer Dateiname falls die Datei bereits existiert
-  /*  if (file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Dateinamen
-        $id = 1;
-        do {
-            $new_path = $upload_folder . $filename . '_' . $id . '.' . $extension;
-            $dbfile = $filename . '_' . $id . '.' . $extension;
-            $id++;
-        } while (file_exists($new_path));
-    }*/
 
 //Alles okay,  verschiebe Datei an neuen Pfad
     move_uploaded_file($_FILES['bild']['tmp_name'], $new_path);
@@ -75,15 +58,7 @@ echo "Bild Ende";
             "INSERT INTO produktkatalog(artikelname, marke, artikelbeschreibung, ean, preis, groesse, menge, details, bild) VALUES (:artikelname, :marke, :artikelbeschreibung, :ean, :preis, :groesse, :menge, :details, :bild)"
         );
         $query->execute(array("artikelname" => $artikelname, "marke" => $marke, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "artikelbeschreibung" => $artikelbeschreibung, "details" => $details, "bild" => $dbfile));
-       /* $query->bindParam(':artikelname', $artikelname);
-        $query->bindParam(':marke', $marke);
-        $query->bindParam(':ean', $ean);
-        $query->bindParam(':preis', $preis);
-        $query->bindParam(':groesse', $groesse);
-        $query->bindParam(':menge', $menge);
-        $query->bindParam(':artikelbeschreibung', $artikelbeschreibung);
-        $query->bindParam(':details', $details);
-        $query->bindParam(':bild', $dbfile);*/
+
 
         $db = null;// Daten werden eingetragen
 

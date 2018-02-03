@@ -19,14 +19,12 @@ margin-left: 50px;
 margin-top: 100px;
 }
 
-</style>
-<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\">
-function auswahl() {
-
-
-  
+.bearbeiten{
+font-weight: bold;
 }
-</script>
+</style>
+
+
 </head>
 
 
@@ -49,8 +47,10 @@ try {
                 <div class='bild'><img src= './images/$zeile->bild' width='300px' height='auto' > ";
 
                         if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
-                            echo"   <div class='bearbeiten'><li><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten</a></li></div>
-                                    <div class='loeschen'><li><a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></li></div>";}
+
+                            echo"  
+   <div class='bearbeiten'><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten | </a>
+                                   <a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></div> ";}
                          else{}
             echo"
                  </div>
@@ -104,7 +104,7 @@ try {
 
       if (isset($_POST['artikelnummer'])){ // Artikel werden in Session array abgespeichert, mit dem sie im Warenkorb ausgelesen werden
           $artikelnummer=$_POST['artikelnummer'];
-          echo $_POST["artikelnummer"];
+
 
 
               $artikelnummer = (int)$_GET["artikelnummer"];

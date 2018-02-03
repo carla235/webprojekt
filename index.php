@@ -87,6 +87,18 @@ color:white;
 
 }
 
+.button {
+   width: 25%;
+    height: ;
+    background-color: lightgray;
+}
+
+:hover a{
+text-decoration:none;   
+color: gray;
+
+}
+
 </style>
 
 </head>

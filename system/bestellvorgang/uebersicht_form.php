@@ -26,15 +26,7 @@ top: -150px;
 
 }
 
-.button {
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    height: 40px;
-    width: 130px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-}
+
 
 
 
@@ -66,8 +58,10 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
 
 echo "</div>
-<div class='col-sm'>
-<div class=\"float-right\">
+    
+<div class='col-sm-4'>
+
+
 
 
 <h2> Betrag </h2>
@@ -98,13 +92,9 @@ echo"Summe:<br><br><br>";
 
 echo"
 <form method='post' action='./system/bestellvorgang/bestellung_do.php'>
-<input type='submit' value='Bestellung abschließen!' class='button' />
+<input type='submit' value='KAUFEN!' class='button'/>
+<br>    
 </form>";
-
-
-
-
-
 
 $kundennummer = $_SESSION['kundennummer'];
 
@@ -117,9 +107,9 @@ try {
     $query->execute();
     while ($zeile=$query->fetchObject()){
 
-        echo"
-
-<h1> Lieferadresse </h1> 
+echo"
+<br>    
+<h2> Lieferadresse </h2>
 
 
 Name: $zeile->name <br>
@@ -130,7 +120,8 @@ Telefonnummer: $zeile->telefonnummer<br>
 E-mail: $zeile->email<br>
 
 ";
-        echo "</div></div></div></div> </div>";
+
+
 
     }
 
@@ -141,6 +132,8 @@ E-mail: $zeile->email<br>
 }
 
 
+
+echo "</div></div></div></div> </div>";
 echo "</body>
 
 
