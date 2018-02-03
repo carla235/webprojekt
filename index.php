@@ -7,6 +7,7 @@
  */
 
 
+
 session_start(); // Session wird gestartet
 
 echo "
@@ -101,6 +102,7 @@ color:white;
 
 <div class='icons' >  <table>";
 
+
 if (!isset ($_SESSION['kundennummer'])){
 
     echo"
@@ -109,13 +111,13 @@ if (!isset ($_SESSION['kundennummer'])){
 
 else{
 
-    echo"
+    echo "
 
-    <td> <a href='index.php?page=logout'><img src='logout.png' width='25em' height='auto'></a></td> <!-- LogoutIcon -->";}
+    <td> <a href='index.php?page=logout'><img src='images/logout.png' width='25em' height='auto'></a></td> <!-- LogoutIcon -->";}
 
-    echo"
+    echo "
 
-      <td> <a href='index.php?page=warenkorb'><img src='shoppingicon.png' width='25em' height='auto'></a></td> <!--WarenkorbIcon wird integriert -->";
+      <td> <a href='index.php?page=warenkorb'><img src='images/shoppingicon.png' width='25em' height='auto'></a></td> <!--WarenkorbIcon wird integriert -->";
 
 
 
@@ -123,9 +125,9 @@ else{
 
 if(isset($_SESSION['kundennummer']) && ($_SESSION['kundennummer'])== '14') {
 
-    echo "<td> <a href='index.php?page=backend'><img src='add.png' width='25em' height ='auto'</a></td> 
+    echo "<td> <a href='index.php?page=backend'><img src='images/add.png' width='25em' height ='auto'</a></td> 
 
-      <td> <a href='index.php?page=bestelluebersicht'><img src='list.png' width='25em' height ='auto'</a></td>
+      <td> <a href='index.php?page=bestelluebersicht'><img src='images/list.png' width='25em' height ='auto'</a></td>
 
 <!-- Produkte hinzufuegen -->";
 
@@ -366,8 +368,8 @@ echo "
 <tr>
 <td><a href='index.php?page=agb'> AGB </a></td>
 <td>ANNE KERN CONCEPT STORE</td>
-<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='instagram_footer.png' width='10%' height='auto' ></a>
-<a href='https://www.facebook.com/annekern.conceptstore/'><img src='facebook-logo-button.png' width='10%' height='auto'></a></td>
+<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='images/instagram_footer.png' width='10%' height='auto' ></a>
+<a href='https://www.facebook.com/annekern.conceptstore/'><img src='images/facebook-logo-button.png' width='10%' height='auto'></a></td>
 </tr>
 
 
