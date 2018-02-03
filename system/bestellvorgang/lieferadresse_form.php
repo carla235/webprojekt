@@ -13,15 +13,9 @@ echo "
 
 <head> 
 <style> 
-body {
-height: 100%; 
-width: 100%; 
-}
 
-*{
-    font-family: 'Open Sans Condensed', sans-serif;
-   }
-    
+
+
 form { 
     height: 100%;
     width: 50%;

@@ -11,22 +11,6 @@ echo "
 
 <head> 
 <style> 
-body {
-height: 100%; 
-width: 100%; 
-}
-
-*{
-    font-family: 'Open Sans Condensed', sans-serif;
-   }
-    
-
-.Kosten{
-float:right;
-width:300px;
-margin-top:-10px;
-margin-right: 100px;
-}
 
 .produkt{
 float: left; 
@@ -52,9 +36,7 @@ top: -150px;
     border: 1px solid black;
 }
 
-input.textfield { 
-  
-}
+
 
 
 
@@ -63,10 +45,12 @@ input.textfield {
 
 <body>";
 
-echo "<h1>ZUSAMMENFASSUNG DEINER BESTELLUNG!</h1>";
+echo "
 
-
-
+<h1>ZUSAMMENFASSUNG DEINER BESTELLUNG!</h1><br><br>
+<div class='container'> <div class='row'>
+    <div class=\"col-sm\">
+   ";
 
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
     foreach($_SESSION['warenkorb']as $neu){ // Gibt Artikelinformationen aus Session array aus
@@ -79,14 +63,23 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
     }
 }
 
+
+
+echo "</div>
+<div class='col-sm'>
+<div class=\"float-right\">
+
+
+<h2> Betrag </h2>
+<p>Zahlung mit
+
+";
 $zahlung = $_POST['Zahlmethode'];
 echo $zahlung;
+echo"</p><br>";
 
 $_SESSION["zahlung"] = $zahlung;
 
-echo "</div>
-<div class='Kosten'>
-";
 
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
     foreach($_SESSION['warenkorb']as $neu){ // Gibt artikelname und Preis aus Session array aus
@@ -109,7 +102,7 @@ echo"
 </form>";
 
 
-echo"</div>";
+
 
 
 
@@ -128,20 +121,16 @@ try {
 
 <h1> Lieferadresse </h1> 
 
-<!-- Variablen im Formualar bzw. das Formular zum ausfuellen --> 
 
-<div class='lieferadresse'><br>
+Name: $zeile->name <br>
+Vorname: $zeile->vorname<br>
+Straße: $zeile->strasse<br>
+PLZ: $zeile->plz<br>
+Telefonnummer: $zeile->telefonnummer<br>
+E-mail: $zeile->email<br>
 
-Name: $zeile->name <br><br><br>
-Vorname: $zeile->vorname<br><br><br>
-Straße: $zeile->strasse<br><br><br>
-PLZ: $zeile->plz<br><br><br>
-Telefonnummer: $zeile->telefonnummer<br><br><br>
-E-mail: $zeile->email<br><br><br>
-
-</div> ";
-        echo "</form>";
-        echo "</div>";
+";
+        echo "</div></div></div></div> </div>";
 
     }
 

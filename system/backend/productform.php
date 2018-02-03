@@ -5,11 +5,7 @@ echo "
 
 <head> 
 <style> 
-body {
-font-family: 'Open Sans Condensed', sans-serif;
-margin-left: 10%;
-margin-right: 10%;
-}
+
 #productform { 
     height: 100%;
     width: 50%;

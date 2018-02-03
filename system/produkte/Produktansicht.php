@@ -120,7 +120,7 @@ try {
                 $marke=$zeile->marke;
                 $preis=$zeile->preis;
                   $groesse = $_POST['groesse'];
-                  $menge =  $_POST['menge'];
+                  $menge = $_POST['menge'];
 
         $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis, 'groesse'=>$groesse, 'menge'=>$menge);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
