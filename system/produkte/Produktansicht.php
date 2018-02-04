@@ -61,7 +61,7 @@ try {
             
                   <div class=\"col-sm\">
                     
-                    // Artikel können in Warenkorb gelegt werden 
+                    <!-- Artikel können in Warenkorb gelegt werden -->
                      <form action='' method='post'>
                          <div class='produktinfos'>
                                 <h1> $zeile->artikelname | $zeile->marke </h1>

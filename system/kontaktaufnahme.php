@@ -4,124 +4,62 @@ echo "
 
 <html>
     <head>
-        <meta charset=\"UTF-8\" />
-        <meta name=\"author\" content=\"ANNE KERN Concept Store\" />
-        <meta name=\"description\" content=\"Kontakt zu ANNE KERN Concept Store aufnehmen\" />
-        <meta name=\"keywords\" content=\"Kontakt, Feedback, Frage\" />
         <title> ANNE KERN Concept Store | Kontakt </title>
-        <style> 
-        
-div.all {
-    font-family: ; 
-    max-width: 1150px;
-    min-height:580px;
-    margin:auto;
-    text-align: justify;
-    background-color: white;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
+        <style>
+ body {
+ font-family: 'Open Sans Condensed', sans-serif;
 }
-
-header {
-    position: fixed;
-    display: block;
-    background-color: white; 
-    top: 0;
-    height: 65px;
-    max-width: 1150px;
-    width:100%;
-    margin:auto;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
     
+.formulare { 
+    height: auto;
+    width: 50%;
+    padding: 0%;  
+    margin-right: 25%;
+    background-color: ;
 }
-
-
-div.inhalt {
-    margin-top: 74px;
-    width: 100%;
-}
-
-/*Kontakt*/
-
-div.formulare {
-    margin-top:3%;
-    margin-left:5%;
-    display:inline-block;
-    vertical-align: text-top;
-}
-
-input[type=text], select {
-    width: 100%;
-    padding: 10px 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-textarea{
-    width: 99%;
-    height:35%;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-fieldset {
-    min-width: 450px;
-    height: 320px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    width:50%;
-    
-} 
-
-input[type=submit], input[type=reset] {
-    width: 480px;
+.checkbox {
+    height: auto;
+    width: auto;
+    padding: 1%;  
+    margin-right: 2%;
     background-color: white;
-    color: black;
-    padding: 14px 20px;
-    margin-left: 5%;
-    margin-bottom:2%;
-    margin-top:10px;
-    border: 1px solid silver;
-    border-radius: 4px;
+    color: black ;
     cursor: pointer;
-    font-size: 11pt;
-    font-family: Avenir;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
-    
+    border: solid black;
+  
+}
+#anfragetext {
+    width: 100% 
 }
 
-input[type=submit]:hover, input[type=reset]:hover {
-   background-color: lightgrey;
-   color: white;
-    
-}
-
-#abbrechen {
-    width: 480px;
+input {
     background-color: white;
-    color: black;
+    color: black ;
     padding: 14px 20px;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    margin-top: 10px;
-    border: 1px solid silver;
-    border-radius: 4px;
+    margin: 8px 0;
     cursor: pointer;
-    font-size: 11pt;
-    font-family:;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
-}        
-        </style>
+    width: 100%;
+    border: 1px solid black;
+  
+}
+
+.button {
+    width: 15%;
+    height: ;
+    margin-right: 2%;
+    background-color: lightgray;
+    position: relative;
+    float: left; 
+}
+
+</style>
     </head>
     <body>
         <div class=\"all\">
         
 <!-- Formulare -->
     <div class=\"inhalt\">
-            <form action=\"mailto:mi017@hdm-stuttgart.de\"
-              method =\"post\" enctype=\"text/plain\">
+            <form action=\"mailto:mi017@hdm-stuttgart.de\" method =\"post\" enctype=\"text/plain\">
                 
         <div class=\"formulare\">
             <fieldset>
@@ -156,24 +94,22 @@ input[type=submit]:hover, input[type=reset]:hover {
                 <legend>Ihre Anfrage:</legend>
         
                 Grund der Kontaktaufnahme:<br/>
-                <input type=\"checkbox\" name=\"grund\"
-                value=\"frage\" />Frage<br />
-                <input type=\"checkbox\" name=\"grund\"
-                value=\"verbesserungsvorschlag\" />Verbesserungsvorschlag<br />
-                <input type=\"checkbox\" name=\"grund\"
-                value=\"feedback\" />Feedback <br/>
-                <input type=\"checkbox\" name=\"grund\"
-                value=\"anderes\" />Anderes <br/><br/>
-
-                Anfragetext: <br/>
-                <textarea  name= \"anfragetext\" rows=\"10\" cols=\"30\"> </textarea> <br/>
-
+                <input class='checkbox' type=\"checkbox\" name=\"grund\" value=\"frage\" />Frage<br />
+                <input class='checkbox' type=\"checkbox\" name=\"grund\" value=\"verbesserungsvorschlag\" />Verbesserungsvorschlag<br />
+                <input class='checkbox' type=\"checkbox\" name=\"grund\" value=\"feedback\" />Feedback <br/>
+                <input class='checkbox' type=\"checkbox\" name=\"grund\" value='anderes' /> Anderes <br/><br/>
+                
+                 Anfragetext: <br/>
+                <textarea id='anfragetext' name= \"anfragetext\" rows=\"10\" cols=\"30\"> </textarea> <br/>
+                
             </fieldset>
         </div>
-        <div class=\"button\">
-            <input type=\"reset\" value=\"Zurücksetzen\" />
-            <input type=\"submit\" value=\"Versenden\" onclick=\"alert('Ihre Anfrage wurde abgeschickt')\" />
-            <a id=\"abbrechen\" href='../index.php?page=start'> Abbrechen </a>
+       
+        
+        <div >
+            <input class=\"button\" type=\"reset\" value=\"Zurücksetzen\" />
+            <input class=\"button\" type=\"reset\" href='../index.php?page=start' value=\"Abbrechen\" />
+            <input class=\"button\" type=\"submit\" value=\"Versenden\" onclick=\"alert('Ihre Anfrage wurde abgeschickt')\" />
         </div>
             </form> 
             </div>
