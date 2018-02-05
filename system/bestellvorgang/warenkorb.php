@@ -111,7 +111,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
                                             <br><br>
                     ";
         $menge = $_POST['menge'];
-        echo $menge;
+        //echo "Menge: $menge"; echo "<br>";
 
         echo "<a href= './system/bestellvorgang/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
     }
@@ -142,7 +142,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
             echo "";
             echo "€";
             echo "<br>";
-            echo "<br>";
+            echo "Menge: $menge"; echo "<br>";echo "<br>";
 
             $gesamt += $t;
 
