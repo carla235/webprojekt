@@ -40,6 +40,26 @@ session_start();
         }
         $db = null;
 
+        $db = new PDO($dsn, $dbuser, $dbpass, $option);
+        $query = $db->prepare(//Eintrag der Daten in DB vorbereiten
+            "SELECT email FROM benutzer WHERE kundennummer=$kundennummer;"
+        );
+        $query->execute();
+        $zeile = $query->fetchObject();
+
+        $empfaenger = "<$zeile->email>";
+        $betreff = "Bestätigung ihrer Bestellung!";
+        $from = "From: ANNE KERN Concept Store <ao027@hdm-stuttgart.de>";
+        $text = "Hallo! 
+                   Vielen Dank für ihre Bestellung!
+                   Ihre Bestellung wird in Kürze versandt!
+                   
+                   Viel Spaß mit ihren neuen Produkten
+                   Ihr ANNE KERN Concept Store
+                  ";
+
+        mail($empfaenger, $betreff, $text, $from);
+
         header("Location:../../index.php?page=bestätigung");
 
     } catch (PDOException $x) {

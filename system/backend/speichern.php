@@ -65,7 +65,7 @@ if (!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && 
     };
 
 
-    header("Location: ../../index.php"); // Bei erfolgreichem Upload --> Startseite
+    header("Location: ../../index.php?page=shop"); // Bei erfolgreichem Upload --> Startseite
 } else {
     $errorMessage = "Eingabe unvollständig.";
     echo $errorMessage;
