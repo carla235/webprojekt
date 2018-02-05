@@ -341,8 +341,8 @@ echo "
 <tr>
 <td><a href='index.php?page=agb'> AGB </a></td>
 <td>ANNE KERN CONCEPT STORE</td>
-<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='images/instagram_footer.png' width='10%' height='auto' ></a>
-<a href='https://www.facebook.com/annekern.conceptstore/'><img src='images/facebook-logo-button.png' width='10%' height='auto'></a></td>
+<td><a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='./images/instagram_footer.png' width='10%' height='auto' ></a>
+<a href='https://www.facebook.com/annekern.conceptstore/'><img src='./images/facebook-logo-button.png' width='10%' height='auto'></a></td>
 </tr>
 
 

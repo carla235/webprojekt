@@ -53,7 +53,7 @@ try {
 
                             echo"  
    <div class='bearbeiten'><a href='index.php?page=bearbeiten&artikelnummer=$zeile->artikelnummer'>Artikel bearbeiten | </a>
-                                   <a href='./system/backend/loeschen/deleteproduct.php'>Artikel loeschen</a></div> ";}
+                           <a href='./system/backend/loeschen/deleteproduct.php?artikelnummer=$zeile->artikelnummer'>Artikel loeschen</a></div> ";}
                          else{}
             echo"
                  </div>
