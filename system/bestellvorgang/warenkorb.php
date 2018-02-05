@@ -1,7 +1,7 @@
 <?php
-include "./system/account/userdata.php";
 
 session_start(); //Session wird wieder aufgenommen
+include "./system/account/userdata.php";
 
 echo "
 <html>
@@ -42,6 +42,40 @@ top: -150px;
 <br><br>";
 
 
+        if(isset($_POST['menge_aktualisieren'])){
+           if(isset($_SESSION['warenkorb'])){
+                $item_array_artikelnummer = array_column($_SESSION['warenkorb'], 'artikelnummer');
+                if(!in_array($_GET['artikelnummer'], $item_array_artikelnummer))
+                {
+                    $count = count($_SESSION['warenkorb']);
+                    $item_array = array(
+                        'artikelnummer' => $_GET['artikelnummer'],
+                        'artikelname'   => $_POST['artikelname'],
+                        'preis'         => $_POST['hidden_preis'],
+                        'menge'         => $_POST['menge']
+                    );
+                    $_SESSION['warenkorb'][$count] = $item_array;
+                }
+                else{
+                    echo"<script>alert('Produkt wurde bereits hinzugefuegt')</script> ";
+                    echo"<script>window.location='index.php'</script>";
+                }
+           }
+           else{
+               $item_array = array(
+                   'artikelnummer' => $_GET['artikelnummer'],
+                   'artikelname'   => $_POST['artikelname'],
+                   'preis'         => $_POST['hidden_preis'],
+                   'menge'         => $_POST['menge']
+
+               );
+               $_SESSION['warenkorb'][0] = $item_array;
+           }
+        }
+
+
+
+
         if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
             foreach($_SESSION['warenkorb']as $neu){ // Gibt Artikelinformationen aus Session array aus
                 $id= $neu['artikelnummer'];
@@ -54,10 +88,12 @@ top: -150px;
                 echo $neu['groesse']." | ";
                 echo $neu['menge']."<br>";
 
-                echo $neu['preis']."€<br><br><br>";
+                echo $row = $neu['preis']."€<br><br>";
 
-                echo "<input type='text' name='menge' placeholder='Menge' class='form_control' value=''>"; echo "<br>";echo "<br>";
-                echo "<input type='hidden' name='hidden_preis' value='<?php echo $row\['preis']; >";
+                echo "Menge:"; echo "<br>";
+                echo "<input type='text' name='menge' placeholder='Menge' class='form_control' value='1'/>"; echo "<br>";echo "<br>";
+                echo "<input type='submit' name='menge_aktualisieren' class='btn button-succss' value='Menge aktualisieren'/>"; echo "<br>";
+                echo "<input type='hidden' name='hidden_preis' value='<?php echo $row\['preis'] />";
 
                 echo "<a href= './system/bestellvorgang/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
 
@@ -80,6 +116,24 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
     }
     }
+
+
+   /* if(!empty($_SESSION['warenkorb']))
+    {
+        $summe = 0;
+        foreach($_SESSION['warenkorb'] as $keys => $values){
+            $values['artikelname'];
+            $values['menge'];
+            $values['preis'];
+            echo number_format( $values['menge']*$values['preis'], 2); echo "<br>";
+
+            $total = $summe + ($values['menge']*$values['preis']);
+
+        }
+        echo "Summe";
+        echo number_format($total, 2);
+    }   */
+
 /*if (!empty($_SESSION['warenkorb'])){
      $total = 0;
      foreach($_SESSION['warenkorb']as $keys => $values) {
@@ -90,10 +144,13 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
          //$values['menge']*
      }
 }
+
+$neu['preis']
+
 */
 
-if(isset($_SESSION['warenkorb'])) {
-     foreach($_SESSION['warenkorb'] as $neu){
+ if(isset($_SESSION['warenkorb'])) {
+     foreach($_SESSION['warenkorb'] as $keys => $values){
 
         $summe = $neu['preis'];
 }
