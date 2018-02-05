@@ -71,7 +71,7 @@ if (!empty($artikelname) && !empty($marke) && !empty($ean) && !empty($preis) && 
     echo $errorMessage;
 }
 
-echo "ende";
+
 
 
 //}

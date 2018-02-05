@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: carlastumpp
- * Date: 27.11.17
- * Time: 17:43
- */
 
 // Daten aus Formular werden an Parameter übergeben
 
@@ -29,9 +23,11 @@
 
             $db = new PDO($dsn, $dbuser, $dbpass, $option);
             $query = $db->prepare(
-                "UPDATE produktkatalog SET marke= :marke, artikelname= :artikelname, artikelbeschreibung= :artikelbeschreibung, ean= :ean, preis= :preis, groesse= :groesse, menge= :menge, details= :details, bild= :bild WHERE artikelnummer = :artikelnummer" );         //neuer Inhalt wird reingeschrieben
+                "UPDATE produktkatalog SET marke= :marke, artikelname= :artikelname, artikelbeschreibung= :artikelbeschreibung, 
+                ean= :ean, preis= :preis, groesse= :groesse, menge= :menge, details= :details, bild= :bild WHERE artikelnummer = :artikelnummer" ); //neuer Inhalt wird reingeschrieben
             //Daten werden an Parameter gebunden
-            $query->execute(array("marke" => $marke, "artikelname" => $artikelname, "artikelnummer" => $artikelnummer, "artikelbeschreibung" => $artikelbeschreibung, "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "details" => $details, "bild" => $dbfile));
+            $query->execute(array("marke" => $marke, "artikelname" => $artikelname, "artikelnummer" => $artikelnummer, "artikelbeschreibung" => $artikelbeschreibung,
+                "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "details" => $details, "bild" => $dbfile));
             $db = null; //Update wird durchgeführt
 
             header('Location: ../../../index.php'); //auf index (Startseite) zurückgeleitet

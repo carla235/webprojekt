@@ -99,7 +99,7 @@ color: gray;
 
 
 
-         <div class='logo' align='center'><a href='index.php?page=start'><img src='Logo.png' width='20%' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
+         <div class='logo' align='center'><a href='index.php?page=start'><img src='./images/Logo.png' width='20%' height='auto'></a></div>  <!-- Bildlogo wird aufgerufen = Titel der Website--> 
 
 
 <div class='icons' >  <table>";

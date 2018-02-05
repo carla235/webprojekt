@@ -126,7 +126,8 @@ try {
                   $menge = $_POST['menge'];
 
                   // Artikel werden in Array abgespeichert (=SESSION)
-        $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis, 'groesse'=>$groesse, 'menge'=>$menge);
+        $neu = array('artikelnummer'=>$artikelnummer, 'bild'=>$bild, 'artikelname'=> $artikelname, 'marke'=>$marke, 'preis'=>$preis,
+            'groesse'=>$groesse, 'menge'=>$menge);
         $_SESSION["warenkorb"][$artikelnummer]= $neu;
 
                   ;}
