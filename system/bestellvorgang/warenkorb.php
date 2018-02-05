@@ -165,7 +165,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
             $gesamt += $t;
         }
 
-    }
+    };
 };
 
 
