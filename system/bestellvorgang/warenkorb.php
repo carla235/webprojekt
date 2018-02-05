@@ -83,9 +83,11 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
         echo $neu['groesse']." | ";
 
+        echo $neu['menge']."<br>";
+
         echo $neu['preis']."€<br><br>";
 
-      echo"
+        echo "   
 
                                             <form action='' method='post'>
 
@@ -100,22 +102,18 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
                                             <option value=\"4\">4</option>
 
                                             <option value=\"5\">5</option>
+
                                             </select>
-                                           
-                                           
                                             <input type='submit' value='Menge ändern'>
-                                           
+                                            <input type='hidden' value='artikelnummer'>
                                             </form>   
 
                                             <br><br>
                     ";
-
         $menge = $_POST['menge'];
 
 
-        echo "<input type='hidden' name='hidden_preis' value='<?php echo $row\['preis'] />";
-
-        echo "<a href= './system/bestellvorgang/delete_wk.php?delete=$id'> <img src='./cross.png' height='20px' width='auto'></a></div>";
+        echo "<a href= './system/bestellvorgang/delete_wk.php?delete=$id'><img src='./cross.png' height='20px' width='auto'></a></div>";
     }
 }
 
@@ -139,16 +137,21 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
 
         if ($_POST['menge']) {
-            $t = $neu['preis'] * $menge;
-            echo $t;
-            echo "";
-            echo "€";
-            echo "<br>";
-            echo "<br>";
 
-            $gesamt += $t;
 
-        } else {
+                $t = $neu['preis'] * $menge;
+                echo $t;
+                echo "";
+                echo "€";
+                echo "<br>";
+                echo "Menge: $menge";
+                echo "<br>";
+                echo "<br>";
+
+                $gesamt += $t;
+            }
+
+        else {
 
 
             echo $t;
@@ -161,7 +164,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
             $gesamt += $t;
         }
 
-    };
+    }
 };
 
 
