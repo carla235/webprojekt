@@ -72,19 +72,21 @@ $_SESSION["zahlung"] = $zahlung;
 
 
 if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Warenkorb existiert
-    foreach($_SESSION['warenkorb']as $neu){ // Gibt artikelname und Preis aus Session array aus
-
+    foreach($_SESSION['warenkorb'] as $neu){ // Gibt artikelname und Preis aus Session array aus
 
         echo $neu['artikelname']." | ";
-        echo $neu['preis']."€<br><br><br>";
-
+        $t = $neu['preis'];
+        echo $t;
+        echo "";echo"€";echo "<br>";echo "<br>";
+        $gesamt+= $t;
     }
-}
+};
 
+echo "Versand: 4.90€"; echo "<br>";echo "<br>";
 
+$summe= $gesamt + 4.90 ;
+echo"Summe: $summe €<br><br><br>";
 
-echo"Versand: 4,90€ <br><br><br>";
-echo"Summe:<br><br><br>";
 
 echo"
 <form method='post' action='./system/bestellvorgang/bestellung_do.php'>
