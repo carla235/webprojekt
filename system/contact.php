@@ -94,7 +94,7 @@ echo "<html>
     <div class='Social'>
         <a href='https://www.instagram.com/annekern.conceptstore/?hl=de'><img src='./images/instagram.png'width='50px' height='50px'></a>
         <a href='https://www.facebook.com/annekern.conceptstore/'><img src='./images/facebook.png' width='50px' width='50px'></a>
-        <div class='kontaktaufnahme'><a href='./system/kontaktaufnahme.php'> Hier klicken, um ANNE KERN Concept Store zu kontaktieren </a></div>
+        <div class='kontaktaufnahme'><a href='index.php?page=kontaktform'> Hier klicken, um ANNE KERN Concept Store zu kontaktieren </a></div>
     </div>
 </p>
 </div>

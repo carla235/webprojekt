@@ -83,11 +83,7 @@ table {
     background-color: lightgray;
 }
 
-:hover a{
-text-decoration:none;   
-color: gray;
 
-}
 
 </style>
 
@@ -313,11 +309,12 @@ if (isset($_GET["page"])) {
             include "./system/footer_info/versand und zahlung.php";
             break;
 
+        case"kontaktform";
+            include"./system/kontaktaufnahme.php";
+            break;
 
         default:
-
             include "system/start.php";
-
             break;
 
 
