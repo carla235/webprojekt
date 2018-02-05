@@ -30,7 +30,7 @@
                 "ean" => $ean, "preis" => $preis, "groesse" => $groesse, "menge" => $menge, "details" => $details, "bild" => $dbfile));
             $db = null; //Update wird durchgeführt
 
-            header('Location: ../../../index.php'); //auf index (Startseite) zurückgeleitet
+            header('Location: ../../../index.php?page=shop'); //auf index (Startseite) zurückgeleitet
         } catch (PDOException $e) {
             echo "Error: Bitten wenden Sie sich an den Administrator!";
             die();
