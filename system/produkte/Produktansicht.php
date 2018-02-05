@@ -77,15 +77,7 @@ try {
                                             <option value=\"XL\">XL</option>
                                             </select></form><br><br>
 
-                                    <form action='' method='post'>
-                                     MENGE: <select id='menge' name='menge'>
-                                            <option value=\"1\">1</option>
-                                            <option value=\"2\">2</option>
-                                            <option value=\"3\">3</option>
-                                            <option value=\"4\">4</option>
-                                            <option value=\"5\">5</option>
-                                            </select></form>   
-                                            <br><br>
+                                    
 
 
 
