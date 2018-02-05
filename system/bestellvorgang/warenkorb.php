@@ -137,16 +137,21 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
 
 
         if ($_POST['menge']) {
-            $t = $neu['preis'] * $menge;
-            echo $t;
-            echo "";
-            echo "€";
-            echo "<br>";
-            echo "Menge: $menge"; echo "<br>";echo "<br>";
 
-            $gesamt += $t;
 
-        } else {
+                $t = $neu['preis'] * $menge;
+                echo $t;
+                echo "";
+                echo "€";
+                echo "<br>";
+                echo "Menge: $menge";
+                echo "<br>";
+                echo "<br>";
+
+                $gesamt += $t;
+            }
+
+        else {
 
 
             echo $t;
@@ -159,7 +164,7 @@ if (isset($_SESSION['warenkorb'])) { // Prüfen, ob Session-Variable für den Wa
             $gesamt += $t;
         }
 
-    };
+    }
 };
 
 
